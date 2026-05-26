@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>企鹅世界杯Fantasy抽签</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p>企鹅世界杯Fantasy</p>
+          <h1>分组抽签</h1>
+        </div>
+        <div class="top-actions">
+          <div class="counter"><span id="drawCount">0</span><small>/48</small></div>
+          <div class="export-actions" id="exportActions" hidden>
+            <button class="soft-btn" id="posterBtn" type="button">导出分组结果海报</button>
+            <button class="soft-btn" id="excelBtn" type="button">导出分组结果表格</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <section class="draw-panel" aria-label="抽签机器">
+          <div class="machine" id="machine">
+            <canvas
+              class="machine-canvas"
+              id="machineCanvas"
+              width="640"
+              height="640"
+              aria-label="玻璃抽签机动画"
+            ></canvas>
+          </div>
+
+          <div class="controls">
+            <button class="primary-btn" id="startBtn" type="button">开始抽签</button>
+            <button class="primary-btn line" id="releaseBtn" type="button">出球</button>
+            <button class="soft-btn" id="autoBtn" type="button">直接生成分组</button>
+            <button class="soft-btn danger" id="resetBtn" type="button">重置</button>
+          </div>
+        </section>
+
+        <section class="groups-panel" aria-label="分组情况">
+          <div class="groups-grid" id="groupsGrid"></div>
+        </section>
+      </section>
+
+      <section class="player-pool" aria-label="玩家池">
+        <div class="pool-head">
+          <h2>玩家池</h2>
+          <span id="remainingCount">48 人待抽</span>
+        </div>
+        <div class="pool-scroll" id="playerPool"></div>
+      </section>
+    </main>
+
+    <div class="modal-backdrop" id="resultModal" hidden>
+      <section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="modalText">
+        <button class="close-btn" id="closeModalBtn" type="button" aria-label="关闭">×</button>
+        <p id="modalText"></p>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
