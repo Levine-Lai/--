@@ -10,8 +10,10 @@
     <main class="app-shell">
       <header class="topbar">
         <div>
-          <p>企鹅世界杯Fantasy</p>
-          <h1>分组抽签</h1>
+          <div class="brand-title">
+            <h1>企鹅世界杯 Fantasy 分组抽签</h1>
+            <img class="title-mascot" src="./assets/title-mascot.png" alt="" aria-hidden="true" />
+          </div>
           <div class="region-switch" id="regionSwitch" aria-label="赛区切换"></div>
         </div>
         <div class="top-actions">
@@ -26,18 +28,6 @@
 
       <section class="workspace">
         <section class="draw-panel" id="drawPanel" aria-label="抽签机器">
-          <div class="penguin-perch" aria-hidden="true">
-            <div class="penguin-mascot">
-              <span class="penguin-eye left"></span>
-              <span class="penguin-eye right"></span>
-              <span class="penguin-beak"></span>
-              <span class="penguin-belly"></span>
-              <span class="penguin-flipper left"></span>
-              <span class="penguin-flipper right"></span>
-              <span class="penguin-foot left"></span>
-              <span class="penguin-foot right"></span>
-            </div>
-          </div>
           <div class="machine" id="machine">
             <canvas
               class="machine-canvas"
