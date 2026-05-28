@@ -369,6 +369,7 @@ const scheduleMatches = [
 ];
 
 const els = {
+  drawPanel: document.querySelector("#drawPanel"),
   machine: document.querySelector("#machine"),
   machineCanvas: document.querySelector("#machineCanvas"),
   regionSwitch: document.querySelector("#regionSwitch"),
@@ -642,6 +643,7 @@ function renderControls() {
   els.autoBtn.disabled = busy || completed;
   els.resetBtn.disabled = state.isReleasing;
   els.exportActions.hidden = !completed;
+  els.drawPanel.classList.toggle("machine-active", state.isSpinning || state.isReleasing);
 }
 
 function render() {
