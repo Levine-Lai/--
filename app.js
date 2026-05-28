@@ -109,65 +109,127 @@ const groups = [
   },
 ];
 
-const playerNames = [
-  "Faiaa",
-  "轻狂",
-  "珍惜",
-  "蒙古大夫",
-  "可乐",
-  "remember",
-  "Eric(殷少)",
-  "andy",
-  "Bad K",
-  "dice",
-  "笨笨",
-  "GaelClichy",
-  "LA",
-  "MUJY",
-  "nagimenz",
-  "面条",
-  "Yeehc111",
-  "Old Trafford",
-  "丢屁",
-  "蒂兰基尔尼",
-  "fitz",
-  "青森山田",
-  "Kw",
-  "BA",
-  "ocean",
-  "进藤光",
-  "香香软软的big b",
-  "鸡米",
-  "Enzo Wang",
-  "Ericherry",
-  "Conan",
-  "Yemon",
-  "欧冠bot  ༽ UEFAntasis",
-  "diogo20lfc",
-  "AVG",
-  "Steven",
-  "id：JackieGu",
-  "HALL（记得哥铁粉）",
-  "Variable 🦖 软糖",
-  "Summerfan",
-  "patience",
-  "比尔",
-  "别墅里面唱K 你想象不到",
-  "MutdBJ-垫底超人",
-  "座山雕",
-  "Antonius",
-  "九五二七",
-  "Pluto.",
-];
-
 const tierColors = ["#f6cf58", "#6fbea4", "#8fb7ff", "#ff9e8f"];
 const tierDarkColors = ["#e5b836", "#47a983", "#6b96dc", "#e47f70"];
 
-const players = playerNames.map((name, index) => ({
-  id: index + 1,
-  name,
-  tier: Math.floor(index / 12) + 1,
-}));
+function makePlayers(names) {
+  return names.map((name, index) => ({
+    id: index + 1,
+    name,
+    tier: Math.floor(index / 12) + 1,
+  }));
+}
+
+const regionConfigs = [
+  {
+    key: "arctic",
+    label: "北极赛区",
+    players: makePlayers([
+      "francistasy",
+      "DDDD",
+      "andy",
+      "大猫与火炮",
+      "AVG",
+      "511",
+      "Enzo Wang",
+      "LAD",
+      "丢屁",
+      "antonius",
+      "LeoDing",
+      "Kimi",
+      "ZHIYU",
+      "nbw",
+      "海笛",
+      "GreyIi",
+      "糕灬福特",
+      "青森山田",
+      "Yemon",
+      "Loki7_7",
+      "小火龙",
+      "Steven",
+      "GaelClichy",
+      "嘉进®平安",
+      "东马",
+      "Nagimenz",
+      "英国人画像",
+      "fitz",
+      "Acidboy",
+      "Verydisco",
+      "拙言",
+      "Dannyyyyy",
+      "Shuo",
+      "蒂亚鸽",
+      "比尔",
+      "Kevin",
+      "Clark Sim",
+      "狗蛋kk",
+      "乳酸君",
+      "香香软软的big b",
+      "星喵",
+      "联曼",
+      "Qunny",
+      "珍惜眼前人❤️",
+      "Havertz scores again",
+      "Maxlee",
+      "鸡米",
+      "TK City",
+    ]),
+  },
+  {
+    key: "antarctic",
+    label: "南极赛区",
+    players: makePlayers([
+      "笨笨是大骗子",
+      "Dr. Mongodmundsson",
+      "小新Jerry",
+      "座山雕",
+      "Conan Joe",
+      "128",
+      "Summerfan",
+      "轻狂",
+      "喝呀",
+      "remember",
+      "zcnai",
+      "小绿",
+      "Bad K",
+      "Ethan",
+      "橘",
+      "BA",
+      "ocean欧巡",
+      "进藤光",
+      "第一边锋萨默维尔",
+      "halfbrain",
+      "蒂兰基尔尼",
+      "软糖",
+      "kusuri",
+      "Baros15",
+      "Pluto",
+      "Jackiegu",
+      "企鹅",
+      "Team Name",
+      "垫底超人00",
+      "Chelsea mata",
+      "SEAWUWU",
+      "沙洛系咁队",
+      "Gladiator Mississippi",
+      "fpl中搁浅的哲学家",
+      "Eva",
+      "diogo",
+      "AnonTokyo",
+      "可乐",
+      "紫葱酱",
+      "面条",
+      "Yeehc111",
+      "鬼嗨",
+      "patience",
+      "Micky VDV",
+      "开半天猪耳朵",
+      "SSU-FAIAA",
+      "X Team",
+      "镜落",
+    ]),
+  },
+];
 
 const slots = Array.from({ length: 4 }, (_, positionIndex) =>
   groups.map((group) => ({
@@ -309,6 +371,7 @@ const scheduleMatches = [
 const els = {
   machine: document.querySelector("#machine"),
   machineCanvas: document.querySelector("#machineCanvas"),
+  regionSwitch: document.querySelector("#regionSwitch"),
   startBtn: document.querySelector("#startBtn"),
   releaseBtn: document.querySelector("#releaseBtn"),
   autoBtn: document.querySelector("#autoBtn"),
@@ -326,15 +389,28 @@ const els = {
   modalText: document.querySelector("#modalText"),
 };
 
-let state = {
-  assignments: [],
-  remaining: [...players],
-  isSpinning: false,
-  isReleasing: false,
-  modalPending: false,
-  modalOpen: false,
-  latestSlotKey: null,
-};
+function createDrawState(regionPlayers) {
+  return {
+    assignments: [],
+    remaining: [...regionPlayers],
+    isSpinning: false,
+    isReleasing: false,
+    modalPending: false,
+    modalOpen: false,
+    latestSlotKey: null,
+  };
+}
+
+let activeRegionKey = "arctic";
+let players = regionConfigs.find((region) => region.key === activeRegionKey).players;
+const regionStates = Object.fromEntries(
+  regionConfigs.map((region) => [region.key, createDrawState(region.players)])
+);
+let state = regionStates[activeRegionKey];
+
+function activeRegion() {
+  return regionConfigs.find((region) => region.key === activeRegionKey) || regionConfigs[0];
+}
 
 let animationFrame = null;
 let releaseTimer = null;
@@ -365,39 +441,11 @@ function escapeXML(value) {
 }
 
 function restoreState() {
-  const raw = localStorage.getItem(storageKey);
-  if (!raw) return;
-
-  try {
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed.assignments)) return;
-
-    const validAssignments = parsed.assignments
-      .filter((item) => item && Number.isInteger(item.playerId))
-      .slice(0, 48);
-    const usedIds = new Set(validAssignments.map((item) => item.playerId));
-
-    state.assignments = validAssignments
-      .map((item, index) => ({
-        player: players.find((player) => player.id === item.playerId),
-        slot: slots[index],
-      }))
-      .filter((item) => item.player && item.slot);
-    state.remaining = players.filter((player) => !usedIds.has(player.id));
-  } catch {
-    localStorage.removeItem(storageKey);
-  }
+  localStorage.removeItem(storageKey);
 }
 
 function saveState() {
-  localStorage.setItem(
-    storageKey,
-    JSON.stringify({
-      assignments: state.assignments.map((assignment) => ({
-        playerId: assignment.player.id,
-      })),
-    })
-  );
+  // 默认每次打开页面都是未开始状态，仅保留本次浏览会话内的赛区进度。
 }
 
 function slotKey(slot) {
@@ -449,6 +497,42 @@ function currentMachinePlayers() {
   if (!nextSlot) return [];
 
   return state.remaining.filter((player) => player.tier === nextSlot.position);
+}
+
+function renderRegionSwitch() {
+  els.regionSwitch.innerHTML = regionConfigs
+    .map(
+      (region) => `
+        <button
+          class="region-tab ${region.key === activeRegionKey ? "active" : ""}"
+          data-region="${region.key}"
+          type="button"
+        >
+          ${region.label}
+        </button>
+      `
+    )
+    .join("");
+}
+
+function setActiveRegion(nextKey) {
+  if (nextKey === activeRegionKey || !regionStates[nextKey]) return;
+
+  clearTimeout(releaseTimer);
+  clearTimeout(modalTimer);
+  if (animationFrame) cancelAnimationFrame(animationFrame);
+  state.isSpinning = false;
+  state.isReleasing = false;
+  state.modalPending = false;
+  state.modalOpen = false;
+  state.latestSlotKey = null;
+
+  activeRegionKey = nextKey;
+  players = activeRegion().players;
+  state = regionStates[activeRegionKey];
+  releaseVisual = null;
+  els.resultModal.hidden = true;
+  render();
 }
 
 function flagUrl(team) {
@@ -561,6 +645,7 @@ function renderControls() {
 }
 
 function render() {
+  renderRegionSwitch();
   renderGroups();
   renderPlayerPool();
   updateMachineBalls();
@@ -989,15 +1074,8 @@ function resetDraw() {
   clearTimeout(modalTimer);
   if (animationFrame) cancelAnimationFrame(animationFrame);
 
-  state = {
-    assignments: [],
-    remaining: [...players],
-    isSpinning: false,
-    isReleasing: false,
-    modalPending: false,
-    modalOpen: false,
-    latestSlotKey: null,
-  };
+  regionStates[activeRegionKey] = createDrawState(players);
+  state = regionStates[activeRegionKey];
   localStorage.removeItem(storageKey);
   closeResultModal();
   releaseVisual = null;
@@ -1308,7 +1386,7 @@ async function drawPoster() {
     ctx,
     canvas.width,
     canvas.height,
-    "企鹅世界杯Fantasy分组结果",
+    `企鹅世界杯Fantasy${activeRegion().label}分组结果`,
     "FANTASY GROUP DRAW RESULTS"
   );
 
@@ -1384,7 +1462,7 @@ async function drawPoster() {
 
   canvas.toBlob((blob) => {
     if (!blob) return;
-    downloadBlob(blob, "企鹅世界杯Fantasy分组结果.png");
+    downloadBlob(blob, `企鹅世界杯Fantasy${activeRegion().label}分组结果.png`);
   }, "image/png");
 }
 
@@ -1401,7 +1479,7 @@ function drawSchedulePoster() {
     ctx,
     canvas.width,
     canvas.height,
-    "企鹅世界杯Fantasy赛程",
+    `企鹅世界杯Fantasy${activeRegion().label}赛程`,
     "GROUP STAGE PLAYER FIXTURES"
   );
 
@@ -1487,7 +1565,7 @@ function drawSchedulePoster() {
 
   canvas.toBlob((blob) => {
     if (!blob) return;
-    downloadBlob(blob, "企鹅世界杯Fantasy赛程海报.png");
+    downloadBlob(blob, `企鹅世界杯Fantasy${activeRegion().label}赛程.png`);
   }, "image/png");
 }
 
@@ -1700,7 +1778,7 @@ function exportExcel() {
   const blob = new Blob([zipBytes], {
     type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   });
-  downloadBlob(blob, "企鹅世界杯Fantasy分组结果.xlsx");
+  downloadBlob(blob, `企鹅世界杯Fantasy${activeRegion().label}分组结果.xlsx`);
 }
 
 function downloadBlob(blob, filename) {
@@ -1721,6 +1799,11 @@ els.resetBtn.addEventListener("click", resetDraw);
 els.posterBtn.addEventListener("click", drawPoster);
 els.schedulePosterBtn.addEventListener("click", drawSchedulePoster);
 els.excelBtn.addEventListener("click", exportExcel);
+els.regionSwitch.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-region]");
+  if (!button) return;
+  setActiveRegion(button.dataset.region);
+});
 els.closeModalBtn.addEventListener("click", closeResultModal);
 els.resultModal.addEventListener("click", (event) => {
   if (event.target === els.resultModal) closeResultModal();

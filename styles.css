@@ -67,6 +67,34 @@ button {
   line-height: 0.95;
 }
 
+.region-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(104px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+  padding: 5px;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 2px 3px 0 rgba(38, 48, 43, 0.1);
+}
+
+.region-tab {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 950;
+}
+
+.region-tab.active {
+  color: #ffffff;
+  background: #247760;
+}
+
 .top-actions,
 .export-actions,
 .controls,
@@ -356,7 +384,12 @@ button {
   padding: 0 10px;
   border: 2px solid var(--line);
   border-radius: 999px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--tier-color) 32%, #ffffff), #ffffff 48%);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--tier-color) 78%, #26302b 8%),
+    color-mix(in srgb, var(--tier-color) 52%, #ffffff) 58%,
+    #ffffff 100%
+  );
   box-shadow: 1.5px 2px 0 rgba(38, 48, 43, 0.1);
   font-size: 0.82rem;
   font-weight: 950;
@@ -371,7 +404,7 @@ button {
 }
 
 .pool-chip strong {
-  color: #247760;
+  color: #10231d;
 }
 
 .pool-chip.drawn {
