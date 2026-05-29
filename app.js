@@ -588,14 +588,30 @@ function renderGroups() {
 
 function renderPlayerPool() {
   const remainingIds = new Set(state.remaining.map((player) => player.id));
-  els.playerPool.innerHTML = players
-    .map((player) => {
-      const isDrawn = !remainingIds.has(player.id);
+  els.playerPool.innerHTML = [1, 2, 3, 4]
+    .map((tier) => {
+      const tierPlayers = players.filter((player) => player.tier === tier);
+      const drawnCount = tierPlayers.filter((player) => !remainingIds.has(player.id)).length;
+      const chips = tierPlayers
+        .map((player) => {
+          const isDrawn = !remainingIds.has(player.id);
+          return `
+            <span class="pool-chip ${isDrawn ? "drawn" : ""}" style="--tier-color:${playerTierColor(player)}">
+              <strong>P${player.id}</strong>
+              <span>${escapeHTML(player.name)}</span>
+            </span>
+          `;
+        })
+        .join("");
+
       return `
-        <span class="pool-chip ${isDrawn ? "drawn" : ""}" style="--tier-color:${playerTierColor(player)}">
-          <strong>P${player.id}</strong>
-          <span>${escapeHTML(player.name)}</span>
-        </span>
+        <section class="pot-section" style="--tier-color:${tierColors[tier - 1]}">
+          <div class="pot-head">
+            <strong>POT ${tier}</strong>
+            <span>${drawnCount}/12</span>
+          </div>
+          <div class="pot-grid">${chips}</div>
+        </section>
       `;
     })
     .join("");
