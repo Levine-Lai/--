@@ -244,29 +244,9 @@ button {
   min-width: 0;
   border: 2px solid var(--line);
   border-radius: 8px;
-  background: var(--group-bg, var(--panel));
+  background: #fff5cf;
   box-shadow: 3px 4px 0 rgba(38, 48, 43, 0.12);
   padding: 12px;
-}
-
-.group-card:nth-child(4n + 1) {
-  --group-bg: #fff5cf;
-  --slot-bg: #fffaf0;
-}
-
-.group-card:nth-child(4n + 2) {
-  --group-bg: #dff3ec;
-  --slot-bg: #f3fbf7;
-}
-
-.group-card:nth-child(4n + 3) {
-  --group-bg: #e9efff;
-  --slot-bg: #f7f9ff;
-}
-
-.group-card:nth-child(4n) {
-  --group-bg: #ffe8df;
-  --slot-bg: #fff7f3;
 }
 
 .group-title {
@@ -301,7 +281,7 @@ button {
   padding: 8px;
   border: 2px solid var(--line);
   border-radius: 4px;
-  background: var(--slot-bg, #fffdf8);
+  background: #fffaf0;
 }
 
 .slot-row.filled {
