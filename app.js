@@ -418,6 +418,13 @@ let modalTimer = null;
 
 const machineCtx = els.machineCanvas.getContext("2d");
 const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+const bowlPhysics = {
+  centerX: 290,
+  centerY: 240,
+  radius: 174,
+  exitX: 304,
+  exitY: 402,
+};
 let machineBalls = [];
 let releaseVisual = null;
 let lastMachineTime = 0;
@@ -497,6 +504,41 @@ function currentMachinePlayers() {
   if (!nextSlot) return [];
 
   return state.remaining.filter((player) => player.tier === nextSlot.position);
+}
+
+function settledBallPosition(index, count, size) {
+  const rows = count > 9
+    ? [5, 4, count - 9]
+    : count > 5
+      ? [5, count - 5]
+      : [count];
+  const gapX = size * 1.72;
+  const gapY = size * 1.66;
+  let offset = 0;
+
+  for (let row = 0; row < rows.length; row += 1) {
+    const rowCount = rows[row];
+    if (index >= offset + rowCount) {
+      offset += rowCount;
+      continue;
+    }
+
+    const rowIndex = index - offset;
+    const x = bowlPhysics.centerX + (rowIndex - (rowCount - 1) / 2) * gapX + row * size * 0.18;
+    const maxRadius = bowlPhysics.radius - size;
+    const dx = x - bowlPhysics.centerX;
+    const floorY = bowlPhysics.centerY + Math.sqrt(Math.max(0, maxRadius ** 2 - dx ** 2));
+
+    return {
+      x,
+      y: floorY - row * gapY,
+    };
+  }
+
+  return {
+    x: bowlPhysics.centerX,
+    y: bowlPhysics.centerY + bowlPhysics.radius - size,
+  };
 }
 
 function renderRegionSwitch() {
@@ -622,19 +664,18 @@ function updateMachineBalls() {
 
   machineBalls = activePlayers.map((player, index) => {
     const count = Math.max(activePlayers.length, 1);
-    const radiusRatio = Math.sqrt((index + 0.5) / count);
-    const angle = index * goldenAngle;
-    const radius = 18 + radiusRatio * 122;
+    const size = 26 + (index % 3);
+    const rest = settledBallPosition(index, count, size);
 
     return {
       player,
-      x: 290 + Math.cos(angle) * radius,
-      y: 240 + Math.sin(angle) * radius,
-      vx: Math.sin(index * 1.91) * 24,
-      vy: Math.cos(index * 1.37) * 24,
-      angle,
+      x: rest.x,
+      y: rest.y,
+      vx: 0,
+      vy: 0,
+      angle: index * goldenAngle,
       spin: 0,
-      size: 26 + (index % 3),
+      size,
       fill: playerTierColor(player),
       darkFill: playerTierDarkColor(player),
     };
@@ -739,9 +780,9 @@ function drawGlassBowl(time) {
 }
 
 function constrainBall(ball) {
-  const centerX = 290;
-  const centerY = 240;
-  const maxRadius = 160 - ball.size;
+  const centerX = bowlPhysics.centerX;
+  const centerY = bowlPhysics.centerY;
+  const maxRadius = bowlPhysics.radius - ball.size;
   const dx = ball.x - centerX;
   const dy = ball.y - centerY;
   const distance = Math.hypot(dx, dy) || 1;
@@ -767,23 +808,31 @@ function stepMachinePhysics(time) {
   lastMachineTime = time;
   if (!state.isSpinning && !state.isReleasing) return;
 
-  const centerX = 290;
-  const centerY = 240;
+  const centerX = bowlPhysics.centerX;
+  const centerY = bowlPhysics.centerY;
   const balls = machineBalls.filter((ball) => ball.player.id !== releaseVisual?.player.id);
 
   balls.forEach((ball, index) => {
     const dx = ball.x - centerX;
     const dy = ball.y - centerY;
     const distance = Math.hypot(dx, dy) || 1;
-    const tangentX = -dy / distance;
-    const tangentY = dx / distance;
-    const noise = Math.sin(time * 0.012 + index * 3.41);
-    const pulse = Math.cos(time * 0.009 + index * 2.13);
 
-    ball.vx += (tangentX * 360 + noise * 180 - dx * 1.15) * dt;
-    ball.vy += (tangentY * 360 + pulse * 180 - dy * 1.15) * dt;
-    ball.vx *= 0.988;
-    ball.vy *= 0.988;
+    if (state.isSpinning) {
+      const tangentX = -dy / distance;
+      const tangentY = dx / distance;
+      const noise = Math.sin(time * 0.012 + index * 3.41);
+      const pulse = Math.cos(time * 0.009 + index * 2.13);
+
+      ball.vx += (tangentX * 360 + noise * 180 - dx * 1.15) * dt;
+      ball.vy += (tangentY * 360 + pulse * 180 - dy * 1.15) * dt;
+      ball.vx *= 0.988;
+      ball.vy *= 0.988;
+    } else {
+      ball.vy += 620 * dt;
+      ball.vx *= 0.968;
+      ball.vy *= 0.978;
+    }
+
     ball.x += ball.vx * dt;
     ball.y += ball.vy * dt;
     ball.spin += (ball.vx + ball.vy) * dt * 0.04;
@@ -866,6 +915,31 @@ function drawBalls(time) {
   });
 }
 
+function chooseExitPlayer() {
+  const nextSlot = slots[state.assignments.length];
+  const currentTier = nextSlot?.position || 1;
+  const candidateBalls = machineBalls
+    .filter((ball) =>
+      ball.player.tier === currentTier &&
+      state.remaining.some((player) => player.id === ball.player.id)
+    )
+    .map((ball) => ({
+      ball,
+      distance: Math.hypot(ball.x - bowlPhysics.exitX, ball.y - bowlPhysics.exitY),
+    }))
+    .sort((a, b) => a.distance - b.distance);
+
+  if (candidateBalls.length) {
+    const player = candidateBalls[0].ball.player;
+    return {
+      player,
+      randomIndex: state.remaining.findIndex((item) => item.id === player.id),
+    };
+  }
+
+  return chooseRemainingPlayer();
+}
+
 function drawTube() {
   const tubePath = new Path2D();
   tubePath.moveTo(304, 402);
@@ -915,14 +989,29 @@ function drawBase() {
   machineCtx.restore();
 }
 
-function releasePoint(progress) {
+function releasePoint(progress, visual = releaseVisual) {
   const p = Math.min(Math.max(progress, 0), 1);
+  const entryEnd = 0.22;
   const curveEnd = 0.46;
+  const entry = { x: bowlPhysics.exitX, y: bowlPhysics.exitY };
+  const start = visual?.start || entry;
 
-  if (p <= curveEnd) {
-    const t = p / curveEnd;
+  if (p <= entryEnd) {
+    const t = p / entryEnd;
+    const eased = 1 - (1 - t) ** 2;
+
+    return {
+      x: start.x + (entry.x - start.x) * eased,
+      y: start.y + (entry.y - start.y) * eased,
+    };
+  }
+
+  const tubeProgress = (p - entryEnd) / (1 - entryEnd);
+
+  if (tubeProgress <= curveEnd) {
+    const t = tubeProgress / curveEnd;
     const inv = 1 - t;
-    const start = { x: 304, y: 402 };
+    const start = entry;
     const control = { x: 306, y: 462 };
     const end = { x: 372, y: 462 };
 
@@ -932,7 +1021,7 @@ function releasePoint(progress) {
     };
   }
 
-  const t = (p - curveEnd) / (1 - curveEnd);
+  const t = (tubeProgress - curveEnd) / (1 - curveEnd);
 
   return {
     x: 372 + (602 - 372) * t,
@@ -947,8 +1036,8 @@ function drawReleaseBall(time) {
   const eased = Math.min(progress, 1) < 0.55
     ? 2 * Math.min(progress, 1) ** 2
     : 1 - (-2 * Math.min(progress, 1) + 2) ** 2 / 2;
-  const point = releasePoint(eased);
-  const inPipeAlpha = eased < 0.9 ? 0.34 + eased * 0.32 : 1;
+  const point = releasePoint(eased, releaseVisual);
+  const inPipeAlpha = eased < 0.22 ? 1 : eased < 0.9 ? 0.34 + eased * 0.32 : 1;
   drawBall(
     point.x,
     point.y,
@@ -994,6 +1083,10 @@ function launchBall(player) {
     color: playerTierColor(player),
     darkColor: playerTierDarkColor(player),
     size: sourceBall?.size || 27,
+    start: {
+      x: sourceBall?.x || bowlPhysics.exitX,
+      y: sourceBall?.y || bowlPhysics.exitY,
+    },
     startedAt: performance.now(),
   };
   drawMachine(releaseVisual.startedAt);
@@ -1025,7 +1118,7 @@ function releaseBall() {
   if (!state.isSpinning || state.isReleasing || state.remaining.length === 0) return;
 
   const slot = slots[state.assignments.length];
-  const { player, randomIndex } = chooseRemainingPlayer();
+  const { player, randomIndex } = chooseExitPlayer();
 
   state.isSpinning = false;
   state.isReleasing = true;
