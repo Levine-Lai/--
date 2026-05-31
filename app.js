@@ -512,8 +512,8 @@ function settledBallPosition(index, count, size) {
     : count > 5
       ? [5, count - 5]
       : [count];
-  const gapX = size * 1.72;
-  const gapY = size * 1.66;
+  const gapX = 62;
+  const gapY = 60;
   let offset = 0;
 
   for (let row = 0; row < rows.length; row += 1) {
@@ -524,7 +524,8 @@ function settledBallPosition(index, count, size) {
     }
 
     const rowIndex = index - offset;
-    const x = bowlPhysics.centerX + (rowIndex - (rowCount - 1) / 2) * gapX + row * size * 0.18;
+    const stagger = row % 2 === 1 ? gapX / 2 : 0;
+    const x = bowlPhysics.centerX + (rowIndex - (rowCount - 1) / 2) * gapX + stagger;
     const maxRadius = bowlPhysics.radius - size;
     const dx = x - bowlPhysics.centerX;
     const floorY = bowlPhysics.centerY + Math.sqrt(Math.max(0, maxRadius ** 2 - dx ** 2));
@@ -820,13 +821,13 @@ function stepMachinePhysics(time) {
     if (state.isSpinning) {
       const tangentX = -dy / distance;
       const tangentY = dx / distance;
-      const noise = Math.sin(time * 0.012 + index * 3.41);
-      const pulse = Math.cos(time * 0.009 + index * 2.13);
+      const noise = Math.sin(time * 0.018 + index * 3.41);
+      const pulse = Math.cos(time * 0.015 + index * 2.13);
 
-      ball.vx += (tangentX * 360 + noise * 180 - dx * 1.15) * dt;
-      ball.vy += (tangentY * 360 + pulse * 180 - dy * 1.15) * dt;
-      ball.vx *= 0.988;
-      ball.vy *= 0.988;
+      ball.vx += (tangentX * 640 + noise * 360 + dx * pulse * 0.9 - dx * 0.62) * dt;
+      ball.vy += (tangentY * 640 + pulse * 340 + dy * noise * 0.9 - dy * 0.62) * dt;
+      ball.vx *= 0.994;
+      ball.vy *= 0.994;
     } else {
       ball.vy += 620 * dt;
       ball.vx *= 0.968;
@@ -1067,6 +1068,12 @@ function startDraw() {
   if (state.isSpinning || state.isReleasing || state.assignments.length >= slots.length) return;
 
   clearTimeout(modalTimer);
+  machineBalls.forEach((ball, index) => {
+    const burst = 260 + (index % 4) * 80;
+    const angle = index * goldenAngle + Math.random() * 0.75;
+    ball.vx += Math.cos(angle) * burst + (Math.random() - 0.5) * 260;
+    ball.vy += Math.sin(angle) * burst - 220 - Math.random() * 260;
+  });
   state.isSpinning = true;
   state.modalPending = false;
   state.modalOpen = false;
