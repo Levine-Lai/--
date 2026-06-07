@@ -387,6 +387,9 @@ const els = {
   resultModal: document.querySelector("#resultModal"),
   closeModalBtn: document.querySelector("#closeModalBtn"),
   modalText: document.querySelector("#modalText"),
+  resetModal: document.querySelector("#resetModal"),
+  cancelResetBtn: document.querySelector("#cancelResetBtn"),
+  confirmResetBtn: document.querySelector("#confirmResetBtn"),
 };
 
 function createDrawState(regionPlayers) {
@@ -1155,6 +1158,20 @@ function closeResultModal() {
   renderControls();
 }
 
+function openResetConfirm() {
+  if (state.isReleasing) return;
+  els.resetModal.hidden = false;
+}
+
+function closeResetConfirm() {
+  els.resetModal.hidden = true;
+}
+
+function confirmResetDraw() {
+  closeResetConfirm();
+  resetDraw();
+}
+
 function completeRandomGroups() {
   if (state.isSpinning || state.isReleasing || state.assignments.length >= slots.length) return;
 
@@ -1428,18 +1445,6 @@ function drawPosterBackdrop(ctx, width, height, title, subtitle) {
   ctx.fillRect(0, 0, width, height);
   ctx.restore();
 
-  ctx.save();
-  ctx.globalAlpha = 0.08;
-  ctx.strokeStyle = "#fff4d8";
-  ctx.lineWidth = 2;
-  for (let x = -height; x < width; x += 86) {
-    ctx.beginPath();
-    ctx.moveTo(x, height);
-    ctx.lineTo(x + height, 0);
-    ctx.stroke();
-  }
-  ctx.restore();
-
   ctx.fillStyle = "rgba(255, 244, 216, 0.04)";
   ctx.font = "950 440px Arial Black, Impact, sans-serif";
   ctx.textAlign = "center";
@@ -1462,6 +1467,39 @@ function drawPosterBackdrop(ctx, width, height, title, subtitle) {
 
 function playerNameForSlot(bySlot, key) {
   return bySlot.get(key)?.player.name || key;
+}
+
+function teamForSlotKey(key) {
+  const group = groups.find((item) => item.letter === key.slice(0, 1));
+  const position = Number(key.slice(1));
+  return group?.teams[position - 1] || null;
+}
+
+function drawSchedulePlayer(ctx, flagImages, team, label, x, y, maxWidth, align = "left") {
+  const flagW = 28;
+  const flagH = 20;
+  const gap = 9;
+  const blockX = align === "right" ? x - maxWidth : x;
+  const flagY = y - flagH / 2 - 1;
+
+  if (team) {
+    drawPosterFlag(
+      ctx,
+      flagImages.get(team.code),
+      team,
+      blockX,
+      flagY,
+      flagW,
+      flagH,
+      "rgba(255, 244, 216, 0.58)"
+    );
+  }
+
+  fittedText(ctx, label, blockX + flagW + gap, y, maxWidth - flagW - gap, {
+    fontSize: 21,
+    minFontSize: 14,
+    color: "#fff4d8",
+  });
 }
 
 function matchGameweek(match) {
@@ -1582,9 +1620,15 @@ async function drawPoster() {
   }, "image/png");
 }
 
-function drawSchedulePoster() {
+async function drawSchedulePoster() {
   if (state.assignments.length < slots.length) return;
 
+  const flagEntries = await Promise.all(
+    groups.flatMap((group) =>
+      group.teams.map(async (team) => [team.code, await loadPosterFlag(team)])
+    )
+  );
+  const flagImages = new Map(flagEntries);
   const canvas = document.createElement("canvas");
   canvas.width = 1800;
   canvas.height = 2400;
@@ -1657,23 +1701,31 @@ function drawSchedulePoster() {
         minFontSize: 13,
         color: "#f4c84f",
       });
-      fittedText(ctx, playerNameForSlot(bySlot, match.home), rowX + 14, rowY + rowH - 20, 174, {
-        fontSize: 21,
-        minFontSize: 14,
-        color: "#fff4d8",
-      });
+      drawSchedulePlayer(
+        ctx,
+        flagImages,
+        teamForSlotKey(match.home),
+        playerNameForSlot(bySlot, match.home),
+        rowX + 14,
+        rowY + rowH - 20,
+        194
+      );
       fittedText(ctx, "VS", rowX + colW / 2, rowY + rowH - 20, 42, {
         fontSize: 18,
         minFontSize: 15,
         color: accent,
         align: "center",
       });
-      fittedText(ctx, playerNameForSlot(bySlot, match.away), rowX + colW - 14, rowY + rowH - 20, 174, {
-        fontSize: 21,
-        minFontSize: 14,
-        color: "#fff4d8",
-        align: "right",
-      });
+      drawSchedulePlayer(
+        ctx,
+        flagImages,
+        teamForSlotKey(match.away),
+        playerNameForSlot(bySlot, match.away),
+        rowX + colW - 14,
+        rowY + rowH - 20,
+        194,
+        "right"
+      );
     });
 
     ctx.restore();
@@ -1911,7 +1963,9 @@ function downloadBlob(blob, filename) {
 els.startBtn.addEventListener("click", startDraw);
 els.releaseBtn.addEventListener("click", releaseBall);
 els.autoBtn.addEventListener("click", completeRandomGroups);
-els.resetBtn.addEventListener("click", resetDraw);
+els.resetBtn.addEventListener("click", openResetConfirm);
+els.cancelResetBtn.addEventListener("click", closeResetConfirm);
+els.confirmResetBtn.addEventListener("click", confirmResetDraw);
 els.posterBtn.addEventListener("click", drawPoster);
 els.schedulePosterBtn.addEventListener("click", drawSchedulePoster);
 els.excelBtn.addEventListener("click", exportExcel);
@@ -1924,8 +1978,14 @@ els.closeModalBtn.addEventListener("click", closeResultModal);
 els.resultModal.addEventListener("click", (event) => {
   if (event.target === els.resultModal) closeResultModal();
 });
+els.resetModal.addEventListener("click", (event) => {
+  if (event.target === els.resetModal) closeResetConfirm();
+});
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") closeResultModal();
+  if (event.key === "Escape") {
+    closeResultModal();
+    closeResetConfirm();
+  }
 });
 
 restoreState();

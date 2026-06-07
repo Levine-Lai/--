@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>企鹅世界杯Fantasy抽签</title>
-    <link rel="stylesheet" href="./styles.css?v=20260531-gravity2" />
+    <link rel="stylesheet" href="./styles.css?v=20260607-reset-flags" />
   </head>
   <body>
     <main class="app-shell">
@@ -67,6 +67,17 @@
       </section>
     </div>
 
-    <script src="./app.js?v=20260531-gravity2"></script>
+    <div class="modal-backdrop" id="resetModal" hidden>
+      <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle">
+        <h2 id="resetTitle">确认重置？</h2>
+        <p>当前赛区的抽签结果会被清空。</p>
+        <div class="confirm-actions">
+          <button class="soft-btn" id="cancelResetBtn" type="button">取消</button>
+          <button class="soft-btn danger" id="confirmResetBtn" type="button">确认重置</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js?v=20260607-reset-flags"></script>
   </body>
 </html>

@@ -168,6 +168,7 @@ button {
   display: grid;
   gap: 14px;
   padding: 14px 16px 16px;
+  background: #eaf5ff;
   overflow: visible;
 }
 
@@ -487,6 +488,25 @@ button {
   transform: rotate(-3deg);
 }
 
+.confirm-modal {
+  width: min(420px, 92vw);
+  padding-top: 34px;
+}
+
+.confirm-modal h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 1.55rem;
+  line-height: 1.15;
+}
+
+.confirm-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 22px;
+}
+
 .close-btn {
   position: absolute;
   right: 12px;
@@ -512,6 +532,14 @@ button {
   font-size: 1.22rem;
   font-weight: 500;
   line-height: 1.65;
+}
+
+.confirm-modal p {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.5;
 }
 
 .modal-line {
