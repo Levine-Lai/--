@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>企鹅世界杯Fantasy抽签</title>
-    <link rel="stylesheet" href="./styles.css?v=20260607-reset-flags" />
+    <title>企鹅欧冠 Fantasy 球队抽签</title>
+    <link rel="stylesheet" href="./styles.css?v=20260831-ucl5" />
   </head>
   <body>
     <main class="app-shell">
@@ -12,22 +12,25 @@
         <div>
           <div class="brand-title">
             <img class="title-mascot" src="./assets/title-mascot.png" alt="" aria-hidden="true" />
-            <h1>企鹅世界杯 Fantasy 分组抽签</h1>
+            <div>
+              <p class="eyebrow">2026/27 UEFA CHAMPIONS LEAGUE</p>
+              <h1>企鹅欧冠 Fantasy 球队抽签</h1>
+            </div>
           </div>
         </div>
         <div class="top-actions">
-          <div class="counter"><span id="drawCount">0</span><small>/48</small></div>
+          <div class="stage-pill" id="stagePill">Pot 1 · 1/9</div>
+          <div class="counter"><span id="drawCount">0</span><small>/36</small></div>
           <div class="export-actions" id="exportActions" hidden>
-            <button class="soft-btn" id="posterBtn" type="button">导出分组结果海报</button>
-            <button class="soft-btn" id="schedulePosterBtn" type="button">导出赛程海报</button>
-            <button class="soft-btn" id="excelBtn" type="button">导出分组结果表格</button>
+            <button class="soft-btn" id="exportBtn" type="button">导出球队对应名单</button>
           </div>
         </div>
       </header>
 
       <section class="workspace">
         <section class="draw-panel" id="drawPanel" aria-label="抽签机器">
-          <div class="region-switch" id="regionSwitch" aria-label="赛区切换"></div>
+          <div class="region-switch" id="regionSwitch" aria-label="南北极赛区切换"></div>
+          <div class="machine-meta"><strong id="nextTeamLabel">Pot 1 · 巴黎圣日耳曼</strong></div>
           <div class="machine" id="machine">
             <canvas
               class="machine-canvas"
@@ -39,38 +42,58 @@
           </div>
 
           <div class="controls">
-            <button class="primary-btn" id="startBtn" type="button">开始抽签</button>
-            <button class="primary-btn line" id="releaseBtn" type="button">出球</button>
-            <button class="soft-btn" id="autoBtn" type="button">直接生成分组</button>
-            <button class="soft-btn danger" id="resetBtn" type="button">重置</button>
+            <button class="primary-btn draw-button" id="startBtn" type="button">抽签</button>
+            <div class="secondary-controls">
+              <button class="soft-btn" id="autoBtn" type="button">直接生成名单</button>
+              <button class="soft-btn danger" id="resetBtn" type="button">重置</button>
+            </div>
           </div>
         </section>
 
-        <section class="groups-panel" aria-label="分组情况">
+        <section class="groups-panel" aria-label="欧冠四档球队与经理人对应情况">
+          <div class="pots-intro">
+            <div>
+              <h2>欧冠联赛阶段</h2>
+            </div>
+          </div>
           <div class="groups-grid" id="groupsGrid"></div>
         </section>
       </section>
 
-      <section class="player-pool" aria-label="玩家池">
+      <section class="player-pool" aria-label="经理人池">
         <div class="pool-head">
-          <h2>玩家池</h2>
-          <span id="remainingCount">48 人待抽</span>
+          <div>
+            <h2>经理人</h2>
+          </div>
+          <span id="remainingCount">36 人待抽</span>
         </div>
         <div class="pool-scroll" id="playerPool"></div>
       </section>
     </main>
 
     <div class="modal-backdrop" id="resultModal" hidden>
-      <section class="result-modal" role="dialog" aria-modal="true" aria-labelledby="modalText">
+      <section class="result-modal draw-paper-modal" role="dialog" aria-modal="true" aria-labelledby="modalText">
         <button class="close-btn" id="closeModalBtn" type="button" aria-label="关闭">×</button>
-        <p id="modalText"></p>
+        <div class="draw-paper-header" aria-hidden="true"></div>
+        <p class="draw-paper-body" id="modalText"></p>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="autoModal" hidden>
+      <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="autoTitle">
+        <h2 id="autoTitle">确认直接生成名单？</h2>
+        <p>剩余球队将立即随机匹配经理人。</p>
+        <div class="confirm-actions">
+          <button class="soft-btn" id="cancelAutoBtn" type="button">取消</button>
+          <button class="soft-btn danger" id="confirmAutoBtn" type="button">确认生成</button>
+        </div>
       </section>
     </div>
 
     <div class="modal-backdrop" id="resetModal" hidden>
       <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle">
         <h2 id="resetTitle">确认重置？</h2>
-        <p>当前赛区的抽签结果会被清空。</p>
+        <p>当前赛区的抽签结果会被清空，已随机选中的 36 位经理人保持不变。</p>
         <div class="confirm-actions">
           <button class="soft-btn" id="cancelResetBtn" type="button">取消</button>
           <button class="soft-btn danger" id="confirmResetBtn" type="button">确认重置</button>
@@ -78,6 +101,6 @@
       </section>
     </div>
 
-    <script src="./app.js?v=20260607-reset-flags"></script>
+    <script src="./ucl-app.js?v=20260831-ucl3"></script>
   </body>
 </html>
