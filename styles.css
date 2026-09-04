@@ -34,6 +34,8 @@ h1, h2, .modal-backdrop p { margin: 0; }
 h1 { font-size: clamp(1.8rem, 3vw, 3.35rem); line-height: 0.98; letter-spacing: -0.04em; }
 .top-actions, .export-actions, .pool-head { display: flex; align-items: center; gap: 9px; }
 .top-actions { justify-content: flex-end; flex-wrap: wrap; }
+.export-actions { flex-wrap: wrap; justify-content: flex-end; }
+.export-image-btn { min-height: 40px; color: #ffffff; background: #173f86; box-shadow: inset 0 0 0 1px rgba(126, 233, 255, 0.42); }
 .counter, .stage-pill { display: flex; align-items: center; justify-content: center; height: 40px; padding: 0 14px; border-radius: 4px; background: rgba(10, 33, 91, 0.92); font-weight: 950; white-space: nowrap; }
 .stage-pill { color: var(--white); background: var(--uefa-blue); }
 .counter { gap: 2px; min-width: 74px; }
@@ -42,7 +44,7 @@ h1 { font-size: clamp(1.8rem, 3vw, 3.35rem); line-height: 0.98; letter-spacing: 
 .draw-panel, .groups-panel, .player-pool, .fixtures-panel, .schedules-panel { min-width: 0; border: 0; border-radius: 6px; background: rgba(7, 26, 82, 0.9); box-shadow: 0 16px 38px rgba(0, 0, 0, 0.2); }
 .draw-panel { position: sticky; top: 12px; display: grid; gap: 12px; padding: 14px 16px 16px; background: linear-gradient(155deg, #123b8d, #071a52); }
 .region-switch { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; padding: 4px; border-radius: 4px; background: #061442; }
-.region-tab { min-height: 38px; padding: 0 12px; border-radius: 2px; color: var(--muted); background: transparent; cursor: pointer; font-weight: 950; }
+.region-tab { min-height: 48px; padding: 6px 10px; border-radius: 2px; color: var(--muted); background: transparent; cursor: pointer; font-size: 0.78rem; font-weight: 950; line-height: 1.18; white-space: normal; }
 .region-tab.active { color: #00143e; background: var(--cyan); }
 .machine-meta { min-width: 0; color: var(--white); font-size: 0.8rem; text-align: center; }
 .machine-meta strong { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -109,8 +109,8 @@ function createCompetitionTeams(pots) {
 }
 
 const regionConfigs = [
-  { key: "arctic", label: "北极赛区", players: createCompetitionTeams(competitionPots.arctic) },
-  { key: "antarctic", label: "南极赛区", players: createCompetitionTeams(competitionPots.antarctic) },
+  { key: "arctic", label: "Shuo🐧北极赛区", players: createCompetitionTeams(competitionPots.arctic) },
+  { key: "antarctic", label: "小红书关注Acidboy🐧南极赛区", players: createCompetitionTeams(competitionPots.antarctic) },
 ];
 
 const slots = teamPots.flatMap((pot) =>
@@ -127,7 +127,8 @@ const els = {
   startBtn: document.querySelector("#startBtn"),
   autoBtn: document.querySelector("#autoBtn"),
   resetBtn: document.querySelector("#resetBtn"),
-  exportBtn: document.querySelector("#exportBtn"),
+  exportDrawBtn: document.querySelector("#exportDrawBtn"),
+  exportScheduleBtn: document.querySelector("#exportScheduleBtn"),
   exportActions: document.querySelector("#exportActions"),
   groupsGrid: document.querySelector("#groupsGrid"),
   playerPool: document.querySelector("#playerPool"),
@@ -983,42 +984,224 @@ function setActiveRegion(nextKey) {
   render();
 }
 
-function exportPairings() {
-  if (state.assignments.length !== slots.length) return;
+const exportFont = '"Microsoft YaHei", "PingFang SC", Arial, sans-serif';
+
+function paintExportBackground(ctx, width, height) {
+  const gradient = ctx.createLinearGradient(0, 0, width, height);
+  gradient.addColorStop(0, "#020628");
+  gradient.addColorStop(0.52, "#00134f");
+  gradient.addColorStop(1, "#123b8d");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = "rgba(0, 201, 255, 0.1)";
+  ctx.beginPath();
+  ctx.arc(width * 0.84, 0, width * 0.34, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function fillRoundRect(ctx, x, y, width, height, radius, color) {
+  ctx.beginPath();
+  ctx.roundRect(x, y, width, height, radius);
+  ctx.fillStyle = color;
+  ctx.fill();
+}
+
+function drawFittedText(ctx, text, x, y, maxWidth, size, color, options = {}) {
+  const { weight = 900, align = "left", minSize = 12 } = options;
+  let fontSize = size;
+  do {
+    ctx.font = `${weight} ${fontSize}px ${exportFont}`;
+    if (ctx.measureText(text).width <= maxWidth) break;
+    fontSize -= 1;
+  } while (fontSize > minSize);
+  ctx.fillStyle = color;
+  ctx.textAlign = align;
+  ctx.textBaseline = "middle";
+  ctx.fillText(text, x, y, maxWidth);
+}
+
+function drawLogo(ctx, image, x, y, size) {
+  if (!image) return;
+  const ratio = Math.min(size / image.naturalWidth, size / image.naturalHeight);
+  const width = image.naturalWidth * ratio;
+  const height = image.naturalHeight * ratio;
+  ctx.drawImage(image, x + (size - width) / 2, y + (size - height) / 2, width, height);
+}
+
+function loadExportLogo(team) {
+  return new Promise((resolve) => {
+    const image = new Image();
+    let settled = false;
+    const finish = (loadedImage) => {
+      if (settled) return;
+      settled = true;
+      window.clearTimeout(timeout);
+      resolve([team.id, loadedImage]);
+    };
+    const timeout = window.setTimeout(() => finish(null), 8000);
+    image.crossOrigin = "anonymous";
+    image.onload = () => finish(image);
+    image.onerror = () => finish(null);
+    image.src = logoUrl(team);
+  });
+}
+
+async function loadExportLogos() {
+  const teams = teamPots.flatMap((pot) => pot.teams);
+  return new Map(await Promise.all(teams.map(loadExportLogo)));
+}
+
+function createExportCanvas(width, height) {
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d");
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  paintExportBackground(ctx, width, height);
+  return { canvas, ctx };
+}
+
+function drawExportHeading(ctx, width, title) {
+  drawFittedText(ctx, activeRegion().label, 52, 54, width - 104, 32, "#00c9ff", { minSize: 22 });
+  drawFittedText(ctx, title, 52, 104, width - 104, 46, "#ffffff", { minSize: 30 });
+}
+
+async function createDrawResultImage() {
+  const logos = await loadExportLogos();
+  const { canvas, ctx } = createExportCanvas(2100, 1260);
+  const bySlot = assignmentMap();
+  const margin = 44;
+  const columnGap = 12;
+  const columnWidth = (canvas.width - margin * 2 - columnGap * 3) / 4;
+  const top = 158;
+  const titleHeight = 54;
+  const rowHeight = 108;
+
+  drawExportHeading(ctx, canvas.width, "欧冠球队抽签结果");
+  teamPots.forEach((pot, potIndex) => {
+    const x = margin + potIndex * (columnWidth + columnGap);
+    fillRoundRect(ctx, x, top, columnWidth, titleHeight, 8, potColors[potIndex]);
+    drawFittedText(ctx, `Pot ${pot.number}`, x + 18, top + titleHeight / 2, columnWidth - 36, 28, "#06133c");
+
+    pot.teams.forEach((team, teamIndex) => {
+      const y = top + titleHeight + teamIndex * rowHeight;
+      const assignment = bySlot.get(`P${pot.number}-${teamIndex + 1}`);
+      ctx.fillStyle = teamIndex % 2 ? "#183a7c" : "#102b68";
+      ctx.fillRect(x, y + 4, columnWidth, rowHeight - 4);
+      drawLogo(ctx, logos.get(team.id), x + 14, y + 20, 64);
+      drawFittedText(ctx, team.zh, x + 92, y + 37, columnWidth - 110, 22, "#7ee9ff", { minSize: 16 });
+      drawFittedText(ctx, assignment?.player.name || "—", x + 92, y + 73, columnWidth - 110, 30, "#ffffff", { minSize: 18 });
+    });
+  });
+  return canvas;
+}
+
+async function createScheduleImage() {
+  const logos = await loadExportLogos();
+  const { canvas, ctx } = createExportCanvas(3300, 2780);
   const players = activeRegion().players;
   const playersById = new Map(players.map((player) => [player.id, player]));
-  const fixtureKeys = [1, 2, 3, 4].flatMap((pot) => [`p${pot}Home`, `p${pot}Away`]);
-  const rows = [
-    ["赛区", "抽中球队档位", "档内顺序", "抽中球队", "英文名", "经理人", "经理人分档", "Pot 1 主", "Pot 1 客", "Pot 2 主", "Pot 2 客", "Pot 3 主", "Pot 3 客", "Pot 4 主", "Pot 4 客"],
-    ...state.assignments.map(({ player, slot }) => [
-      activeRegion().label,
-      `Pot ${slot.pot}`,
-      slot.position,
-      slot.team.zh,
-      slot.team.name,
-      player.name,
-      `Pot ${player.pot}`,
-      ...fixtureKeys.map((key) => playersById.get(state.fixtures[player.id][key]).name),
-    ]),
-  ];
-  const csv = rows
-    .map((row) => row.map((value) => `"${String(value).replaceAll('"', '""')}"`).join(","))
-    .join("\r\n");
-  const blob = new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement("a");
-  link.href = url;
-  link.download = `企鹅欧冠Fantasy_${activeRegion().label}_球队对应名单.csv`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
+  const assignmentsByPlayer = new Map(state.assignments.map((assignment) => [assignment.player.id, assignment]));
+  const margin = 35;
+  const cardGap = 10;
+  const cardWidth = (canvas.width - margin * 2 - cardGap * 8) / 9;
+  const rowTop = 154;
+  const potTitleHeight = 48;
+  const ownerHeight = 82;
+  const matchHeight = 62;
+  const potGap = 30;
+  const potRowHeight = potTitleHeight + ownerHeight + matchHeight * 8;
+
+  drawExportHeading(ctx, canvas.width, "欧冠联赛阶段对阵");
+  [1, 2, 3, 4].forEach((pot, potIndex) => {
+    const y = rowTop + potIndex * (potRowHeight + potGap);
+    const potColor = potColors[potIndex];
+    fillRoundRect(ctx, margin, y, 160, potTitleHeight - 6, 7, potColor);
+    drawFittedText(ctx, `Pot ${pot}`, margin + 18, y + 21, 124, 25, "#06133c");
+
+    players.filter((player) => player.pot === pot).forEach((player, playerIndex) => {
+      const x = margin + playerIndex * (cardWidth + cardGap);
+      const assignment = assignmentsByPlayer.get(player.id);
+      const cardY = y + potTitleHeight;
+      ctx.fillStyle = "#071a52";
+      ctx.fillRect(x, cardY, cardWidth, ownerHeight + matchHeight * 8);
+      ctx.fillStyle = potColor;
+      ctx.fillRect(x, cardY, cardWidth, 7);
+      drawLogo(ctx, logos.get(assignment.slot.team.id), x + 15, cardY + 19, 48);
+      drawFittedText(ctx, player.name, x + 78, cardY + 43, cardWidth - 94, 25, "#ffffff", { minSize: 15 });
+
+      fixtureColumns.forEach((column, matchIndex) => {
+        const opponent = playersById.get(state.fixtures[player.id][column.key]);
+        const opponentAssignment = assignmentsByPlayer.get(opponent.id);
+        const matchY = cardY + ownerHeight + matchIndex * matchHeight;
+        const isHome = column.venue === "home";
+        ctx.fillStyle = isHome ? "#102b68" : "#183a7c";
+        ctx.fillRect(x + 3, matchY + 2, cardWidth - 6, matchHeight - 2);
+        ctx.fillStyle = isHome ? "#00c9ff" : "#e11d8d";
+        ctx.fillRect(x + 3, matchY + 2, 4, matchHeight - 2);
+        drawFittedText(ctx, `Pot ${column.pot}`, x + 14, matchY + 15, 82, 15, "#b7c7ec", { weight: 800 });
+        drawFittedText(ctx, column.label, x + cardWidth - 14, matchY + 15, 70, 15, isHome ? "#00c9ff" : "#ff9bd4", { align: "right" });
+        drawLogo(ctx, logos.get(opponentAssignment.slot.team.id), x + 14, matchY + 22, 34);
+        drawFittedText(ctx, opponent.name, x + 58, matchY + 43, cardWidth - 74, 21, "#ffffff", { minSize: 13 });
+      });
+    });
+  });
+  return canvas;
+}
+
+function safeFilePart(value) {
+  return value.replace(/[\\/:*?"<>|]/g, "");
+}
+
+function downloadCanvas(canvas, filename) {
+  return new Promise((resolve, reject) => {
+    try {
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          reject(new Error("图片生成失败"));
+          return;
+        }
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+        resolve();
+      }, "image/png");
+    } catch (error) {
+      reject(error);
+    }
+  });
+}
+
+async function runImageExport(button, label, createImage) {
+  if (state.assignments.length !== slots.length || !state.fixtures) return;
+  const originalText = button.textContent;
+  els.exportDrawBtn.disabled = true;
+  els.exportScheduleBtn.disabled = true;
+  button.textContent = "生成中…";
+  try {
+    const canvas = await createImage();
+    await downloadCanvas(canvas, `企鹅欧冠Fantasy_${safeFilePart(activeRegion().label)}_${label}.png`);
+  } catch (error) {
+    console.error(error);
+    window.alert("图片导出失败，请重试");
+  } finally {
+    button.textContent = originalText;
+    els.exportDrawBtn.disabled = false;
+    els.exportScheduleBtn.disabled = false;
+  }
 }
 
 els.startBtn.addEventListener("click", startDraw);
 els.autoBtn.addEventListener("click", openAutoConfirm);
 els.resetBtn.addEventListener("click", openResetConfirm);
-els.exportBtn.addEventListener("click", exportPairings);
+els.exportDrawBtn.addEventListener("click", () => runImageExport(els.exportDrawBtn, "抽签结果", createDrawResultImage));
+els.exportScheduleBtn.addEventListener("click", () => runImageExport(els.exportScheduleBtn, "对阵", createScheduleImage));
 els.cancelResetBtn.addEventListener("click", closeResetConfirm);
 els.confirmResetBtn.addEventListener("click", resetDraw);
 els.cancelAutoBtn.addEventListener("click", closeAutoConfirm);

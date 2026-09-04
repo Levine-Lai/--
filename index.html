@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>企鹅欧冠 Fantasy 球队抽签</title>
-    <link rel="stylesheet" href="./styles.css?v=20260904-fixtures6" />
+    <link rel="stylesheet" href="./styles.css?v=20260904-export1" />
   </head>
   <body>
     <main class="app-shell">
@@ -22,7 +22,8 @@
           <div class="stage-pill" id="stagePill">Pot 1 · 1/9</div>
           <div class="counter"><span id="drawCount">0</span><small>/36</small></div>
           <div class="export-actions" id="exportActions" hidden>
-            <button class="soft-btn" id="exportBtn" type="button">导出完整名单</button>
+            <button class="soft-btn export-image-btn" id="exportDrawBtn" type="button">导出抽签结果</button>
+            <button class="soft-btn export-image-btn" id="exportScheduleBtn" type="button">导出对阵</button>
           </div>
         </div>
       </header>
@@ -136,6 +137,6 @@
       </section>
     </div>
 
-    <script src="./ucl-app.js?v=20260904-fixtures6"></script>
+    <script src="./ucl-app.js?v=20260904-export1"></script>
   </body>
 </html>
