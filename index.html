@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>企鹅欧冠 Fantasy 球队抽签</title>
-    <link rel="stylesheet" href="./styles.css?v=20260831-ucl7" />
+    <link rel="stylesheet" href="./styles.css?v=20260904-fixtures6" />
   </head>
   <body>
     <main class="app-shell">
@@ -22,7 +22,7 @@
           <div class="stage-pill" id="stagePill">Pot 1 · 1/9</div>
           <div class="counter"><span id="drawCount">0</span><small>/36</small></div>
           <div class="export-actions" id="exportActions" hidden>
-            <button class="soft-btn" id="exportBtn" type="button">导出球队对应名单</button>
+            <button class="soft-btn" id="exportBtn" type="button">导出完整名单</button>
           </div>
         </div>
       </header>
@@ -60,14 +60,47 @@
         </section>
       </section>
 
-      <section class="player-pool" aria-label="经理人池">
+      <section class="player-pool" aria-label="经理人分档">
         <div class="pool-head">
           <div>
-            <h2>经理人</h2>
+            <h2>经理人分档</h2>
           </div>
-          <span id="remainingCount">36 人待抽</span>
+          <span id="remainingCount">36 人</span>
         </div>
         <div class="pool-scroll" id="playerPool"></div>
+      </section>
+
+      <section class="fixtures-panel" id="fixturesPanel" aria-label="完整对阵" hidden>
+        <div class="fixtures-head">
+          <h2>完整对阵</h2>
+          <span id="fixturesRegion"></span>
+        </div>
+        <div class="fixtures-scroll">
+          <table class="fixtures-table">
+            <thead>
+              <tr>
+                <th scope="col">经理人 / 球队</th>
+                <th scope="col">Pot 1 主</th>
+                <th scope="col">Pot 1 客</th>
+                <th scope="col">Pot 2 主</th>
+                <th scope="col">Pot 2 客</th>
+                <th scope="col">Pot 3 主</th>
+                <th scope="col">Pot 3 客</th>
+                <th scope="col">Pot 4 主</th>
+                <th scope="col">Pot 4 客</th>
+              </tr>
+            </thead>
+            <tbody id="fixturesBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="schedules-panel" id="schedulesPanel" aria-label="各队赛程" hidden>
+        <div class="schedules-head">
+          <h2>各队赛程</h2>
+          <span id="schedulesRegion"></span>
+        </div>
+        <div class="schedule-list" id="scheduleList"></div>
       </section>
     </main>
 
@@ -95,7 +128,7 @@
     <div class="modal-backdrop" id="resetModal" hidden>
       <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle">
         <h2 id="resetTitle">确认重置？</h2>
-        <p>当前赛区的抽签结果会被清空，已随机选中的 36 位经理人保持不变。</p>
+        <p>当前赛区的抽签和对阵结果会被清空。</p>
         <div class="confirm-actions">
           <button class="soft-btn" id="cancelResetBtn" type="button">取消</button>
           <button class="soft-btn danger" id="confirmResetBtn" type="button">确认重置</button>
@@ -103,6 +136,6 @@
       </section>
     </div>
 
-    <script src="./ucl-app.js?v=20260831-ucl3"></script>
+    <script src="./ucl-app.js?v=20260904-fixtures6"></script>
   </body>
 </html>

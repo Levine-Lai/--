@@ -4,12 +4,15 @@ const potDarkColors = ["#d9a92c", "#49a57f", "#678fc8", "#cf7767"];
 // 整机 memory：这是不可变的核心约束，界面和抽签逻辑均从这里读取。
 const MACHINE_MEMORY = Object.freeze({
   managerPoolSize: 36,
-  singleMachinePool: true,
+  potSize: 9,
+  oneMachineForAllPots: true,
+  drawByPot: true,
   preserveLegacyAnimation: true,
   spinDuration: 3000,
   releaseDuration: 2300,
   modalDelay: 1000,
 });
+const SHOW_FULL_FIXTURES = false;
 
 const teamPots = [
   {
@@ -70,22 +73,18 @@ const teamPots = [
   },
 ];
 
-const sourceManagers = {
+const competitionPots = {
   arctic: [
-    "francistasy", "DDDD", "andy", "大猫与火炮", "AVG", "511", "Enzo Wang", "LAD",
-    "丢屁", "antonius", "LeoDing", "Kimi", "ZHIYU", "nbw", "海笛", "GreyIi",
-    "糕灬福特", "青森山田", "Yemon", "Loki7_7", "小火龙", "Steven", "GaelClichy", "嘉进®平安",
-    "东马", "Nagimenz", "英国人画像", "fitz", "Acidboy", "Verydisco", "拙言", "Dannyyyyy",
-    "Shuo", "蒂亚鸽", "比尔", "Kevin", "Clark Sim", "狗蛋kk", "乳酸君", "香香软软的big b",
-    "星喵", "联曼", "Qunny", "珍惜眼前人❤️", "Havertz scores again", "Maxlee", "鸡米", "TK City",
+    ["UEFAntasis", "Bad K", "紫葱酱", "东马", "座山雕", "fitz", "Shuo", "AVG", "DDDD"],
+    ["狗蛋kk", "Diego W", "喝呀", "Kimi", "nbw", "baros15", "第一边锋萨默维尔", "Steven", "kusuri"],
+    ["当代丁蟹", "企鹅", "切尔西萌塔", "Pluto", "verydisco", "拙言", "W", "Kw", "欧巡"],
+    ["九命黑獭一统天下", "江逐流", "Eva", "Micky VDV", "殷少Eric", "x team", "Yamine Lmao", "镜落", "warmer"],
   ],
   antarctic: [
-    "笨笨是大骗子", "Dr. Mongodmundsson", "小新Jerry", "座山雕", "Conan Joe", "128", "Summerfan", "轻狂",
-    "喝呀", "remember", "zcnai", "小绿", "Bad K", "Ethan", "橘", "BA",
-    "ocean欧巡", "进藤光", "第一边锋萨默维尔", "halfbrain", "蒂兰基尔尼", "软糖", "kusuri", "Baros15",
-    "Pluto", "Jackiegu", "企鹅", "Team Name", "垫底超人00", "Chelsea mata", "SEAWUWU", "沙洛系咁队",
-    "Gladiator Mississippi", "fpl中搁浅的哲学家", "Eva", "diogo", "AnonTokyo", "可乐", "紫葱酱", "面条",
-    "Yeehc111", "鬼嗨", "patience", "Micky VDV", "开半天猪耳朵", "SSU-FAIAA", "X Team", "镜落",
+    ["Euro Ben", "remember", "进藤光", "LQ女神", "小火龙", "Acidboy", "yummy", "conan joe", "enzowang"],
+    ["蒂兰基尔尼", "Jiang", "Nirvana", "yu128", "丢屁", "lulucool", "halfbrain", "Snepia Fepson", "鬼嗨"],
+    ["Eric", "BA", "高桥明", "公瑾", "saru", "垫底超人00", "Dannyyyyy", "比尔", "纳尼"],
+    ["面条", "联曼", "珍惜眼前人❤️", "Frank Hua", "Elliott", "Lambert luo", "Y", "英国人画像", "ZHIYU"],
   ],
 };
 
@@ -98,20 +97,29 @@ function shuffle(list) {
   return copy;
 }
 
-function selectManagers(names) {
-  return shuffle(names)
-    .slice(0, MACHINE_MEMORY.managerPoolSize)
-    .map((name, index) => ({ id: index + 1, name }));
+function createCompetitionTeams(pots) {
+  return pots.flatMap((names, potIndex) =>
+    names.map((name, position) => ({
+      id: potIndex * 9 + position + 1,
+      name,
+      pot: potIndex + 1,
+      potPosition: position + 1,
+    }))
+  );
 }
 
 const regionConfigs = [
-  { key: "arctic", label: "北极赛区", players: selectManagers(sourceManagers.arctic) },
-  { key: "antarctic", label: "南极赛区", players: selectManagers(sourceManagers.antarctic) },
+  { key: "arctic", label: "北极赛区", players: createCompetitionTeams(competitionPots.arctic) },
+  { key: "antarctic", label: "南极赛区", players: createCompetitionTeams(competitionPots.antarctic) },
 ];
 
 const slots = teamPots.flatMap((pot) =>
   pot.teams.map((team, index) => ({ pot: pot.number, position: index + 1, team }))
 );
+const fixtureColumns = [1, 2, 3, 4].flatMap((pot) => [
+  { key: `p${pot}Home`, pot, venue: "home", label: "主场" },
+  { key: `p${pot}Away`, pot, venue: "away", label: "客场" },
+]);
 
 const els = {
   machineCanvas: document.querySelector("#machineCanvas"),
@@ -123,6 +131,12 @@ const els = {
   exportActions: document.querySelector("#exportActions"),
   groupsGrid: document.querySelector("#groupsGrid"),
   playerPool: document.querySelector("#playerPool"),
+  fixturesPanel: document.querySelector("#fixturesPanel"),
+  fixturesRegion: document.querySelector("#fixturesRegion"),
+  fixturesBody: document.querySelector("#fixturesBody"),
+  schedulesPanel: document.querySelector("#schedulesPanel"),
+  schedulesRegion: document.querySelector("#schedulesRegion"),
+  scheduleList: document.querySelector("#scheduleList"),
   drawCount: document.querySelector("#drawCount"),
   remainingCount: document.querySelector("#remainingCount"),
   stagePill: document.querySelector("#stagePill"),
@@ -142,6 +156,7 @@ function createDrawState(players) {
   return {
     assignments: [],
     remaining: [...players],
+    fixtures: null,
     isSpinning: false,
     isReleasing: false,
     modalPending: false,
@@ -198,6 +213,43 @@ function assignmentMap() {
   return new Map(state.assignments.map((assignment) => [slotKey(assignment.slot), assignment]));
 }
 
+function addFixture(fixtures, home, away) {
+  fixtures[home.id][`p${away.pot}Home`] = away.id;
+  fixtures[away.id][`p${home.pot}Away`] = home.id;
+}
+
+function generateFixtures(players) {
+  const fixtures = Object.fromEntries(players.map((player) => [player.id, {}]));
+  const byPot = new Map(
+    [1, 2, 3, 4].map((pot) => [pot, players.filter((player) => player.pot === pot)])
+  );
+
+  for (let pot = 1; pot <= 4; pot += 1) {
+    const ring = shuffle(byPot.get(pot));
+    ring.forEach((home, index) => addFixture(fixtures, home, ring[(index + 1) % ring.length]));
+  }
+
+  for (let leftPot = 1; leftPot <= 4; leftPot += 1) {
+    for (let rightPot = leftPot + 1; rightPot <= 4; rightPot += 1) {
+      const left = shuffle(byPot.get(leftPot));
+      const right = shuffle(byPot.get(rightPot));
+      const returnOffset = 1 + Math.floor(Math.random() * (right.length - 1));
+      left.forEach((home, index) => addFixture(fixtures, home, right[index]));
+      left.forEach((away, index) => addFixture(fixtures, right[(index + returnOffset) % right.length], away));
+    }
+  }
+
+  const expectedKeys = [1, 2, 3, 4].flatMap((pot) => [`p${pot}Home`, `p${pot}Away`]);
+  players.forEach((player) => {
+    const opponentIds = expectedKeys.map((key) => fixtures[player.id][key]);
+    if (opponentIds.some((id) => !id) || new Set(opponentIds).size !== 8 || opponentIds.includes(player.id)) {
+      throw new Error(`无法为 ${player.name} 生成完整的 8 场对阵`);
+    }
+  });
+
+  return fixtures;
+}
+
 function currentSlot() {
   return slots[state.assignments.length] || null;
 }
@@ -250,13 +302,131 @@ function renderPots() {
 
 function renderPlayerPool() {
   const remainingIds = new Set(state.remaining.map((player) => player.id));
-  els.playerPool.innerHTML = activeRegion().players
-    .map((player) => `
-      <span class="pool-chip ${remainingIds.has(player.id) ? "" : "drawn"}">
-        <strong>P${String(player.id).padStart(2, "0")}</strong>
-        <span title="${escapeHTML(player.name)}">${escapeHTML(player.name)}</span>
-      </span>
-    `)
+  const activePot = currentSlot()?.pot;
+  els.playerPool.innerHTML = [1, 2, 3, 4]
+    .map((pot) => {
+      const players = activeRegion().players.filter((player) => player.pot === pot);
+      const remaining = players.filter((player) => remainingIds.has(player.id)).length;
+      return `
+        <section class="pool-pot ${activePot === pot ? "active" : ""}" data-pot="${pot}">
+          <div class="pool-pot-head"><strong>Pot ${pot}</strong><span>${remaining}/9</span></div>
+          <div class="pool-pot-list">
+            ${players.map((player) => `
+              <span class="pool-chip ${remainingIds.has(player.id) ? "" : "drawn"}">
+                <span title="${escapeHTML(player.name)}">${escapeHTML(player.name)}</span>
+              </span>
+            `).join("")}
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+}
+
+function renderFixtures() {
+  const complete = state.assignments.length === slots.length && state.fixtures;
+  const visible = SHOW_FULL_FIXTURES && complete;
+  els.fixturesPanel.hidden = !visible;
+  if (!visible) {
+    els.fixturesBody.innerHTML = "";
+    return;
+  }
+
+  const players = activeRegion().players;
+  const playersById = new Map(players.map((player) => [player.id, player]));
+  const assignmentsByPlayer = new Map(state.assignments.map((assignment) => [assignment.player.id, assignment]));
+
+  els.fixturesRegion.textContent = activeRegion().label;
+  els.fixturesBody.innerHTML = players
+    .map((player) => {
+      const assignment = assignmentsByPlayer.get(player.id);
+      const opponents = fixtureColumns
+        .map((column) => {
+          const opponent = playersById.get(state.fixtures[player.id][column.key]);
+          const opponentAssignment = assignmentsByPlayer.get(opponent.id);
+          return `
+            <td>
+              <span class="fixture-opponent">
+                <img src="${logoUrl(opponentAssignment.slot.team)}" alt="" loading="lazy" />
+                <span class="fixture-copy">
+                  <strong title="${escapeHTML(opponent.name)}">${escapeHTML(opponent.name)}</strong>
+                  <small>${escapeHTML(opponentAssignment.slot.team.zh)}</small>
+                </span>
+              </span>
+            </td>
+          `;
+        })
+        .join("");
+      return `
+        <tr data-pot="${player.pot}">
+          <th scope="row">
+            <span class="fixture-team">
+              <img src="${logoUrl(assignment.slot.team)}" alt="" loading="lazy" />
+              <span class="fixture-copy">
+                <span class="fixture-pot">Pot ${player.pot}</span>
+                <strong title="${escapeHTML(player.name)}">${escapeHTML(player.name)}</strong>
+                <small>${escapeHTML(assignment.slot.team.zh)}</small>
+              </span>
+            </span>
+          </th>
+          ${opponents}
+        </tr>
+      `;
+    })
+    .join("");
+}
+
+function renderSchedules() {
+  const complete = state.assignments.length === slots.length && state.fixtures;
+  els.schedulesPanel.hidden = !complete;
+  if (!complete) {
+    els.scheduleList.innerHTML = "";
+    return;
+  }
+
+  const players = activeRegion().players;
+  const playersById = new Map(players.map((player) => [player.id, player]));
+  const assignmentsByPlayer = new Map(state.assignments.map((assignment) => [assignment.player.id, assignment]));
+  els.schedulesRegion.textContent = activeRegion().label;
+  els.scheduleList.innerHTML = [1, 2, 3, 4]
+    .map((pot) => {
+      const cards = players
+        .filter((player) => player.pot === pot)
+        .map((player) => {
+          const assignment = assignmentsByPlayer.get(player.id);
+          const matches = fixtureColumns
+            .map((column) => {
+              const opponent = playersById.get(state.fixtures[player.id][column.key]);
+              const opponentAssignment = assignmentsByPlayer.get(opponent.id);
+              return `
+                <div class="schedule-match" data-venue="${column.venue}">
+                  <div class="schedule-match-meta"><span>Pot ${column.pot}</span><strong>${column.label}</strong></div>
+                  <img src="${logoUrl(opponentAssignment.slot.team)}" alt="${escapeHTML(opponentAssignment.slot.team.zh)}队徽" loading="lazy" />
+                  <strong title="${escapeHTML(opponent.name)}">${escapeHTML(opponent.name)}</strong>
+                </div>
+              `;
+            })
+            .join("");
+          return `
+            <article class="schedule-card" data-pot="${player.pot}">
+              <header class="schedule-card-head">
+                <img src="${logoUrl(assignment.slot.team)}" alt="${escapeHTML(assignment.slot.team.zh)}队徽" loading="lazy" />
+                <div>
+                  <h3>${escapeHTML(player.name)}</h3>
+                </div>
+              </header>
+              <div class="schedule-opponents">${matches}</div>
+            </article>
+          `;
+        })
+        .join("");
+      return `
+        <section class="schedule-pot-row" data-pot="${pot}" aria-label="Pot ${pot} 赛程">
+          <div class="schedule-pot-title">Pot ${pot}</div>
+          <div class="schedule-pot-grid">${cards}</div>
+        </section>
+      `;
+    })
     .join("");
 }
 
@@ -267,7 +437,7 @@ function renderControls() {
   const positionInPot = (state.assignments.length % 9) + 1;
 
   els.drawCount.textContent = state.assignments.length;
-  els.remainingCount.textContent = `${state.remaining.length} 人待抽`;
+  els.remainingCount.textContent = `${state.remaining.length} 人`;
   els.stagePill.textContent = complete ? "抽签完成" : `Pot ${next.pot} · ${positionInPot}/9`;
   els.nextTeamLabel.textContent = complete ? "完成" : `Pot ${next.pot} · ${next.team.zh}`;
   els.startBtn.textContent = state.isSpinning ? "抽签中…" : state.isReleasing || state.modalPending ? "出球中…" : "抽签";
@@ -281,6 +451,8 @@ function render() {
   renderRegionSwitch();
   renderPots();
   renderPlayerPool();
+  renderFixtures();
+  renderSchedules();
   updateMachineBalls();
   renderControls();
 }
@@ -305,7 +477,9 @@ function packedPosition(index) {
 
 function updateMachineBalls() {
   const potIndex = currentPotIndex();
-  machineBalls = state.remaining.map((player, index) => {
+  const activePot = currentSlot()?.pot;
+  const eligiblePlayers = activePot ? state.remaining.filter((player) => player.pot === activePot) : [];
+  machineBalls = eligiblePlayers.map((player, index) => {
     const position = packedPosition(index);
     return {
       player,
@@ -540,15 +714,17 @@ function drawBalls() {
 }
 
 function chooseExitPlayer() {
+  const activePot = currentSlot()?.pot;
+  const eligiblePlayers = state.remaining.filter((player) => player.pot === activePot);
   const candidateBalls = machineBalls
-    .filter((ball) => state.remaining.some((player) => player.id === ball.player.id))
+    .filter((ball) => eligiblePlayers.some((player) => player.id === ball.player.id))
     .map((ball) => ({
       ball,
       distance: Math.hypot(ball.x - bowlPhysics.exitX, ball.y - bowlPhysics.exitY),
     }))
     .sort((a, b) => a.distance - b.distance);
 
-  const player = candidateBalls[0]?.ball.player || state.remaining[Math.floor(Math.random() * state.remaining.length)];
+  const player = candidateBalls[0]?.ball.player || eligiblePlayers[Math.floor(Math.random() * eligiblePlayers.length)];
   return {
     player,
     randomIndex: state.remaining.findIndex((item) => item.id === player.id),
@@ -706,6 +882,9 @@ function releaseBall() {
 function completeDraw(player, randomIndex, slot) {
   state.remaining.splice(randomIndex, 1);
   state.assignments.push({ player, slot });
+  if (state.assignments.length === slots.length) {
+    state.fixtures = generateFixtures(activeRegion().players);
+  }
   state.isSpinning = false;
   state.isReleasing = false;
   state.modalPending = true;
@@ -742,11 +921,14 @@ function closeResultModal() {
 function completeRandomDraw() {
   if (state.isSpinning || state.isReleasing || state.modalPending || !currentSlot()) return;
   closeAutoConfirm();
-  const remainingPool = shuffle(state.remaining);
-  slots.slice(state.assignments.length).forEach((slot, index) => {
-    state.assignments.push({ player: remainingPool[index], slot });
+  const remainingByPot = Object.fromEntries(
+    [1, 2, 3, 4].map((pot) => [pot, shuffle(state.remaining.filter((player) => player.pot === pot))])
+  );
+  slots.slice(state.assignments.length).forEach((slot) => {
+    state.assignments.push({ player: remainingByPot[slot.pot].shift(), slot });
   });
   state.remaining = [];
+  state.fixtures = generateFixtures(activeRegion().players);
   state.latestSlotKey = "";
   state.modalPending = false;
   render();
@@ -803,8 +985,11 @@ function setActiveRegion(nextKey) {
 
 function exportPairings() {
   if (state.assignments.length !== slots.length) return;
+  const players = activeRegion().players;
+  const playersById = new Map(players.map((player) => [player.id, player]));
+  const fixtureKeys = [1, 2, 3, 4].flatMap((pot) => [`p${pot}Home`, `p${pot}Away`]);
   const rows = [
-    ["赛区", "档位", "档内顺序", "球队", "英文名", "经理人"],
+    ["赛区", "抽中球队档位", "档内顺序", "抽中球队", "英文名", "经理人", "经理人分档", "Pot 1 主", "Pot 1 客", "Pot 2 主", "Pot 2 客", "Pot 3 主", "Pot 3 客", "Pot 4 主", "Pot 4 客"],
     ...state.assignments.map(({ player, slot }) => [
       activeRegion().label,
       `Pot ${slot.pot}`,
@@ -812,6 +997,8 @@ function exportPairings() {
       slot.team.zh,
       slot.team.name,
       player.name,
+      `Pot ${player.pot}`,
+      ...fixtureKeys.map((key) => playersById.get(state.fixtures[player.id][key]).name),
     ]),
   ];
   const csv = rows
