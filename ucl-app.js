@@ -116,10 +116,192 @@ const regionConfigs = [
 const slots = teamPots.flatMap((pot) =>
   pot.teams.map((team, index) => ({ pot: pot.number, position: index + 1, team }))
 );
-const fixtureColumns = [1, 2, 3, 4].flatMap((pot) => [
-  { key: `p${pot}Home`, pot, venue: "home", label: "主场" },
-  { key: `p${pot}Away`, pot, venue: "away", label: "客场" },
-]);
+const officialMatchdays = [
+  {
+    number: 1,
+    matches: [
+      ["2026-09-08", "AEK Athens", "LASK"],
+      ["2026-09-08", "Club Brugge", "Aston Villa"],
+      ["2026-09-08", "Borussia Dortmund", "Villarreal"],
+      ["2026-09-08", "Porto", "Manchester City"],
+      ["2026-09-08", "Lille", "Real Betis"],
+      ["2026-09-08", "Real Madrid", "Inter"],
+      ["2026-09-09", "Barcelona", "Feyenoord"],
+      ["2026-09-09", "Stuttgart", "Viking"],
+      ["2026-09-09", "Liverpool", "Atlético de Madrid"],
+      ["2026-09-09", "Paris Saint-Germain", "Slovan Bratislava"],
+      ["2026-09-09", "Sporting CP", "Galatasaray"],
+      ["2026-09-09", "Napoli", "Arsenal"],
+      ["2026-09-10", "Fenerbahçe", "Roma"],
+      ["2026-09-10", "PSV", "Shakhtar Donetsk"],
+      ["2026-09-10", "Como", "Leipzig"],
+      ["2026-09-10", "Bayern München", "Bodø/Glimt"],
+      ["2026-09-10", "Manchester United", "Sabah"],
+      ["2026-09-10", "Slavia Praha", "Lens"],
+    ],
+  },
+  {
+    number: 2,
+    matches: [
+      ["2026-10-13", "Lens", "Sporting CP"],
+      ["2026-10-13", "Sabah", "Slavia Praha"],
+      ["2026-10-13", "Arsenal", "Lille"],
+      ["2026-10-13", "Atlético de Madrid", "Manchester United"],
+      ["2026-10-13", "Inter", "Club Brugge"],
+      ["2026-10-13", "Galatasaray", "Barcelona"],
+      ["2026-10-13", "Leipzig", "PSV"],
+      ["2026-10-13", "Viking", "Bayern München"],
+      ["2026-10-13", "Villarreal", "Napoli"],
+      ["2026-10-14", "Feyenoord", "Como"],
+      ["2026-10-14", "LASK", "Liverpool"],
+      ["2026-10-14", "Roma", "Real Madrid"],
+      ["2026-10-14", "Aston Villa", "Fenerbahçe"],
+      ["2026-10-14", "Shakhtar Donetsk", "AEK Athens"],
+      ["2026-10-14", "Bodø/Glimt", "Borussia Dortmund"],
+      ["2026-10-14", "Manchester City", "Paris Saint-Germain"],
+      ["2026-10-14", "Real Betis", "Porto"],
+      ["2026-10-14", "Slovan Bratislava", "Stuttgart"],
+    ],
+  },
+  {
+    number: 3,
+    matches: [
+      ["2026-10-20", "Fenerbahçe", "Slavia Praha"],
+      ["2026-10-20", "Sabah", "Borussia Dortmund"],
+      ["2026-10-20", "Roma", "Slovan Bratislava"],
+      ["2026-10-20", "Porto", "PSV"],
+      ["2026-10-20", "Liverpool", "Villarreal"],
+      ["2026-10-20", "Manchester City", "AEK Athens"],
+      ["2026-10-20", "Paris Saint-Germain", "Barcelona"],
+      ["2026-10-20", "Napoli", "Bodø/Glimt"],
+      ["2026-10-20", "Stuttgart", "Atlético de Madrid"],
+      ["2026-10-21", "Como", "Manchester United"],
+      ["2026-10-21", "Lille", "Galatasaray"],
+      ["2026-10-21", "Aston Villa", "Viking"],
+      ["2026-10-21", "Club Brugge", "Lens"],
+      ["2026-10-21", "Bayern München", "Arsenal"],
+      ["2026-10-21", "Inter", "Shakhtar Donetsk"],
+      ["2026-10-21", "Real Madrid", "Leipzig"],
+      ["2026-10-21", "Real Betis", "Feyenoord"],
+      ["2026-10-21", "Sporting CP", "LASK"],
+    ],
+  },
+  {
+    number: 4,
+    matches: [
+      ["2026-11-03", "Shakhtar Donetsk", "Sporting CP"],
+      ["2026-11-03", "Galatasaray", "Stuttgart"],
+      ["2026-11-03", "Atlético de Madrid", "Bayern München"],
+      ["2026-11-03", "Barcelona", "Aston Villa"],
+      ["2026-11-03", "Feyenoord", "Inter"],
+      ["2026-11-03", "Bodø/Glimt", "Lille"],
+      ["2026-11-03", "LASK", "Slovan Bratislava"],
+      ["2026-11-03", "Manchester United", "Roma"],
+      ["2026-11-03", "Villarreal", "Paris Saint-Germain"],
+      ["2026-11-04", "AEK Athens", "Real Madrid"],
+      ["2026-11-04", "Fenerbahçe", "Liverpool"],
+      ["2026-11-04", "Borussia Dortmund", "Real Betis"],
+      ["2026-11-04", "Porto", "Napoli"],
+      ["2026-11-04", "PSV", "Club Brugge"],
+      ["2026-11-04", "Leipzig", "Manchester City"],
+      ["2026-11-04", "Lens", "Como"],
+      ["2026-11-04", "Slavia Praha", "Arsenal"],
+      ["2026-11-04", "Viking", "Sabah"],
+    ],
+  },
+  {
+    number: 5,
+    matches: [
+      ["2026-11-24", "Bodø/Glimt", "LASK"],
+      ["2026-11-24", "Galatasaray", "Aston Villa"],
+      ["2026-11-24", "Arsenal", "Borussia Dortmund"],
+      ["2026-11-24", "Como", "AEK Athens"],
+      ["2026-11-24", "Feyenoord", "Porto"],
+      ["2026-11-24", "Manchester City", "Napoli"],
+      ["2026-11-24", "Leipzig", "Lens"],
+      ["2026-11-24", "Real Madrid", "PSV"],
+      ["2026-11-24", "Slovan Bratislava", "Real Betis"],
+      ["2026-11-25", "Sabah", "Barcelona"],
+      ["2026-11-25", "Slavia Praha", "Villarreal"],
+      ["2026-11-25", "Atlético de Madrid", "Viking"],
+      ["2026-11-25", "Club Brugge", "Liverpool"],
+      ["2026-11-25", "Inter", "Stuttgart"],
+      ["2026-11-25", "Shakhtar Donetsk", "Fenerbahçe"],
+      ["2026-11-25", "Lille", "Bayern München"],
+      ["2026-11-25", "Paris Saint-Germain", "Roma"],
+      ["2026-11-25", "Sporting CP", "Manchester United"],
+    ],
+  },
+  {
+    number: 6,
+    matches: [
+      ["2026-12-08", "Viking", "Feyenoord"],
+      ["2026-12-08", "Villarreal", "Sabah"],
+      ["2026-12-08", "AEK Athens", "Galatasaray"],
+      ["2026-12-08", "Roma", "Sporting CP"],
+      ["2026-12-08", "Aston Villa", "Paris Saint-Germain"],
+      ["2026-12-08", "Barcelona", "Manchester City"],
+      ["2026-12-08", "Bayern München", "Slavia Praha"],
+      ["2026-12-08", "Manchester United", "Leipzig"],
+      ["2026-12-08", "Napoli", "Club Brugge"],
+      ["2026-12-09", "Real Betis", "Como"],
+      ["2026-12-09", "Slovan Bratislava", "Shakhtar Donetsk"],
+      ["2026-12-09", "Arsenal", "Real Madrid"],
+      ["2026-12-09", "Borussia Dortmund", "Inter"],
+      ["2026-12-09", "LASK", "Fenerbahçe"],
+      ["2026-12-09", "Liverpool", "Porto"],
+      ["2026-12-09", "PSV", "Atlético de Madrid"],
+      ["2026-12-09", "Lens", "Bodø/Glimt"],
+      ["2026-12-09", "Stuttgart", "Lille"],
+    ],
+  },
+  {
+    number: 7,
+    matches: [
+      ["2027-01-19", "Bodø/Glimt", "Atlético de Madrid"],
+      ["2027-01-19", "Galatasaray", "Feyenoord"],
+      ["2027-01-19", "AEK Athens", "Roma"],
+      ["2027-01-19", "Aston Villa", "Borussia Dortmund"],
+      ["2027-01-19", "Inter", "Liverpool"],
+      ["2027-01-19", "Porto", "Slavia Praha"],
+      ["2027-01-19", "Lille", "Slovan Bratislava"],
+      ["2027-01-19", "Real Madrid", "LASK"],
+      ["2027-01-19", "Stuttgart", "Club Brugge"],
+      ["2027-01-20", "Fenerbahçe", "Villarreal"],
+      ["2027-01-20", "Sabah", "Napoli"],
+      ["2027-01-20", "Como", "Paris Saint-Germain"],
+      ["2027-01-20", "Manchester United", "Bayern München"],
+      ["2027-01-20", "Leipzig", "Shakhtar Donetsk"],
+      ["2027-01-20", "Lens", "Manchester City"],
+      ["2027-01-20", "Real Betis", "Arsenal"],
+      ["2027-01-20", "Sporting CP", "Barcelona"],
+      ["2027-01-20", "Viking", "PSV"],
+    ],
+  },
+  {
+    number: 8,
+    matches: [
+      ["2027-01-27", "Arsenal", "Sabah"],
+      ["2027-01-27", "Roma", "Lille"],
+      ["2027-01-27", "Atlético de Madrid", "Fenerbahçe"],
+      ["2027-01-27", "Borussia Dortmund", "AEK Athens"],
+      ["2027-01-27", "Club Brugge", "Bodø/Glimt"],
+      ["2027-01-27", "Bayern München", "Real Betis"],
+      ["2027-01-27", "Barcelona", "Como"],
+      ["2027-01-27", "Shakhtar Donetsk", "Real Madrid"],
+      ["2027-01-27", "Feyenoord", "Leipzig"],
+      ["2027-01-27", "LASK", "Porto"],
+      ["2027-01-27", "Liverpool", "Lens"],
+      ["2027-01-27", "Manchester City", "Sporting CP"],
+      ["2027-01-27", "Paris Saint-Germain", "Galatasaray"],
+      ["2027-01-27", "PSV", "Stuttgart"],
+      ["2027-01-27", "Slavia Praha", "Aston Villa"],
+      ["2027-01-27", "Napoli", "Viking"],
+      ["2027-01-27", "Villarreal", "Manchester United"],
+      ["2027-01-27", "Slovan Bratislava", "Inter"],
+    ],
+  },
+];
 
 const els = {
   machineCanvas: document.querySelector("#machineCanvas"),
@@ -214,38 +396,61 @@ function assignmentMap() {
   return new Map(state.assignments.map((assignment) => [slotKey(assignment.slot), assignment]));
 }
 
-function addFixture(fixtures, home, away) {
-  fixtures[home.id][`p${away.pot}Home`] = away.id;
-  fixtures[away.id][`p${home.pot}Away`] = home.id;
+function formatOfficialDate(isoDate) {
+  const [, month, day] = isoDate.split("-").map(Number);
+  return `${month}月${day}日`;
 }
 
-function generateFixtures(players) {
-  const fixtures = Object.fromEntries(players.map((player) => [player.id, {}]));
-  const byPot = new Map(
-    [1, 2, 3, 4].map((pot) => [pot, players.filter((player) => player.pot === pot)])
-  );
+function generateFixtures(players, assignments) {
+  const fixtures = Object.fromEntries(players.map((player) => [player.id, []]));
+  const teamsByName = new Map(teamPots.flatMap((pot) => pot.teams).map((team) => [team.name, team]));
+  const assignmentsByTeamId = new Map(assignments.map((assignment) => [assignment.slot.team.id, assignment]));
 
-  for (let pot = 1; pot <= 4; pot += 1) {
-    const ring = shuffle(byPot.get(pot));
-    ring.forEach((home, index) => addFixture(fixtures, home, ring[(index + 1) % ring.length]));
-  }
+  officialMatchdays.forEach((matchday) => {
+    if (matchday.matches.length !== 18) throw new Error(`第 ${matchday.number} 轮赛程不完整`);
+    const playersInRound = new Set();
+    matchday.matches.forEach(([date, homeName, awayName]) => {
+      const homeTeam = teamsByName.get(homeName);
+      const awayTeam = teamsByName.get(awayName);
+      const homeAssignment = homeTeam && assignmentsByTeamId.get(homeTeam.id);
+      const awayAssignment = awayTeam && assignmentsByTeamId.get(awayTeam.id);
+      if (!homeAssignment || !awayAssignment) throw new Error(`官方赛程球队无法匹配：${homeName} vs ${awayName}`);
+      if (playersInRound.has(homeAssignment.player.id) || playersInRound.has(awayAssignment.player.id)) {
+        throw new Error(`第 ${matchday.number} 轮存在重复球队`);
+      }
+      playersInRound.add(homeAssignment.player.id);
+      playersInRound.add(awayAssignment.player.id);
+      fixtures[homeAssignment.player.id].push({
+        matchday: matchday.number,
+        date,
+        dateLabel: formatOfficialDate(date),
+        venue: "home",
+        opponentId: awayAssignment.player.id,
+      });
+      fixtures[awayAssignment.player.id].push({
+        matchday: matchday.number,
+        date,
+        dateLabel: formatOfficialDate(date),
+        venue: "away",
+        opponentId: homeAssignment.player.id,
+      });
+    });
+    if (playersInRound.size !== 36) throw new Error(`第 ${matchday.number} 轮球队数量不正确`);
+  });
 
-  for (let leftPot = 1; leftPot <= 4; leftPot += 1) {
-    for (let rightPot = leftPot + 1; rightPot <= 4; rightPot += 1) {
-      const left = shuffle(byPot.get(leftPot));
-      const right = shuffle(byPot.get(rightPot));
-      const returnOffset = 1 + Math.floor(Math.random() * (right.length - 1));
-      left.forEach((home, index) => addFixture(fixtures, home, right[index]));
-      left.forEach((away, index) => addFixture(fixtures, right[(index + returnOffset) % right.length], away));
-    }
-  }
-
-  const expectedKeys = [1, 2, 3, 4].flatMap((pot) => [`p${pot}Home`, `p${pot}Away`]);
   players.forEach((player) => {
-    const opponentIds = expectedKeys.map((key) => fixtures[player.id][key]);
-    if (opponentIds.some((id) => !id) || new Set(opponentIds).size !== 8 || opponentIds.includes(player.id)) {
-      throw new Error(`无法为 ${player.name} 生成完整的 8 场对阵`);
+    const matches = fixtures[player.id];
+    const opponentIds = matches.map((match) => match.opponentId);
+    const homeCount = matches.filter((match) => match.venue === "home").length;
+    if (matches.length !== 8 || new Set(opponentIds).size !== 8 || opponentIds.includes(player.id) || homeCount !== 4) {
+      throw new Error(`${player.name} 的官方赛程校验失败`);
     }
+    [1, 2, 3, 4].forEach((pot) => {
+      const potMatches = matches.filter((match) => players.find((candidate) => candidate.id === match.opponentId)?.pot === pot);
+      if (potMatches.length !== 2 || potMatches.filter((match) => match.venue === "home").length !== 1) {
+        throw new Error(`${player.name} 的 Pot ${pot} 赛程校验失败`);
+      }
+    });
   });
 
   return fixtures;
@@ -341,9 +546,9 @@ function renderFixtures() {
   els.fixturesBody.innerHTML = players
     .map((player) => {
       const assignment = assignmentsByPlayer.get(player.id);
-      const opponents = fixtureColumns
-        .map((column) => {
-          const opponent = playersById.get(state.fixtures[player.id][column.key]);
+      const opponents = state.fixtures[player.id]
+        .map((match) => {
+          const opponent = playersById.get(match.opponentId);
           const opponentAssignment = assignmentsByPlayer.get(opponent.id);
           return `
             <td>
@@ -395,13 +600,13 @@ function renderSchedules() {
         .filter((player) => player.pot === pot)
         .map((player) => {
           const assignment = assignmentsByPlayer.get(player.id);
-          const matches = fixtureColumns
-            .map((column) => {
-              const opponent = playersById.get(state.fixtures[player.id][column.key]);
+          const matches = state.fixtures[player.id]
+            .map((match) => {
+              const opponent = playersById.get(match.opponentId);
               const opponentAssignment = assignmentsByPlayer.get(opponent.id);
               return `
-                <div class="schedule-match" data-venue="${column.venue}">
-                  <div class="schedule-match-meta"><span>Pot ${column.pot}</span><strong>${column.label}</strong></div>
+                <div class="schedule-match" data-venue="${match.venue}">
+                  <div class="schedule-match-meta"><span>第 ${match.matchday} 轮 · ${match.dateLabel}</span><strong>${match.venue === "home" ? "主场" : "客场"}</strong></div>
                   <img src="${logoUrl(opponentAssignment.slot.team)}" alt="${escapeHTML(opponentAssignment.slot.team.zh)}队徽" loading="lazy" />
                   <strong title="${escapeHTML(opponent.name)}">${escapeHTML(opponent.name)}</strong>
                 </div>
@@ -884,7 +1089,7 @@ function completeDraw(player, randomIndex, slot) {
   state.remaining.splice(randomIndex, 1);
   state.assignments.push({ player, slot });
   if (state.assignments.length === slots.length) {
-    state.fixtures = generateFixtures(activeRegion().players);
+    state.fixtures = generateFixtures(activeRegion().players, state.assignments);
   }
   state.isSpinning = false;
   state.isReleasing = false;
@@ -929,7 +1134,7 @@ function completeRandomDraw() {
     state.assignments.push({ player: remainingByPot[slot.pot].shift(), slot });
   });
   state.remaining = [];
-  state.fixtures = generateFixtures(activeRegion().players);
+  state.fixtures = generateFixtures(activeRegion().players, state.assignments);
   state.latestSlotKey = "";
   state.modalPending = false;
   render();
@@ -1131,17 +1336,17 @@ async function createScheduleImage() {
       drawLogo(ctx, logos.get(assignment.slot.team.id), x + 15, cardY + 19, 48);
       drawFittedText(ctx, player.name, x + 78, cardY + 43, cardWidth - 94, 25, "#ffffff", { minSize: 15 });
 
-      fixtureColumns.forEach((column, matchIndex) => {
-        const opponent = playersById.get(state.fixtures[player.id][column.key]);
+      state.fixtures[player.id].forEach((match, matchIndex) => {
+        const opponent = playersById.get(match.opponentId);
         const opponentAssignment = assignmentsByPlayer.get(opponent.id);
         const matchY = cardY + ownerHeight + matchIndex * matchHeight;
-        const isHome = column.venue === "home";
+        const isHome = match.venue === "home";
         ctx.fillStyle = isHome ? "#102b68" : "#183a7c";
         ctx.fillRect(x + 3, matchY + 2, cardWidth - 6, matchHeight - 2);
         ctx.fillStyle = isHome ? "#00c9ff" : "#e11d8d";
         ctx.fillRect(x + 3, matchY + 2, 4, matchHeight - 2);
-        drawFittedText(ctx, `Pot ${column.pot}`, x + 14, matchY + 15, 82, 15, "#b7c7ec", { weight: 800 });
-        drawFittedText(ctx, column.label, x + cardWidth - 14, matchY + 15, 70, 15, isHome ? "#00c9ff" : "#ff9bd4", { align: "right" });
+        drawFittedText(ctx, `第 ${match.matchday} 轮 · ${match.dateLabel}`, x + 14, matchY + 15, cardWidth - 104, 15, "#b7c7ec", { weight: 800 });
+        drawFittedText(ctx, isHome ? "主场" : "客场", x + cardWidth - 14, matchY + 15, 70, 15, isHome ? "#00c9ff" : "#ff9bd4", { align: "right" });
         drawLogo(ctx, logos.get(opponentAssignment.slot.team.id), x + 14, matchY + 22, 34);
         drawFittedText(ctx, opponent.name, x + 58, matchY + 43, cardWidth - 74, 21, "#ffffff", { minSize: 13 });
       });
