@@ -606,7 +606,7 @@ function renderSchedules() {
               const opponentAssignment = assignmentsByPlayer.get(opponent.id);
               return `
                 <div class="schedule-match" data-venue="${match.venue}">
-                  <div class="schedule-match-meta"><span>第 ${match.matchday} 轮 · ${match.dateLabel}</span><strong>${match.venue === "home" ? "主场" : "客场"}</strong></div>
+                  <div class="schedule-match-meta"><span>第 ${match.matchday} 轮 · ${match.dateLabel} · Pot ${opponent.pot}</span><strong>${match.venue === "home" ? "主场" : "客场"}</strong></div>
                   <img src="${logoUrl(opponentAssignment.slot.team)}" alt="${escapeHTML(opponentAssignment.slot.team.zh)}队徽" loading="lazy" />
                   <strong title="${escapeHTML(opponent.name)}">${escapeHTML(opponent.name)}</strong>
                 </div>
@@ -1345,7 +1345,7 @@ async function createScheduleImage() {
         ctx.fillRect(x + 3, matchY + 2, cardWidth - 6, matchHeight - 2);
         ctx.fillStyle = isHome ? "#00c9ff" : "#e11d8d";
         ctx.fillRect(x + 3, matchY + 2, 4, matchHeight - 2);
-        drawFittedText(ctx, `第 ${match.matchday} 轮 · ${match.dateLabel}`, x + 14, matchY + 15, cardWidth - 104, 15, "#b7c7ec", { weight: 800 });
+        drawFittedText(ctx, `第 ${match.matchday} 轮 · ${match.dateLabel} · Pot ${opponent.pot}`, x + 14, matchY + 15, cardWidth - 104, 15, "#b7c7ec", { weight: 800 });
         drawFittedText(ctx, isHome ? "主场" : "客场", x + cardWidth - 14, matchY + 15, 70, 15, isHome ? "#00c9ff" : "#ff9bd4", { align: "right" });
         drawLogo(ctx, logos.get(opponentAssignment.slot.team.id), x + 14, matchY + 22, 34);
         drawFittedText(ctx, opponent.name, x + 58, matchY + 43, cardWidth - 74, 21, "#ffffff", { minSize: 13 });
