@@ -53,6 +53,13 @@ function getMatchData(matchday, home, away, region = dashboardRegion) {
 }
 function formatDate(dateValue) { const date = new Date(`${dateValue}T00:00:00`); return `${date.getMonth() + 1}月${date.getDate()}日`; }
 function scoreText(data) { return Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore) ? `${data.homeScore}:${data.awayScore}` : "—:—"; }
+function scoreBoardHtml(data) {
+  const hasScore = Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore);
+  const homeScore = hasScore ? data.homeScore : "—";
+  const awayScore = hasScore ? data.awayScore : "—";
+  const label = hasScore ? `比分 ${homeScore} 比 ${awayScore}` : "比赛尚未产生比分";
+  return `<span class="scoreboard" aria-label="${label}"><span class="score-value">${homeScore}</span><span class="score-divider">:</span><span class="score-value">${awayScore}</span></span>`;
+}
 
 function renderRegionState() {
   dashboardEls.regionButtons.forEach((button) => {
@@ -80,7 +87,7 @@ function matchCardHtml(roundNumber, match, index) {
     <span class="match-meta"><span>第 ${roundNumber} 轮</span><span>${hasScore ? escapeHtml(data.status || "已结束") : "未开始"}</span></span>
     <span class="match-sides">
       <span class="match-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(managerFor(homeName))}</strong><small>${escapeHtml(home.zh)}</small></span>
-      <span class="match-score"><strong>${scoreText(data)}</strong></span>
+      <span class="match-score">${scoreBoardHtml(data)}</span>
       <span class="match-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(managerFor(awayName))}</strong><small>${escapeHtml(away.zh)}</small></span>
     </span></button>`;
 }
