@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#020b2d" />
     <title>企鹅欧冠 Fantasy 联赛</title>
-    <link rel="stylesheet" href="./dashboard.css?v=20260907-3" />
+    <link rel="stylesheet" href="./dashboard.css?v=20260907-4" />
   </head>
   <body>
     <main class="league-shell">
@@ -13,7 +13,7 @@
         <div class="header-copy">
           <div>
             <p class="season-label">2026/27 UEFA CHAMPIONS LEAGUE</p>
-            <h1>企鹅欧冠 Fantasy 联赛</h1>
+            <h1>企鹅欧冠 Fantasy 联赛对阵</h1>
           </div>
         </div>
         <div class="region-switch" role="group" aria-label="赛区切换">
@@ -40,12 +40,9 @@
         <div class="section-heading">
           <div><p class="section-kicker" id="standingsRegionLabel"></p><h2>实时积分榜</h2></div>
         </div>
-        <div class="standings-legend" aria-label="排名区域说明">
-          <span><i class="zone-direct"></i>前 8 名</span><span><i class="zone-playoff"></i>9–24 名</span><span><i class="zone-out"></i>25–36 名</span>
-        </div>
         <div class="table-card">
           <table class="standings-table">
-            <thead><tr><th>排名</th><th>球队 / 经理人</th><th>赛</th><th>胜</th><th>平</th><th>负</th><th>得分</th><th>失分</th><th>净胜</th><th>积分</th></tr></thead>
+            <thead><tr><th>排名</th><th>玩家</th><th>赛</th><th>胜</th><th>平</th><th>负</th><th>得分</th><th>失分</th><th>净胜</th><th>积分</th></tr></thead>
             <tbody id="standingsBody"></tbody>
           </table>
         </div>
@@ -67,6 +64,6 @@
     </div>
 
     <script src="./ucl-app.js?v=20260907-data"></script>
-    <script src="./dashboard.js?v=20260907-3"></script>
+    <script src="./dashboard.js?v=20260907-4"></script>
   </body>
 </html>
