@@ -303,6 +303,8 @@ const officialMatchdays = [
   },
 ];
 
+// 抽签页暂时从首页隐藏；数据仍供联赛看板复用，旧抽签逻辑完整保留。
+if (document.querySelector("#machineCanvas")) {
 const els = {
   machineCanvas: document.querySelector("#machineCanvas"),
   regionSwitch: document.querySelector("#regionSwitch"),
@@ -1445,3 +1447,4 @@ window.__uclDrawApp = {
 };
 
 render();
+}

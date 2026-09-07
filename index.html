@@ -3,140 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>企鹅欧冠 Fantasy 球队抽签</title>
-    <link rel="stylesheet" href="./styles.css?v=20260905-official2" />
+    <meta name="theme-color" content="#020b2d" />
+    <title>企鹅欧冠 Fantasy 联赛</title>
+    <link rel="stylesheet" href="./dashboard.css?v=20260907-1" />
   </head>
   <body>
-    <main class="app-shell">
-      <header class="topbar">
-        <div>
-          <div class="brand-title">
-            <img class="title-mascot" src="./assets/title-mascot.png" alt="" aria-hidden="true" />
-            <div>
-              <p class="eyebrow">2026/27 UEFA CHAMPIONS LEAGUE</p>
-              <h1>企鹅欧冠 Fantasy 球队抽签</h1>
-            </div>
+    <main class="league-shell">
+      <header class="site-header">
+        <div class="header-copy">
+          <img class="brand-mascot" src="./assets/title-mascot.png" alt="" aria-hidden="true" />
+          <div>
+            <p class="season-label">2026/27 UEFA CHAMPIONS LEAGUE</p>
+            <h1>企鹅欧冠 Fantasy 联赛</h1>
           </div>
         </div>
-        <div class="top-actions">
-          <div class="stage-pill" id="stagePill">Pot 1 · 1/9</div>
-          <div class="counter"><span id="drawCount">0</span><small>/36</small></div>
-          <div class="export-actions" id="exportActions" hidden>
-            <button class="soft-btn export-image-btn" id="exportDrawBtn" type="button">导出抽签结果</button>
-            <button class="soft-btn export-image-btn" id="exportScheduleBtn" type="button">导出对阵</button>
-          </div>
+        <div class="region-switch" role="group" aria-label="赛区切换">
+          <button class="region-button is-active" type="button" data-region="arctic">Shuo🐧北极赛区</button>
+          <button class="region-button" type="button" data-region="antarctic">小红书关注Acidboy🐧南极赛区</button>
         </div>
       </header>
 
-      <section class="workspace">
-        <section class="draw-panel" id="drawPanel" aria-label="抽签机器">
-          <div class="region-switch" id="regionSwitch" aria-label="南北极赛区切换"></div>
-          <div class="machine-meta"><strong id="nextTeamLabel">Pot 1 · 巴黎圣日耳曼</strong></div>
-          <div class="machine" id="machine">
-            <canvas
-              class="machine-canvas"
-              id="machineCanvas"
-              width="640"
-              height="640"
-              aria-label="玻璃抽签机动画"
-            ></canvas>
-          </div>
+      <nav class="main-nav" aria-label="联赛页面">
+        <button class="nav-button is-active" type="button" data-view="matches"><span>对阵详情</span><small>8 轮比赛</small></button>
+        <button class="nav-button" type="button" data-view="standings"><span>实时积分榜</span><small>胜 3 · 平 1 · 负 0</small></button>
+        <button class="nav-button" type="button" data-view="groups"><span>分组详情</span><small>四档 36 队</small></button>
+      </nav>
 
-          <div class="controls">
-            <button class="primary-btn draw-button" id="startBtn" type="button">抽签</button>
-            <div class="secondary-controls">
-              <button class="soft-btn" id="autoBtn" type="button">直接生成名单</button>
-              <button class="soft-btn danger" id="resetBtn" type="button">重置</button>
-            </div>
-          </div>
-        </section>
-
-        <section class="groups-panel" aria-label="欧冠四档球队与经理人对应情况">
-          <div class="pots-intro">
-            <div>
-              <h2>欧冠联赛阶段</h2>
-            </div>
-          </div>
-          <div class="groups-grid" id="groupsGrid"></div>
-        </section>
+      <section class="page-view is-active" id="matchesView" data-view-panel="matches">
+        <div class="section-heading">
+          <div><p class="section-kicker" id="matchesRegionLabel"></p><h2>对阵详情</h2></div>
+          <span class="sync-status"><i></i> 等待官方 API</span>
+        </div>
+        <div class="round-tabs" id="roundTabs" role="tablist" aria-label="比赛轮次"></div>
+        <div class="round-summary">
+          <div><strong id="roundTitle">第 1 轮</strong><span id="roundDates"></span></div><span>18 场比赛</span>
+        </div>
+        <div class="match-grid" id="matchGrid"></div>
       </section>
 
-      <section class="player-pool" aria-label="经理人分档">
-        <div class="pool-head">
-          <div>
-            <h2>经理人分档</h2>
-          </div>
-          <span id="remainingCount">36 人</span>
+      <section class="page-view" id="standingsView" data-view-panel="standings" hidden>
+        <div class="section-heading">
+          <div><p class="section-kicker" id="standingsRegionLabel"></p><h2>实时积分榜</h2></div>
+          <span class="points-rule">胜 3 分 · 平 1 分 · 负 0 分</span>
         </div>
-        <div class="pool-scroll" id="playerPool"></div>
-      </section>
-
-      <section class="fixtures-panel" id="fixturesPanel" aria-label="完整对阵" hidden>
-        <div class="fixtures-head">
-          <h2>完整对阵</h2>
-          <span id="fixturesRegion"></span>
-        </div>
-        <div class="fixtures-scroll">
-          <table class="fixtures-table">
-            <thead>
-              <tr>
-                <th scope="col">经理人 / 球队</th>
-                <th scope="col">第 1 轮</th>
-                <th scope="col">第 2 轮</th>
-                <th scope="col">第 3 轮</th>
-                <th scope="col">第 4 轮</th>
-                <th scope="col">第 5 轮</th>
-                <th scope="col">第 6 轮</th>
-                <th scope="col">第 7 轮</th>
-                <th scope="col">第 8 轮</th>
-              </tr>
-            </thead>
-            <tbody id="fixturesBody"></tbody>
+        <div class="table-card">
+          <table class="standings-table">
+            <thead><tr><th>排名</th><th>球队 / 经理人</th><th>赛</th><th>胜</th><th>平</th><th>负</th><th>得分</th><th>失分</th><th>净胜</th><th>积分</th></tr></thead>
+            <tbody id="standingsBody"></tbody>
           </table>
         </div>
       </section>
 
-      <section class="schedules-panel" id="schedulesPanel" aria-label="各队赛程" hidden>
-        <div class="schedules-head">
-          <h2>各队赛程</h2>
-          <span id="schedulesRegion"></span>
+      <section class="page-view" id="groupsView" data-view-panel="groups" hidden>
+        <div class="section-heading">
+          <div><p class="section-kicker" id="groupsRegionLabel"></p><h2>分组详情</h2></div>
+          <span class="assignment-count">36 支球队 · 36 位经理人</span>
         </div>
-        <div class="schedule-list" id="scheduleList"></div>
+        <div class="pot-grid" id="potGrid"></div>
       </section>
     </main>
 
-    <div class="modal-backdrop" id="resultModal" hidden>
-      <section class="result-modal draw-paper-modal" role="dialog" aria-modal="true" aria-labelledby="modalText">
-        <button class="close-btn" id="closeModalBtn" type="button" aria-label="关闭">×</button>
-        <div class="draw-paper-header" aria-hidden="true">
-          <img src="./assets/ucl-draw-header.jpg?v=20260831-1" alt="" />
-        </div>
-        <p class="draw-paper-body" id="modalText"></p>
+    <div class="modal-backdrop" id="matchModal" hidden>
+      <section class="match-modal" role="dialog" aria-modal="true" aria-labelledby="modalMatchTitle">
+        <button class="modal-close" id="modalClose" type="button" aria-label="关闭">×</button>
+        <div id="modalContent"></div>
       </section>
     </div>
 
-    <div class="modal-backdrop" id="autoModal" hidden>
-      <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="autoTitle">
-        <h2 id="autoTitle">确认直接生成名单？</h2>
-        <p>剩余球队将立即随机匹配经理人。</p>
-        <div class="confirm-actions">
-          <button class="soft-btn" id="cancelAutoBtn" type="button">取消</button>
-          <button class="soft-btn danger" id="confirmAutoBtn" type="button">确认生成</button>
-        </div>
-      </section>
-    </div>
-
-    <div class="modal-backdrop" id="resetModal" hidden>
-      <section class="result-modal confirm-modal" role="dialog" aria-modal="true" aria-labelledby="resetTitle">
-        <h2 id="resetTitle">确认重置？</h2>
-        <p>当前赛区的抽签和对阵结果会被清空。</p>
-        <div class="confirm-actions">
-          <button class="soft-btn" id="cancelResetBtn" type="button">取消</button>
-          <button class="soft-btn danger" id="confirmResetBtn" type="button">确认重置</button>
-        </div>
-      </section>
-    </div>
-
-    <script src="./ucl-app.js?v=20260905-official2"></script>
+    <script src="./ucl-app.js?v=20260907-data"></script>
+    <script src="./dashboard.js?v=20260907-1"></script>
   </body>
 </html>
