@@ -30,8 +30,7 @@ const dashboardEls = {
   regionButtons: [...document.querySelectorAll("[data-region]")],
   navButtons: [...document.querySelectorAll(".nav-button")],
   viewPanels: [...document.querySelectorAll("[data-view-panel]")],
-  roundTabs: document.querySelector("#roundTabs"), roundTitle: document.querySelector("#roundTitle"),
-  roundDates: document.querySelector("#roundDates"), matchGrid: document.querySelector("#matchGrid"),
+  roundTabs: document.querySelector("#roundTabs"), matchGrid: document.querySelector("#matchGrid"),
   standingsBody: document.querySelector("#standingsBody"), potGrid: document.querySelector("#potGrid"),
   matchesRegionLabel: document.querySelector("#matchesRegionLabel"), standingsRegionLabel: document.querySelector("#standingsRegionLabel"),
   groupsRegionLabel: document.querySelector("#groupsRegionLabel"), matchModal: document.querySelector("#matchModal"),
@@ -53,7 +52,7 @@ function getMatchData(matchday, home, away, region = dashboardRegion) {
   };
 }
 function formatDate(dateValue) { const date = new Date(`${dateValue}T00:00:00`); return `${date.getMonth() + 1}月${date.getDate()}日`; }
-function scoreText(data) { return Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore) ? `${data.homeScore} : ${data.awayScore}` : "— : —"; }
+function scoreText(data) { return Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore) ? `${data.homeScore}:${data.awayScore}` : "—:—"; }
 
 function renderRegionState() {
   dashboardEls.regionButtons.forEach((button) => {
@@ -78,24 +77,21 @@ function matchCardHtml(roundNumber, match, index) {
   const data = getMatchData(roundNumber, homeName, awayName);
   const hasScore = Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore);
   return `<button class="match-card" type="button" data-match-index="${index}" aria-label="查看${escapeHtml(home.zh)}对阵${escapeHtml(away.zh)}详情">
-    <span class="match-meta"><span>第 ${roundNumber} 轮 · ${formatDate(date)}</span><span>${hasScore ? escapeHtml(data.status || "已结束") : "待同步"}</span></span>
+    <span class="match-meta"><span>第 ${roundNumber} 轮</span><span>${hasScore ? escapeHtml(data.status || "已结束") : "未开始"}</span></span>
     <span class="match-sides">
-      <span class="match-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(home.zh)}</strong><small>${escapeHtml(managerFor(homeName))}</small></span>
-      <span class="match-score"><strong>${scoreText(data)}</strong><small>${hasScore ? "比赛结果" : "等待比分"}</small></span>
-      <span class="match-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(away.zh)}</strong><small>${escapeHtml(managerFor(awayName))}</small></span>
-    </span><span class="match-open">点击查看阵容与差异球员</span></button>`;
+      <span class="match-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(managerFor(homeName))}</strong><small>${escapeHtml(home.zh)}</small></span>
+      <span class="match-score"><strong>${scoreText(data)}</strong></span>
+      <span class="match-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(managerFor(awayName))}</strong><small>${escapeHtml(away.zh)}</small></span>
+    </span></button>`;
 }
 
 function renderMatches() {
   const round = officialMatchdays.find((item) => item.number === activeRound);
-  const dates = [...new Set(round.matches.map((match) => match[0]))];
-  dashboardEls.roundTitle.textContent = `第 ${activeRound} 轮`;
-  dashboardEls.roundDates.textContent = dates.map(formatDate).join(" — ");
   dashboardEls.matchGrid.innerHTML = round.matches.map((match, index) => matchCardHtml(round.number, match, index)).join("");
 }
 
 function lineupHtml(items) {
-  return Array.isArray(items) && items.length ? `<div class="empty-lineup">${items.map(escapeHtml).join(" · ")}</div>` : '<div class="empty-lineup">阵容待官方 API 同步</div>';
+  return Array.isArray(items) && items.length ? `<div class="empty-lineup">${items.map(escapeHtml).join(" · ")}</div>` : '<div class="empty-lineup">阵容暂未公布</div>';
 }
 
 function openMatchModal(matchIndex) {
@@ -103,7 +99,7 @@ function openMatchModal(matchIndex) {
   const [date, homeName, awayName] = round.matches[matchIndex];
   const home = teamsByName.get(homeName), away = teamsByName.get(awayName);
   const data = getMatchData(activeRound, homeName, awayName);
-  const differentials = Array.isArray(data.differentials) && data.differentials.length ? data.differentials.map(escapeHtml).join(" · ") : "差异球员待官方 API 同步";
+  const differentials = Array.isArray(data.differentials) && data.differentials.length ? data.differentials.map(escapeHtml).join(" · ") : "暂无差异球员";
   dashboardEls.modalContent.innerHTML = `<div class="modal-match-head">
       <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮 · ${formatDate(date)}</p>
       <div class="modal-scoreline">
@@ -111,10 +107,10 @@ function openMatchModal(matchIndex) {
         <div class="modal-score">${scoreText(data)}</div>
         <div class="modal-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(away.zh)}</strong><span>${escapeHtml(managerFor(awayName))}</span></div>
       </div></div>
-    <div class="modal-detail-body"><p class="detail-label">双方阵容</p><div class="lineup-grid">
-      <section class="lineup-panel"><h3><img src="${logoUrl(home)}" alt="" />${escapeHtml(managerFor(homeName))}</h3><div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.homeCaptain || "待同步")}</span></div>${lineupHtml(data.homeLineup)}</section>
-      <section class="lineup-panel"><h3><img src="${logoUrl(away)}" alt="" />${escapeHtml(managerFor(awayName))}</h3><div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.awayCaptain || "待同步")}</span></div>${lineupHtml(data.awayLineup)}</section>
-    </div><section class="differential-panel"><p>${differentials}</p></section></div>`;
+    <div class="modal-detail-body"><section class="differential-panel"><strong>差异球员</strong><p>${differentials}</p></section><p class="detail-label">双方阵容</p><div class="lineup-grid">
+      <section class="lineup-panel"><h3><img src="${logoUrl(home)}" alt="" />${escapeHtml(managerFor(homeName))}</h3>${lineupHtml(data.homeLineup)}<div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.homeCaptain || "暂未公布")}</span></div></section>
+      <section class="lineup-panel"><h3><img src="${logoUrl(away)}" alt="" />${escapeHtml(managerFor(awayName))}</h3>${lineupHtml(data.awayLineup)}<div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.awayCaptain || "暂未公布")}</span></div></section>
+    </div></div>`;
   dashboardEls.matchModal.hidden = false; document.body.style.overflow = "hidden"; dashboardEls.modalClose.focus();
 }
 function closeMatchModal() { dashboardEls.matchModal.hidden = true; document.body.style.overflow = ""; }
@@ -136,7 +132,7 @@ function calculateStandings(region = dashboardRegion) {
 }
 
 function renderStandings() {
-  dashboardEls.standingsBody.innerHTML = calculateStandings().map((row,index) => `<tr>
+  dashboardEls.standingsBody.innerHTML = calculateStandings().map((row,index) => `<tr data-zone="${index < 8 ? "direct" : index < 24 ? "playoff" : "out"}">
     <td class="rank-cell"><strong>${index+1}</strong></td><td><div class="standing-club"><img src="${logoUrl(row.team)}" alt="" /><div><strong>${escapeHtml(row.team.zh)}</strong><small>${escapeHtml(managerFor(row.team.name))}</small></div></div></td>
     <td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td><td>${row.scored}</td><td>${row.conceded}</td><td>${row.difference>0?"+":""}${row.difference}</td><td class="points-cell">${row.points}</td></tr>`).join("");
 }
