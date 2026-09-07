@@ -58,7 +58,7 @@ function scoreBoardHtml(data) {
   const homeScore = hasScore ? data.homeScore : "—";
   const awayScore = hasScore ? data.awayScore : "—";
   const label = hasScore ? `比分 ${homeScore} 比 ${awayScore}` : "比赛尚未产生比分";
-  return `<span class="scoreboard" aria-label="${label}"><span class="score-value">${homeScore}</span><span class="score-divider">:</span><span class="score-value">${awayScore}</span></span>`;
+  return `<span class="scoreboard" aria-label="${label}"><span class="score-value${hasScore ? "" : " is-empty"}">${homeScore}</span><span class="score-divider">:</span><span class="score-value${hasScore ? "" : " is-empty"}">${awayScore}</span></span>`;
 }
 
 function renderRegionState() {
