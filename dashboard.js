@@ -141,7 +141,7 @@ function calculateStandings(region = dashboardRegion) {
 function renderStandings() {
   dashboardEls.standingsBody.innerHTML = calculateStandings().map((row,index) => `<tr data-zone="${index < 8 ? "direct" : index < 24 ? "playoff" : "out"}">
     <td class="rank-cell"><strong>${index+1}</strong></td><td><div class="standing-club"><img src="${logoUrl(row.team)}" alt="" /><strong>${escapeHtml(managerFor(row.team.name))}</strong></div></td>
-    <td>${row.played}</td><td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td><td>${row.scored}</td><td>${row.conceded}</td><td>${row.difference>0?"+":""}${row.difference}</td><td class="points-cell">${row.points}</td></tr>`).join("");
+    <td>${row.won}</td><td>${row.drawn}</td><td>${row.lost}</td><td>${row.difference>0?"+":""}${row.difference}</td><td class="points-cell">${row.points}</td></tr>`).join("");
 }
 
 function renderGroups() {
