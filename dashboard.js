@@ -22,9 +22,13 @@ const finalManagers = {
 const allTeams = teamPots.flatMap((pot) => pot.teams.map((team, index) => ({ ...team, pot: pot.number, potPosition: index + 1 })));
 const teamsByName = new Map(allTeams.map((team) => [team.name, team]));
 const resultsByRegion = { arctic: {}, antarctic: {} };
-let dashboardRegion = "arctic";
-let activeView = "matches";
+const dashboardParams = new URLSearchParams(window.location.search);
+const requestedRegion = dashboardParams.get("region");
+const requestedView = dashboardParams.get("view");
+let dashboardRegion = Object.hasOwn(regionLabels, requestedRegion) ? requestedRegion : "arctic";
+let activeView = ["matches", "standings", "fdr", "groups"].includes(requestedView) ? requestedView : "matches";
 let activeRound = 1;
+document.body.classList.toggle("is-exporting", dashboardParams.get("export") === "1");
 
 const dashboardEls = {
   regionButtons: [...document.querySelectorAll("[data-region]")],
@@ -199,4 +203,4 @@ window.addEventListener("keydown",(event)=>{if(event.key==="Escape")closeMatchMo
 
 // 后续官方数据接入点：传入带 region/matchday/homeTeam/awayTeam 的比赛记录即可刷新页面。
 window.__penguinCupDashboard = { setMatchData, getStandings:(region=dashboardRegion)=>calculateStandings(region), getState:()=>({region:dashboardRegion,view:activeView,round:activeRound}) };
-renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr();
+renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr(); switchView(activeView);

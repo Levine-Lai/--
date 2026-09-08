@@ -72,6 +72,9 @@ h1 { font-weight: 700; letter-spacing: -.025em; }
 .detail-item { border-left: 0; border-top: 1px solid var(--line); background: transparent; padding: 12px 0 0; }
 button { touch-action: manipulation; }
 button:active { filter: brightness(.94); }
+.is-exporting .site-header, .is-exporting .main-nav { display: none; }
+.is-exporting .league-shell { width: min(1400px, calc(100% - 32px)); padding: 28px 0 20px; }
+.is-exporting .page-view { padding-top: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .page-view:not([hidden]) { animation: view-enter .2s ease-out; }
   .modal-backdrop:not([hidden]) .match-modal { animation: view-enter .2s ease-out; }
