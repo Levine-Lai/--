@@ -28,6 +28,7 @@ const requestedView = dashboardParams.get("view");
 let dashboardRegion = Object.hasOwn(regionLabels, requestedRegion) ? requestedRegion : "arctic";
 let activeView = ["matches", "standings", "fdr", "groups"].includes(requestedView) ? requestedView : "matches";
 let activeRound = 1;
+let fdrSort = { round: null, direction: null };
 document.body.classList.toggle("is-exporting", dashboardParams.get("export") === "1");
 
 const dashboardEls = {
@@ -165,8 +166,21 @@ function fixtureForTeam(round, teamName) {
 }
 
 function renderFdr() {
-  dashboardEls.fdrHead.innerHTML = `<tr><th>玩家</th>${officialMatchdays.map((round) => `<th><strong>GW${round.number}</strong></th>`).join("")}</tr>`;
-  dashboardEls.fdrBody.innerHTML = allTeams.map((team) => {
+  dashboardEls.fdrHead.innerHTML = `<tr><th>玩家</th>${officialMatchdays.map((round) => {
+    const active = fdrSort.round === round.number && fdrSort.direction;
+    const directionLabel = active ? (fdrSort.direction === "easy" ? "易→难" : "难→易") : "";
+    return `<th aria-sort="${active ? (fdrSort.direction === "easy" ? "descending" : "ascending") : "none"}"><button class="fdr-sort${active ? " is-active" : ""}" type="button" data-fdr-sort="${round.number}" aria-label="GD${round.number}${directionLabel ? `，当前${directionLabel}` : "，按难度排序"}"><strong>GD${round.number}</strong>${directionLabel ? `<small>${directionLabel}</small>` : ""}</button></th>`;
+  }).join("")}</tr>`;
+  const displayedTeams = [...allTeams];
+  if (fdrSort.round && fdrSort.direction) {
+    const round = officialMatchdays.find((item) => item.number === fdrSort.round);
+    displayedTeams.sort((teamA, teamB) => {
+      const potA = fixtureForTeam(round, teamA.name)?.opponent?.pot || 0;
+      const potB = fixtureForTeam(round, teamB.name)?.opponent?.pot || 0;
+      return fdrSort.direction === "easy" ? potB - potA : potA - potB;
+    });
+  }
+  dashboardEls.fdrBody.innerHTML = displayedTeams.map((team) => {
     const manager = managerFor(team.name);
     const fixtures = officialMatchdays.map((round) => {
       const fixture = fixtureForTeam(round, team.name);
@@ -176,6 +190,13 @@ function renderFdr() {
     }).join("");
     return `<tr><th scope="row"><img src="${logoUrl(team)}" alt="" /><span>${escapeHtml(manager)}</span></th>${fixtures}</tr>`;
   }).join("");
+}
+
+function cycleFdrSort(round) {
+  if (fdrSort.round !== round || !fdrSort.direction) fdrSort = { round, direction: "easy" };
+  else if (fdrSort.direction === "easy") fdrSort = { round, direction: "hard" };
+  else fdrSort = { round: null, direction: null };
+  renderFdr();
 }
 
 function switchView(view) {
@@ -195,6 +216,7 @@ function setMatchData(records) {
 
 dashboardEls.regionButtons.forEach((button) => button.addEventListener("click",()=>setRegion(button.dataset.region)));
 dashboardEls.navButtons.forEach((button) => button.addEventListener("click",()=>switchView(button.dataset.view)));
+dashboardEls.fdrHead.addEventListener("click",(event)=>{const button=event.target.closest("[data-fdr-sort]");if(button)cycleFdrSort(Number(button.dataset.fdrSort))});
 dashboardEls.roundTabs.addEventListener("click",(event)=>{const button=event.target.closest("[data-round]");if(!button)return;activeRound=Number(button.dataset.round);renderRoundTabs();renderMatches()});
 dashboardEls.matchGrid.addEventListener("click",(event)=>{const card=event.target.closest("[data-match-index]");if(card)openMatchModal(Number(card.dataset.matchIndex))});
 dashboardEls.modalClose.addEventListener("click",closeMatchModal);
