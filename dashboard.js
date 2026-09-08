@@ -32,8 +32,9 @@ const dashboardEls = {
   viewPanels: [...document.querySelectorAll("[data-view-panel]")],
   roundTabs: document.querySelector("#roundTabs"), matchGrid: document.querySelector("#matchGrid"),
   standingsBody: document.querySelector("#standingsBody"), potGrid: document.querySelector("#potGrid"),
+  fdrHead: document.querySelector("#fdrHead"), fdrBody: document.querySelector("#fdrBody"),
   matchesRegionLabel: document.querySelector("#matchesRegionLabel"), standingsRegionLabel: document.querySelector("#standingsRegionLabel"),
-  groupsRegionLabel: document.querySelector("#groupsRegionLabel"), matchModal: document.querySelector("#matchModal"),
+  groupsRegionLabel: document.querySelector("#groupsRegionLabel"), fdrRegionLabel: document.querySelector("#fdrRegionLabel"), matchModal: document.querySelector("#matchModal"),
   modalClose: document.querySelector("#modalClose"), modalContent: document.querySelector("#modalContent"),
 };
 
@@ -70,6 +71,7 @@ function renderRegionState() {
   dashboardEls.matchesRegionLabel.textContent = label;
   dashboardEls.standingsRegionLabel.textContent = label;
   dashboardEls.groupsRegionLabel.textContent = label;
+  dashboardEls.fdrRegionLabel.textContent = label;
 }
 
 function renderRoundTabs() {
@@ -149,14 +151,37 @@ function renderGroups() {
     ${pot.teams.map((team,index) => `<div class="group-row"><img src="${logoUrl(team)}" alt="" /><div><span>${escapeHtml(team.zh)}</span><strong>${escapeHtml(finalManagers[dashboardRegion][pot.number-1][index])}</strong></div></div>`).join("")}</section>`).join("");
 }
 
+function fixtureForTeam(round, teamName) {
+  const match = round.matches.find(([, homeName, awayName]) => homeName === teamName || awayName === teamName);
+  if (!match) return null;
+  const [, homeName, awayName] = match;
+  const isHome = homeName === teamName;
+  const opponentName = isHome ? awayName : homeName;
+  return { opponent: teamsByName.get(opponentName), venue: isHome ? "H" : "A" };
+}
+
+function renderFdr() {
+  dashboardEls.fdrHead.innerHTML = `<tr><th>玩家</th>${officialMatchdays.map((round) => `<th><strong>GW${round.number}</strong></th>`).join("")}</tr>`;
+  dashboardEls.fdrBody.innerHTML = allTeams.map((team) => {
+    const manager = managerFor(team.name);
+    const fixtures = officialMatchdays.map((round) => {
+      const fixture = fixtureForTeam(round, team.name);
+      if (!fixture?.opponent) return '<td class="fdr-empty">—</td>';
+      const opponentManager = managerFor(fixture.opponent.name);
+      return `<td class="fdr-cell" data-pot="${fixture.opponent.pot}" title="${escapeHtml(opponentManager)} · Pot ${fixture.opponent.pot} · ${fixture.venue === "H" ? "主场" : "客场"}"><span>${escapeHtml(opponentManager)}</span><small>${fixture.venue}</small></td>`;
+    }).join("");
+    return `<tr><th scope="row"><img src="${logoUrl(team)}" alt="" /><span>${escapeHtml(manager)}</span></th>${fixtures}</tr>`;
+  }).join("");
+}
+
 function switchView(view) {
   activeView = view;
   dashboardEls.navButtons.forEach((button) => { const selected=button.dataset.view===view; button.classList.toggle("is-active",selected); button.setAttribute("aria-current",selected?"page":"false"); });
   dashboardEls.viewPanels.forEach((panel) => { const selected=panel.dataset.viewPanel===view; panel.hidden=!selected; panel.classList.toggle("is-active",selected); });
-  if(view==="standings") renderStandings(); if(view==="groups") renderGroups();
+  if(view==="standings") renderStandings(); if(view==="groups") renderGroups(); if(view==="fdr") renderFdr();
 }
 function setRegion(region) {
-  if(!regionLabels[region]) return; dashboardRegion=region; closeMatchModal(); renderRegionState(); renderMatches(); renderStandings(); renderGroups();
+  if(!regionLabels[region]) return; dashboardRegion=region; closeMatchModal(); renderRegionState(); renderMatches(); renderStandings(); renderGroups(); renderFdr();
 }
 function setMatchData(records) {
   if(!Array.isArray(records)) return;
@@ -174,4 +199,4 @@ window.addEventListener("keydown",(event)=>{if(event.key==="Escape")closeMatchMo
 
 // 后续官方数据接入点：传入带 region/matchday/homeTeam/awayTeam 的比赛记录即可刷新页面。
 window.__penguinCupDashboard = { setMatchData, getStandings:(region=dashboardRegion)=>calculateStandings(region), getState:()=>({region:dashboardRegion,view:activeView,round:activeRound}) };
-renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups();
+renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr();
