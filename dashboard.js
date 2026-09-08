@@ -186,7 +186,7 @@ function renderFdr() {
       const fixture = fixtureForTeam(round, team.name);
       if (!fixture?.opponent) return '<td class="fdr-empty">—</td>';
       const opponentManager = managerFor(fixture.opponent.name);
-      return `<td class="fdr-cell" data-pot="${fixture.opponent.pot}" title="${escapeHtml(opponentManager)} · Pot ${fixture.opponent.pot} · ${fixture.venue === "H" ? "主场" : "客场"}"><span>${escapeHtml(opponentManager)}</span><small>${fixture.venue}</small></td>`;
+      return `<td class="fdr-cell" data-pot="${fixture.opponent.pot}" title="${escapeHtml(opponentManager)} · Pot ${fixture.opponent.pot}"><span>${escapeHtml(opponentManager)}</span></td>`;
     }).join("");
     return `<tr><th scope="row"><img src="${logoUrl(team)}" alt="" /><span>${escapeHtml(manager)}</span></th>${fixtures}</tr>`;
   }).join("");
