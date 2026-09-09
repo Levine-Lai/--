@@ -1,5 +1,5 @@
 window.PENGUIN_UEFA_SNAPSHOT = {
-  "generatedAt": "2026-09-09T06:16:05.375Z",
+  "generatedAt": "2026-09-09T06:48:56.041Z",
   "matchday": 1,
   "source": "UEFA UCL Fantasy opponent-team API",
   "records": [
@@ -54,6 +54,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -283,6 +284,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Marin",
           "points": 14,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -395,6 +397,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 24,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -498,6 +501,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -664,6 +668,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -794,6 +799,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -969,6 +975,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 24,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -1108,6 +1115,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -1265,6 +1273,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 12,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -1413,6 +1422,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 24,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -1579,6 +1589,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 12,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -5382,6 +5393,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 13,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -5418,6 +5430,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 12,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -5472,6 +5485,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Marin",
           "points": 28,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -5566,6 +5580,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 12,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -5687,6 +5702,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 13,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -5853,6 +5869,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -6064,6 +6081,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Marin",
           "points": 14,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -6122,6 +6140,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 26,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -6270,6 +6289,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 24,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -6436,6 +6456,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 13,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -6593,6 +6614,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "E. Haaland",
           "points": 24,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -6804,6 +6826,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Marin",
           "points": 14,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -7629,6 +7652,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "S. Guirassy",
           "points": 13,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -10347,6 +10371,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "F. Valverde",
           "points": 10,
           "captain": false,
+          "manOfMatch": true,
           "bench": true,
           "played": true,
           "position": 3
@@ -10802,6 +10827,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Marin",
           "points": 14,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3

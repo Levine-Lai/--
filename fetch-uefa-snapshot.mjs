@@ -96,7 +96,7 @@ const playerFeed = await fetch(playerFeedUrl, { headers }).then((response) => {
   if (!response.ok) throw new Error(`Player feed HTTP ${response.status}`);
   return response.json();
 });
-const playerNames = new Map(playerFeed.data.value.playerList.map((player) => [Number(player.id), player.pDName || player.pFName || String(player.id)]));
+const playerInfoById = new Map(playerFeed.data.value.playerList.map((player) => [Number(player.id), player]));
 
 async function fetchMember(region, expectedTeamName, guid) {
   const endpoint = new URL(`https://gaming.uefa.com/en/uclfantasy/services/api/Gameplay/user/${CURRENT_USER_GUID}/opponent-team`);
@@ -107,15 +107,19 @@ async function fetchMember(region, expectedTeamName, guid) {
   });
   const value = payload?.data?.value;
   if (!value || Number(value.retval) !== 1) throw new Error(`${expectedTeamName}: invalid UEFA response`);
-  const lineup = value.playerid.map((player) => ({
-    id: Number(player.id),
-    name: playerNames.get(Number(player.id)) || String(player.id),
-    points: Number(player.overallpointsnew ?? player.overallpoints ?? 0),
-    captain: Number(player.iscaptain) === 1,
-    bench: Number(player.benchposition) > 0,
-    played: Number(player.isplayed) === 1,
-    position: Number(player.skill),
-  }));
+  const lineup = value.playerid.map((player) => {
+    const playerInfo = playerInfoById.get(Number(player.id));
+    return {
+      id: Number(player.id),
+      name: playerInfo?.pDName || playerInfo?.pFName || String(player.id),
+      points: Number(player.overallpointsnew ?? player.overallpoints ?? 0),
+      captain: Number(player.iscaptain) === 1,
+      ...(Number(playerInfo?.mOM) === 1 && Number(playerInfo?.mOMPts) === 3 ? { manOfMatch: true } : {}),
+      bench: Number(player.benchposition) > 0,
+      played: Number(player.isplayed) === 1,
+      position: Number(player.skill),
+    };
+  });
   const captain = lineup.find((player) => player.captain);
   return {
     region,
