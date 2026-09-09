@@ -19,9 +19,25 @@ const finalManagers = {
   ],
 };
 
+const leagueRosterData = window.PENGUIN_LEAGUE_ROSTERS || { regions: { arctic: [], antarctic: [] }, extras: { arctic: [], antarctic: [] } };
+const normalizeMemberKey = (value) => String(value ?? "").normalize("NFKC").trim().replace(/\s+/g, " ").toLocaleLowerCase();
+const leagueMemberIndexes = Object.fromEntries(Object.entries(leagueRosterData.regions).map(([region, members]) => {
+  const index = new Map();
+  members.forEach((member) => {
+    [member.drawName, member.fantasyTeam, member.displayName].forEach((value) => {
+      const key = normalizeMemberKey(value);
+      if (!key) return;
+      if (!index.has(key)) index.set(key, member);
+      else if (index.get(key) !== member) index.set(key, null);
+    });
+  });
+  return [region, index];
+}));
+
 const allTeams = teamPots.flatMap((pot) => pot.teams.map((team, index) => ({ ...team, pot: pot.number, potPosition: index + 1 })));
 const teamsByName = new Map(allTeams.map((team) => [team.name, team]));
 const resultsByRegion = { arctic: {}, antarctic: {} };
+const managerScoresByRegion = { arctic: {}, antarctic: {} };
 const dashboardParams = new URLSearchParams(window.location.search);
 const requestedRegion = dashboardParams.get("region");
 const requestedView = dashboardParams.get("view");
@@ -50,6 +66,28 @@ function logoUrl(team) { return `https://img.uefa.com/imgml/TP/teams/logos/70x70
 function managerFor(teamName, region = dashboardRegion) {
   const team = teamsByName.get(teamName);
   return finalManagers[region][team.pot - 1][team.potPosition - 1];
+}
+function resolveLeagueMember(identity, region = dashboardRegion) {
+  const index = leagueMemberIndexes[region];
+  if (!index) return null;
+  if (identity && typeof identity === "object") {
+    const candidates = [identity.drawName, identity.fantasyTeam, identity.fantasyTeamName, identity.entryName, identity.displayName, identity.managerName, identity.name];
+    for (const candidate of candidates) {
+      const member = index.get(normalizeMemberKey(candidate));
+      if (member) return member;
+    }
+    return null;
+  }
+  return index.get(normalizeMemberKey(identity)) || null;
+}
+function teamForManager(identity, region = dashboardRegion) {
+  const member = resolveLeagueMember(identity, region);
+  const drawName = member?.drawName || String(identity ?? "");
+  for (let potIndex = 0; potIndex < finalManagers[region].length; potIndex += 1) {
+    const position = finalManagers[region][potIndex].indexOf(drawName);
+    if (position >= 0) return teamPots[potIndex].teams[position];
+  }
+  return null;
 }
 function matchKey(matchday, home, away) { return `${matchday}|${home}|${away}`; }
 function getMatchData(matchday, home, away, region = dashboardRegion) {
@@ -214,6 +252,52 @@ function setMatchData(records) {
   renderMatches(); renderStandings();
 }
 
+// 按 Fantasy 队名、玩家显示名或抽签昵称导入每轮得分；最终统一映射到网站抽签昵称。
+function setManagerScores(records) {
+  if (!Array.isArray(records)) return { imported: 0, unresolved: [] };
+  const unresolved = [];
+  let imported = 0;
+  records.forEach((record) => {
+    const region = record.region || dashboardRegion;
+    const member = resolveLeagueMember(record, region);
+    const team = member ? teamForManager(member.drawName, region) : null;
+    const matchday = Number(record.matchday ?? record.round ?? record.gameday);
+    const score = Number(record.score ?? record.points);
+    if (!member || !team || !Number.isInteger(matchday) || matchday < 1 || matchday > officialMatchdays.length || !Number.isFinite(score)) {
+      unresolved.push(record);
+      return;
+    }
+    managerScoresByRegion[region][`${matchday}|${team.name}`] = {
+      score,
+      lineup: Array.isArray(record.lineup) ? record.lineup : [],
+      captain: record.captain ?? null,
+      status: record.status || "已同步",
+    };
+    imported += 1;
+  });
+
+  Object.keys(managerScoresByRegion).forEach((region) => {
+    officialMatchdays.forEach((round) => round.matches.forEach(([, homeName, awayName]) => {
+      const home = managerScoresByRegion[region][`${round.number}|${homeName}`];
+      const away = managerScoresByRegion[region][`${round.number}|${awayName}`];
+      if (!home || !away) return;
+      resultsByRegion[region][matchKey(round.number, homeName, awayName)] = {
+        ...resultsByRegion[region][matchKey(round.number, homeName, awayName)],
+        homeScore: home.score,
+        awayScore: away.score,
+        homeLineup: home.lineup,
+        awayLineup: away.lineup,
+        homeCaptain: home.captain,
+        awayCaptain: away.captain,
+        status: home.status === away.status ? home.status : "已同步",
+      };
+    }));
+  });
+  renderMatches();
+  renderStandings();
+  return { imported, unresolved };
+}
+
 dashboardEls.regionButtons.forEach((button) => button.addEventListener("click",()=>setRegion(button.dataset.region)));
 dashboardEls.navButtons.forEach((button) => button.addEventListener("click",()=>switchView(button.dataset.view)));
 dashboardEls.fdrHead.addEventListener("click",(event)=>{const button=event.target.closest("[data-fdr-sort]");if(button)cycleFdrSort(Number(button.dataset.fdrSort))});
@@ -224,5 +308,13 @@ dashboardEls.matchModal.addEventListener("click",(event)=>{if(event.target===das
 window.addEventListener("keydown",(event)=>{if(event.key==="Escape")closeMatchModal()});
 
 // 后续官方数据接入点：传入带 region/matchday/homeTeam/awayTeam 的比赛记录即可刷新页面。
-window.__penguinCupDashboard = { setMatchData, getStandings:(region=dashboardRegion)=>calculateStandings(region), getState:()=>({region:dashboardRegion,view:activeView,round:activeRound}) };
+window.__penguinCupDashboard = {
+  setMatchData,
+  setManagerScores,
+  resolveLeagueMember,
+  teamForManager,
+  getLeagueRosters: () => leagueRosterData,
+  getStandings:(region=dashboardRegion)=>calculateStandings(region),
+  getState:()=>({region:dashboardRegion,view:activeView,round:activeRound}),
+};
 renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr(); switchView(activeView);
