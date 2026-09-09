@@ -34,6 +34,13 @@ const leagueMemberIndexes = Object.fromEntries(Object.entries(leagueRosterData.r
   return [region, index];
 }));
 
+function attachGuidToLeagueMember(member, guid, region) {
+  const key = normalizeMemberKey(guid);
+  if (!member || !key || !leagueMemberIndexes[region]) return;
+  member.guid = guid;
+  leagueMemberIndexes[region].set(key, member);
+}
+
 const allTeams = teamPots.flatMap((pot) => pot.teams.map((team, index) => ({ ...team, pot: pot.number, potPosition: index + 1 })));
 const teamsByName = new Map(allTeams.map((team) => [team.name, team]));
 const resultsByRegion = { arctic: {}, antarctic: {} };
@@ -71,7 +78,7 @@ function resolveLeagueMember(identity, region = dashboardRegion) {
   const index = leagueMemberIndexes[region];
   if (!index) return null;
   if (identity && typeof identity === "object") {
-    const candidates = [identity.drawName, identity.fantasyTeam, identity.fantasyTeamName, identity.entryName, identity.displayName, identity.managerName, identity.name];
+    const candidates = [identity.guid, identity.opponentguid, identity.drawName, identity.fantasyTeam, identity.fantasyTeamName, identity.entryName, identity.displayName, identity.managerName, identity.name];
     for (const candidate of candidates) {
       const member = index.get(normalizeMemberKey(candidate));
       if (member) return member;
@@ -143,7 +150,12 @@ function renderMatches() {
 }
 
 function lineupHtml(items) {
-  return Array.isArray(items) && items.length ? `<div class="empty-lineup">${items.map(escapeHtml).join(" · ")}</div>` : '<div class="empty-lineup">阵容暂未公布</div>';
+  if (!Array.isArray(items) || !items.length) return '<div class="empty-lineup">阵容暂未公布</div>';
+  return `<div class="empty-lineup">${items.map((item) => {
+    if (!item || typeof item !== "object") return escapeHtml(item);
+    const flags = `${item.captain ? " ©" : ""}${item.bench ? " · 替补" : ""}`;
+    return `${escapeHtml(item.name)} ${Number(item.points) || 0}分${flags}`;
+  }).join(" · ")}</div>`;
 }
 
 function openMatchModal(matchIndex) {
@@ -267,6 +279,7 @@ function setManagerScores(records) {
       unresolved.push(record);
       return;
     }
+    if (record.guid) attachGuidToLeagueMember(member, record.guid, region);
     managerScoresByRegion[region][`${matchday}|${team.name}`] = {
       score,
       lineup: Array.isArray(record.lineup) ? record.lineup : [],
@@ -317,4 +330,9 @@ window.__penguinCupDashboard = {
   getStandings:(region=dashboardRegion)=>calculateStandings(region),
   getState:()=>({region:dashboardRegion,view:activeView,round:activeRound}),
 };
-renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr(); switchView(activeView);
+renderRegionState(); renderRoundTabs(); renderMatches(); renderStandings(); renderGroups(); renderFdr();
+if (window.PENGUIN_UEFA_SNAPSHOT?.records) {
+  const importResult = setManagerScores(window.PENGUIN_UEFA_SNAPSHOT.records);
+  window.__penguinCupDashboard.lastImport = importResult;
+}
+switchView(activeView);
