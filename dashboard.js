@@ -150,29 +150,28 @@ function renderMatches() {
   dashboardEls.matchGrid.innerHTML = round.matches.map((match, index) => matchCardHtml(round.number, match, index)).join("");
 }
 
-function playerKey(player) {
-  if (!player || typeof player !== "object") return normalizeMemberKey(player);
-  return player.id == null ? normalizeMemberKey(player.name) : `id:${player.id}`;
+function positionLabel(position) {
+  return ({ 1: "GW", 2: "DE", 3: "MD", 4: "FW" })[Number(position)] || "--";
 }
 
-function lineupDifferences(homeLineup, awayLineup) {
-  const home = Array.isArray(homeLineup) ? homeLineup : [];
-  const away = Array.isArray(awayLineup) ? awayLineup : [];
-  const homeKeys = new Set(home.map(playerKey));
-  const awayKeys = new Set(away.map(playerKey));
-  return {
-    home: home.filter((player) => !awayKeys.has(playerKey(player))),
-    away: away.filter((player) => !homeKeys.has(playerKey(player))),
-  };
-}
-
-function differentialPlayersHtml(items) {
-  if (!items.length) return '<p class="diff-empty">无差异球员</p>';
-  return `<ol class="diff-player-list">${items.map((player) => {
+function lineupPlayersHtml(items, isBench) {
+  if (!items.length) return '<p class="lineup-empty">暂无球员</p>';
+  return `<ol class="lineup-player-list">${items.map((player) => {
     const isPlayed = Boolean(player?.played);
+    const isUnavailable = isBench && isPlayed;
     const points = isPlayed ? Number(player?.points) || 0 : 0;
-    return `<li class="diff-player${isPlayed ? " is-played" : " is-unplayed"}"><span class="diff-player-name">${escapeHtml(player?.name || "未知球员")}${player?.captain ? '<b class="captain-mark" title="队长">©</b>' : ""}</span><strong class="diff-player-points">${points}<small>分</small></strong></li>`;
+    const stateClass = `${isPlayed ? " is-played" : " is-unplayed"}${isUnavailable ? " is-unavailable" : ""}`;
+    const stateTitle = isUnavailable ? ' title="已开赛且位于替补席，本轮得分无效"' : "";
+    return `<li class="lineup-player${stateClass}"${stateTitle}><span class="position-code">${positionLabel(player?.position)}</span><span class="lineup-player-name">${escapeHtml(player?.name || "未知球员")}${player?.captain ? '<b class="captain-mark" title="队长">©</b>' : ""}</span><strong class="lineup-player-points">${points}<small>分</small></strong></li>`;
   }).join("")}</ol>`;
+}
+
+function fullLineupHtml(items) {
+  const lineup = Array.isArray(items) ? items : [];
+  const starters = lineup.filter((player) => !player?.bench);
+  const substitutes = lineup.filter((player) => player?.bench);
+  return `<div class="lineup-section lineup-section--starters"><div class="lineup-section-title"><strong>首发</strong><span>${starters.length}</span></div>${lineupPlayersHtml(starters, false)}</div>
+    <div class="lineup-section lineup-section--bench"><div class="lineup-section-title"><strong>替补</strong><span>${substitutes.length}</span></div>${lineupPlayersHtml(substitutes, true)}</div>`;
 }
 
 function openMatchModal(matchIndex) {
@@ -180,7 +179,8 @@ function openMatchModal(matchIndex) {
   const [, homeName, awayName] = round.matches[matchIndex];
   const home = teamsByName.get(homeName), away = teamsByName.get(awayName);
   const data = getMatchData(activeRound, homeName, awayName);
-  const differences = lineupDifferences(data.homeLineup, data.awayLineup);
+  const homeLineup = Array.isArray(data.homeLineup) ? data.homeLineup : [];
+  const awayLineup = Array.isArray(data.awayLineup) ? data.awayLineup : [];
   dashboardEls.modalContent.innerHTML = `<div class="modal-match-head">
       <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮</p>
       <div class="modal-scoreline">
@@ -188,9 +188,9 @@ function openMatchModal(matchIndex) {
         <div class="modal-score">${scoreBoardHtml(data, "modal")}</div>
         <div class="modal-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(away.zh)}</strong><span>${escapeHtml(managerFor(awayName))}</span></div>
       </div></div>
-    <div class="modal-detail-body"><div class="diff-heading"><strong>阵容 Diff</strong><span>15 人阵容 · 共有球员已抵消</span></div><div class="diff-columns">
-      <section class="diff-side"><h3><img src="${logoUrl(home)}" alt="" /><span>${escapeHtml(managerFor(homeName))}</span><small>${differences.home.length} 人</small></h3>${differentialPlayersHtml(differences.home)}</section>
-      <section class="diff-side"><h3><img src="${logoUrl(away)}" alt="" /><span>${escapeHtml(managerFor(awayName))}</span><small>${differences.away.length} 人</small></h3>${differentialPlayersHtml(differences.away)}</section>
+    <div class="modal-detail-body"><div class="lineup-heading"><strong>双方阵容</strong><span>划线替补已锁定，不再计分</span></div><div class="lineup-columns">
+      <section class="lineup-side"><h3><img src="${logoUrl(home)}" alt="" /><span>${escapeHtml(managerFor(homeName))}</span><small>${homeLineup.length} 人</small></h3>${fullLineupHtml(homeLineup)}</section>
+      <section class="lineup-side"><h3><img src="${logoUrl(away)}" alt="" /><span>${escapeHtml(managerFor(awayName))}</span><small>${awayLineup.length} 人</small></h3>${fullLineupHtml(awayLineup)}</section>
     </div></div>`;
   dashboardEls.matchModal.hidden = false; document.body.style.overflow = "hidden"; dashboardEls.modalClose.focus();
 }
