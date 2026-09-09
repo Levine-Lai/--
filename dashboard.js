@@ -102,14 +102,15 @@ function getMatchData(matchday, home, away, region = dashboardRegion) {
     homeScore: null, awayScore: null, homeLineup: [], awayLineup: [], homeCaptain: null, awayCaptain: null, differentials: [], status: "待同步",
   };
 }
-function formatDate(dateValue) { const date = new Date(`${dateValue}T00:00:00`); return `${date.getMonth() + 1}月${date.getDate()}日`; }
-function scoreText(data) { return Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore) ? `${data.homeScore}:${data.awayScore}` : "—:—"; }
-function scoreBoardHtml(data) {
+function scoreBoardHtml(data, variant = "") {
   const hasScore = Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore);
   const homeScore = hasScore ? data.homeScore : "—";
   const awayScore = hasScore ? data.awayScore : "—";
   const label = hasScore ? `比分 ${homeScore} 比 ${awayScore}` : "比赛尚未产生比分";
-  return `<span class="scoreboard" aria-label="${label}"><span class="score-value${hasScore ? "" : " is-empty"}">${homeScore}</span><span class="score-divider">:</span><span class="score-value${hasScore ? "" : " is-empty"}">${awayScore}</span></span>`;
+  const homeState = !hasScore ? " is-empty" : homeScore > awayScore ? " is-leading" : homeScore < awayScore ? " is-trailing" : " is-level";
+  const awayState = !hasScore ? " is-empty" : awayScore > homeScore ? " is-leading" : awayScore < homeScore ? " is-trailing" : " is-level";
+  const variantClass = variant ? ` scoreboard--${variant}` : "";
+  return `<span class="scoreboard${variantClass}" aria-label="${label}"><span class="score-value${homeState}">${homeScore}</span><span class="score-divider">:</span><span class="score-value${awayState}">${awayScore}</span></span>`;
 }
 
 function renderRegionState() {
@@ -149,31 +150,47 @@ function renderMatches() {
   dashboardEls.matchGrid.innerHTML = round.matches.map((match, index) => matchCardHtml(round.number, match, index)).join("");
 }
 
-function lineupHtml(items) {
-  if (!Array.isArray(items) || !items.length) return '<div class="empty-lineup">阵容暂未公布</div>';
-  return `<div class="empty-lineup">${items.map((item) => {
-    if (!item || typeof item !== "object") return escapeHtml(item);
-    const flags = `${item.captain ? " ©" : ""}${item.bench ? " · 替补" : ""}`;
-    return `${escapeHtml(item.name)} ${Number(item.points) || 0}分${flags}`;
-  }).join(" · ")}</div>`;
+function playerKey(player) {
+  if (!player || typeof player !== "object") return normalizeMemberKey(player);
+  return player.id == null ? normalizeMemberKey(player.name) : `id:${player.id}`;
+}
+
+function lineupDifferences(homeLineup, awayLineup) {
+  const home = Array.isArray(homeLineup) ? homeLineup : [];
+  const away = Array.isArray(awayLineup) ? awayLineup : [];
+  const homeKeys = new Set(home.map(playerKey));
+  const awayKeys = new Set(away.map(playerKey));
+  return {
+    home: home.filter((player) => !awayKeys.has(playerKey(player))),
+    away: away.filter((player) => !homeKeys.has(playerKey(player))),
+  };
+}
+
+function differentialPlayersHtml(items) {
+  if (!items.length) return '<p class="diff-empty">无差异球员</p>';
+  return `<ol class="diff-player-list">${items.map((player) => {
+    const isPlayed = Boolean(player?.played);
+    const points = isPlayed ? Number(player?.points) || 0 : 0;
+    return `<li class="diff-player${isPlayed ? " is-played" : " is-unplayed"}"><span class="diff-player-name">${escapeHtml(player?.name || "未知球员")}${player?.captain ? '<b class="captain-mark" title="队长">©</b>' : ""}</span><strong class="diff-player-points">${points}<small>分</small></strong></li>`;
+  }).join("")}</ol>`;
 }
 
 function openMatchModal(matchIndex) {
   const round = officialMatchdays.find((item) => item.number === activeRound);
-  const [date, homeName, awayName] = round.matches[matchIndex];
+  const [, homeName, awayName] = round.matches[matchIndex];
   const home = teamsByName.get(homeName), away = teamsByName.get(awayName);
   const data = getMatchData(activeRound, homeName, awayName);
-  const differentials = Array.isArray(data.differentials) && data.differentials.length ? data.differentials.map(escapeHtml).join(" · ") : "暂无差异球员";
+  const differences = lineupDifferences(data.homeLineup, data.awayLineup);
   dashboardEls.modalContent.innerHTML = `<div class="modal-match-head">
-      <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮 · ${formatDate(date)}</p>
+      <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮</p>
       <div class="modal-scoreline">
         <div class="modal-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(home.zh)}</strong><span>${escapeHtml(managerFor(homeName))}</span></div>
-        <div class="modal-score">${scoreText(data)}</div>
+        <div class="modal-score">${scoreBoardHtml(data, "modal")}</div>
         <div class="modal-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(away.zh)}</strong><span>${escapeHtml(managerFor(awayName))}</span></div>
       </div></div>
-    <div class="modal-detail-body"><section class="differential-panel"><strong>差异球员</strong><p>${differentials}</p></section><p class="detail-label">双方阵容</p><div class="lineup-grid">
-      <section class="lineup-panel"><h3><img src="${logoUrl(home)}" alt="" />${escapeHtml(managerFor(homeName))}</h3>${lineupHtml(data.homeLineup)}<div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.homeCaptain || "暂未公布")}</span></div></section>
-      <section class="lineup-panel"><h3><img src="${logoUrl(away)}" alt="" />${escapeHtml(managerFor(awayName))}</h3>${lineupHtml(data.awayLineup)}<div class="detail-item"><strong>队长</strong><span>${escapeHtml(data.awayCaptain || "暂未公布")}</span></div></section>
+    <div class="modal-detail-body"><div class="diff-heading"><strong>阵容 Diff</strong><span>15 人阵容 · 共有球员已抵消</span></div><div class="diff-columns">
+      <section class="diff-side"><h3><img src="${logoUrl(home)}" alt="" /><span>${escapeHtml(managerFor(homeName))}</span><small>${differences.home.length} 人</small></h3>${differentialPlayersHtml(differences.home)}</section>
+      <section class="diff-side"><h3><img src="${logoUrl(away)}" alt="" /><span>${escapeHtml(managerFor(awayName))}</span><small>${differences.away.length} 人</small></h3>${differentialPlayersHtml(differences.away)}</section>
     </div></div>`;
   dashboardEls.matchModal.hidden = false; document.body.style.overflow = "hidden"; dashboardEls.modalClose.focus();
 }
