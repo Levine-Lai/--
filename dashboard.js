@@ -187,9 +187,9 @@ function openMatchModal(matchIndex) {
   dashboardEls.modalContent.innerHTML = `<div class="modal-match-head">
       <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮</p>
       <div class="modal-scoreline">
-        <div class="modal-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(home.zh)}</strong><span>${escapeHtml(managerFor(homeName))}</span></div>
+        <div class="modal-team"><img src="${logoUrl(home)}" alt="" /><strong>${escapeHtml(managerFor(homeName))}</strong><span>${escapeHtml(home.zh)}</span></div>
         <div class="modal-score">${scoreBoardHtml(data, "modal")}</div>
-        <div class="modal-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(away.zh)}</strong><span>${escapeHtml(managerFor(awayName))}</span></div>
+        <div class="modal-team"><img src="${logoUrl(away)}" alt="" /><strong>${escapeHtml(managerFor(awayName))}</strong><span>${escapeHtml(away.zh)}</span></div>
       </div></div>
     <div class="modal-detail-body"><div class="lineup-heading"><strong>双方阵容</strong></div><div class="lineup-columns">
       <section class="lineup-side"><h3><img src="${logoUrl(home)}" alt="" /><span>${escapeHtml(managerFor(homeName))}</span></h3>${fullLineupHtml(homeLineup)}</section>
