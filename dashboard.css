@@ -84,4 +84,4 @@ button:focus-visible{outline:2px solid #7ce8ff;outline-offset:2px}
 .analytics-full-list .analytics-metric{min-width:94px}
 .analytics-full-list .analytics-metric strong{font-size:18px}
 @media(max-width:700px){.analytics-card:hover{transform:none}.match-modal.is-analytics{max-height:calc(100dvh - 16px)}.analytics-modal-content header{padding:22px 50px 17px 16px}.analytics-modal-content header h2{font-size:23px}.analytics-full-list li{grid-template-columns:27px minmax(0,1fr) auto;gap:7px;min-height:44px;padding:7px 11px}.analytics-full-list .analytics-player strong{font-size:13px}.analytics-full-list .analytics-player small{font-size:9px}.analytics-full-list .analytics-metric{min-width:73px}.analytics-full-list .analytics-metric strong{font-size:16px}.analytics-full-list .analytics-metric small{font-size:8px}}
-.lineup-player.is-played .lineup-player-points{color:var(--gold)}
+.lineup-player .lineup-player-points{color:#f4cc55!important}
