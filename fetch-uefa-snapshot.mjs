@@ -3,6 +3,7 @@ import { writeFile } from "node:fs/promises";
 const CURRENT_USER_GUID = "7649f634-a5a9-11f1-ad1f-b33810b58db2";
 const MATCHDAY = 1;
 const PHASE_ID = 1;
+const MATCHDAY_STATUS_OVERRIDE = MATCHDAY === 1 ? "已结束" : null;
 
 const leagueMembers = {
   arctic: [
@@ -131,7 +132,7 @@ async function fetchMember(region, expectedTeamName, guid) {
     overallPoints: Number(value.ovPoints ?? 0),
     captain: captain?.name || null,
     lineup,
-    status: Number(value.isAccounting) === 1 ? "统计中" : "进行中",
+    status: MATCHDAY_STATUS_OVERRIDE || (Number(value.isAccounting) === 1 ? "统计中" : "进行中"),
   };
 }
 

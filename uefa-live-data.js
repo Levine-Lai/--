@@ -1,5 +1,5 @@
 window.PENGUIN_UEFA_SNAPSHOT = {
-  "generatedAt": "2026-09-10T00:33:14.760Z",
+  "generatedAt": "2026-09-11T00:55:10.237Z",
   "matchday": 1,
   "source": "UEFA UCL Fantasy opponent-team API",
   "records": [
@@ -9,14 +9,14 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "AVG",
       "displayName": "AVERAGE",
       "matchday": 1,
-      "score": 71,
-      "overallPoints": 71,
+      "score": 102,
+      "overallPoints": 102,
       "captain": "S. Guirassy",
       "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
           "captain": false,
           "manOfMatch": true,
           "bench": false,
@@ -24,31 +24,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
         },
         {
           "id": 250080553,
@@ -61,33 +43,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
           "id": 250088061,
           "name": "A. Hakimi",
           "points": 3,
@@ -97,38 +52,56 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
+          "id": 250118908,
+          "name": "S. Lammens",
           "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 1
         },
         {
           "id": 250179137,
           "name": "I. Fresneda",
           "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
           "captain": false,
           "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250162184,
+          "name": "C. Lang",
+          "points": 2,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
@@ -143,16 +116,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250162184,
-          "name": "C. Lang",
-          "points": 2,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
+          "position": 4
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -160,72 +161,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Eva",
       "displayName": "CHI",
       "matchday": 1,
-      "score": 40,
-      "overallPoints": 40,
-      "captain": "K. Kvaratskhelia",
+      "score": 101,
+      "overallPoints": 101,
+      "captain": "M. Olise",
       "lineup": [
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250079545,
-          "name": "D. Upamecano",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 97746,
-          "name": "Y. Sommer",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
+          "id": 250099671,
+          "name": "G. Til",
           "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": true,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 4
         },
         {
           "id": 250136465,
@@ -237,12 +193,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250130006,
+          "name": "Sergi Altimira",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "points": 14,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
@@ -255,18 +230,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 4
         },
         {
-          "id": 250130006,
-          "name": "Sergi Altimira",
-          "points": 3,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250079545,
+          "name": "D. Upamecano",
+          "points": 10,
           "captain": false,
           "bench": false,
           "played": true,
@@ -282,26 +266,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250055294,
-          "name": "R. Marin",
-          "points": 14,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 97746,
+          "name": "Y. Sommer",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 42,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
-          "points": 1,
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 4
+          "position": 3
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -309,18 +311,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "jingluo",
       "displayName": "Ray",
       "matchday": 1,
-      "score": 66,
-      "overallPoints": 66,
+      "score": 94,
+      "overallPoints": 94,
       "captain": "E. Haaland",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
           "captain": false,
           "bench": false,
-          "played": true,
-          "position": 2
+          "played": false,
+          "position": 1
         },
         {
           "id": 250131901,
@@ -328,35 +330,35 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 8,
           "captain": false,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 2
         },
         {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
           "captain": false,
           "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250150915,
-          "name": "J. Cardoso",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
+          "played": false,
           "position": 2
+        },
+        {
+          "id": 250076168,
+          "name": "M. Cucurella",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 2
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 3
         },
         {
           "id": 250112880,
@@ -365,26 +367,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "captain": false,
           "manOfMatch": true,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
         },
         {
           "id": 250113001,
@@ -392,8 +376,26 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 2,
           "captain": false,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 4
         },
         {
           "id": 250103758,
@@ -402,14 +404,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "captain": true,
           "manOfMatch": true,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": false,
           "position": 3
@@ -420,39 +423,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 2,
           "captain": false,
           "bench": true,
-          "played": true,
+          "played": false,
           "position": 1
         },
         {
-          "id": 250076168,
-          "name": "M. Cucurella",
-          "points": 3,
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
-          "bench": false,
-          "played": true,
+          "bench": true,
+          "played": false,
           "position": 2
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
+          "bench": true,
+          "played": false,
+          "position": 2
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
+          "id": 250150915,
+          "name": "J. Cardoso",
+          "points": 0,
           "captain": false,
-          "manOfMatch": true,
           "bench": true,
-          "played": true,
+          "played": false,
           "position": 3
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -460,34 +462,34 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "放棄是極其難",
       "displayName": "安德",
       "matchday": 1,
-      "score": 52,
-      "overallPoints": 52,
+      "score": 106,
+      "overallPoints": 106,
       "captain": "S. Guirassy",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250178823,
+          "name": "P. Dorgu",
+          "points": 12,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
+          "position": 3
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
           "captain": false,
-          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -495,10 +497,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
@@ -512,11 +514,68 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250140940,
+          "name": "M. Baturina",
+          "points": 13,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250092517,
           "name": "J. Ryerson",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -530,79 +589,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250140940,
-          "name": "M. Baturina",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250178823,
-          "name": "P. Dorgu",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
           "id": 250086333,
           "name": "P. Dybala",
-          "points": 0,
+          "points": 3,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -610,111 +615,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "nbw",
       "displayName": "Chyancheng Wu",
       "matchday": 1,
-      "score": 86,
-      "overallPoints": 86,
+      "score": 119,
+      "overallPoints": 119,
       "captain": "S. Guirassy",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 15,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101238,
-          "name": "W. Anton",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250080553,
-          "name": "S. Guirassy",
-          "points": 26,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250176488,
-          "name": "J. Ramón",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250130006,
-          "name": "Sergi Altimira",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250187727,
           "name": "R. Zalazar",
@@ -726,9 +630,46 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250080553,
+          "name": "S. Guirassy",
+          "points": 26,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 15,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250130006,
+          "name": "Sergi Altimira",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -744,28 +685,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "1a6a4f6a-aa83-11f1-b94a-bb5423dec20f",
-      "fantasyTeam": "Dream Tickets",
-      "displayName": "Steven",
-      "matchday": 1,
-      "score": 65,
-      "overallPoints": 65,
-      "captain": "S. Guirassy",
-      "lineup": [
-        {
           "id": 250112880,
           "name": "Raphinha",
           "points": 16,
@@ -776,30 +695,116 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250101238,
+          "name": "W. Anton",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250176488,
+          "name": "J. Ramón",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250171184,
           "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
           "points": 0,
           "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "1a6a4f6a-aa83-11f1-b94a-bb5423dec20f",
+      "fantasyTeam": "Dream Tickets",
+      "displayName": "Steven",
+      "matchday": 1,
+      "score": 104,
+      "overallPoints": 104,
+      "captain": "S. Guirassy",
+      "lineup": [
+        {
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250101240,
+          "name": "G. Prömel",
+          "points": 4,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 3
         },
         {
@@ -813,42 +818,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250081628,
-          "name": "Diogo Dalot",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
           "id": 250088061,
           "name": "A. Hakimi",
           "points": 3,
@@ -858,11 +827,39 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250064064,
-          "name": "Marquinhos",
-          "points": 0,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -876,13 +873,127 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101240,
-          "name": "G. Prömel",
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250064064,
+          "name": "Marquinhos",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250081628,
+          "name": "Diogo Dalot",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "02d501fa-99d6-11f1-9099-21824ba98c86",
+      "fantasyTeam": "heavy serenade",
+      "displayName": "micky",
+      "matchday": 1,
+      "score": 93,
+      "overallPoints": 93,
+      "captain": "E. Haaland",
+      "lineup": [
+        {
+          "id": 250134138,
+          "name": "B. Barcola",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250124063,
+          "name": "R. Cherki",
           "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250103758,
+          "name": "E. Haaland",
+          "points": 24,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250194673,
@@ -894,31 +1005,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
+          "id": 250110943,
+          "name": "Matheus Cunha",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "02d501fa-99d6-11f1-9099-21824ba98c86",
-      "fantasyTeam": "heavy serenade",
-      "displayName": "micky",
-      "matchday": 1,
-      "score": 54,
-      "overallPoints": 54,
-      "captain": "E. Haaland",
-      "lineup": [
+          "position": 3
+        },
         {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
@@ -934,109 +1032,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
           "id": 250171184,
           "name": "M. Olise",
-          "points": 0,
+          "points": 21,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250124063,
-          "name": "R. Cherki",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250103758,
-          "name": "E. Haaland",
-          "points": 24,
-          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
-          "position": 4
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250110943,
-          "name": "Matheus Cunha",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
           "position": 3
         },
         {
-          "id": 250134138,
-          "name": "B. Barcola",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1047,12 +1055,12 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "Xavi Espart",
           "points": 0,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -1060,115 +1068,14 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Pluto D",
       "displayName": "Du",
       "matchday": 1,
-      "score": 69,
-      "overallPoints": 69,
+      "score": 107,
+      "overallPoints": 107,
       "captain": "S. Guirassy",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250080553,
-          "name": "S. Guirassy",
-          "points": 26,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250074004,
-          "name": "J. Butez",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
           "id": 250078886,
           "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250042705,
-          "name": "L. Shaw",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1185,13 +1092,32 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 4
+        },
+        {
+          "id": 250080553,
+          "name": "S. Guirassy",
+          "points": 26,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250074004,
+          "name": "J. Butez",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250194673,
@@ -1201,23 +1127,75 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "b5cb45ae-a277-11f1-9fdd-6d0db8725bb7",
-      "fantasyTeam": "座山雕",
-      "displayName": "座山雕",
-      "matchday": 1,
-      "score": 66,
-      "overallPoints": 66,
-      "captain": "Raphinha",
-      "lineup": [
+        },
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250042705,
+          "name": "L. Shaw",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
@@ -1225,46 +1203,49 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "b5cb45ae-a277-11f1-9fdd-6d0db8725bb7",
+      "fantasyTeam": "座山雕",
+      "displayName": "座山雕",
+      "matchday": 1,
+      "score": 97,
+      "overallPoints": 97,
+      "captain": "Raphinha",
+      "lineup": [
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 2
         },
         {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250212323,
+          "name": "Wesley França",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1290,15 +1271,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250117491,
-          "name": "M. Kovář",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
           "id": 250128377,
           "name": "Jude Bellingham",
           "points": 3,
@@ -1308,24 +1280,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250212323,
-          "name": "Wesley França",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250147458,
           "name": "L. Suárez",
           "points": 7,
@@ -1333,6 +1287,43 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250117491,
+          "name": "M. Kovář",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250127538,
@@ -1348,12 +1339,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "Z. Suzuki",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -1361,10 +1371,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "九命黑獭一统天下",
       "displayName": "Alex",
       "matchday": 1,
-      "score": 63,
-      "overallPoints": 63,
+      "score": 101,
+      "overallPoints": 101,
       "captain": "E. Haaland",
       "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
         {
           "id": 250131901,
           "name": "Gabriel",
@@ -1375,59 +1403,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250187458,
+          "name": "R. van Bommel",
+          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250163731,
-          "name": "Yan Couto",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250103758,
@@ -1440,29 +1422,39 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250187458,
-          "name": "R. van Bommel",
-          "points": 0,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
           "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250200231,
           "name": "M. Araújo",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
@@ -1476,13 +1468,23 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
+          "id": 250163731,
+          "name": "Yan Couto",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250046901,
@@ -1494,16 +1496,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250190377,
-          "name": "Xavi Espart",
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250190377,
+          "name": "Xavi Espart",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -1511,19 +1522,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Kw拜诶噻",
       "displayName": "Kw",
       "matchday": 1,
-      "score": 50,
-      "overallPoints": 50,
-      "captain": "M. Mittelstädt",
+      "score": 92,
+      "overallPoints": 92,
+      "captain": "H. Kane",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -1534,58 +1536,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
+          "points": 18,
+          "captain": true,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250186227,
-          "name": "A. Diao",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250104066,
@@ -1593,6 +1559,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 13,
           "captain": false,
           "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250186227,
+          "name": "A. Diao",
+          "points": 7,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
@@ -1608,6 +1583,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250065792,
           "name": "V. Milinković-Savić",
           "points": 2,
@@ -1617,18 +1601,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250164991,
-          "name": "João Neves",
-          "points": 0,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1644,16 +1619,53 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 8,
-          "captain": true,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
           "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250164991,
+          "name": "João Neves",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -1661,32 +1673,41 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Baros15",
       "displayName": "JYC15",
       "matchday": 1,
-      "score": 55,
-      "overallPoints": 55,
+      "score": 66,
+      "overallPoints": 66,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
-          "id": 250181082,
-          "name": "M. Lewis-Skelly",
-          "points": 0,
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 4
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1703,21 +1724,30 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
+          "id": 250117491,
+          "name": "M. Kovář",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250182174,
+          "name": "K. Karetsas",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -1730,36 +1760,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250117491,
-          "name": "M. Kovář",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
-          "points": 3,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
@@ -1779,18 +1782,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "Rui Silva",
           "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
         },
         {
-          "id": 250182174,
-          "name": "K. Karetsas",
-          "points": 1,
+          "id": 250181082,
+          "name": "M. Lewis-Skelly",
+          "points": 0,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 3
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250190377,
@@ -1802,7 +1814,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -1810,9 +1822,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "珠海兵工厂",
       "displayName": "Ericking Arsenal",
       "matchday": 1,
-      "score": 46,
-      "overallPoints": 46,
-      "captain": "L. Suárez",
+      "score": 99,
+      "overallPoints": 99,
+      "captain": "M. Olise",
       "lineup": [
         {
           "id": 250171278,
@@ -1824,67 +1836,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250124460,
-          "name": "C. Tzolis",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": true,
+          "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250163731,
-          "name": "Yan Couto",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250153621,
-          "name": "N. Paz",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
+          "position": 4
         },
         {
           "id": 250088061,
@@ -1896,29 +1854,47 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250124460,
+          "name": "C. Tzolis",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 3
+        },
+        {
+          "id": 250202036,
+          "name": "Flávio Gonçalves",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250153621,
+          "name": "N. Paz",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250147458,
           "name": "L. Suárez",
-          "points": 14,
-          "captain": true,
+          "points": 7,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
+          "id": 250156423,
+          "name": "D. Svensson",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -1932,125 +1908,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250202036,
-          "name": "Flávio Gonçalves",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "1b914a22-a8dc-11f1-8854-9b8aaf24794f",
-      "fantasyTeam": "Jzl",
-      "displayName": "vx",
-      "matchday": 1,
-      "score": 49,
-      "overallPoints": 49,
-      "captain": "L. Yamal",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250164780,
           "name": "Fermín López",
           "points": 1,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250181717,
-          "name": "A. Semenyo",
-          "points": 3,
-          "captain": false,
           "bench": true,
           "played": true,
           "position": 3
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
-        },
-        {
-          "id": 250064064,
-          "name": "Marquinhos",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250090101,
-          "name": "M. Safonov",
-          "points": 3,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
         },
         {
           "id": 250076574,
@@ -2062,9 +1935,68 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250163731,
+          "name": "Yan Couto",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 42,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "1b914a22-a8dc-11f1-8854-9b8aaf24794f",
+      "fantasyTeam": "Jzl",
+      "displayName": "vx",
+      "matchday": 1,
+      "score": 79,
+      "overallPoints": 79,
+      "captain": "L. Yamal",
+      "lineup": [
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -2080,13 +2012,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250085391,
-          "name": "A. Brignoli",
-          "points": 7,
+          "id": 250090101,
+          "name": "M. Safonov",
+          "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250181717,
+          "name": "A. Semenyo",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250182174,
@@ -2096,23 +2037,56 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 3
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "d5372a2c-a9b4-11f1-9466-e5b27f9952e8",
-      "fantasyTeam": "DDDD",
-      "displayName": "Wei",
-      "matchday": 1,
-      "score": 45,
-      "overallPoints": 45,
-      "captain": "Raphinha",
-      "lineup": [
+        },
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
+          "id": 250085391,
+          "name": "A. Brignoli",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250064064,
+          "name": "Marquinhos",
           "points": 0,
           "captain": false,
           "bench": false,
@@ -2129,83 +2103,69 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
           "position": 2
-        },
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "d5372a2c-a9b4-11f1-9466-e5b27f9952e8",
+      "fantasyTeam": "DDDD",
+      "displayName": "Wei",
+      "matchday": 1,
+      "score": 69,
+      "overallPoints": 69,
+      "captain": "Raphinha",
+      "lineup": [
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
           "id": 250132811,
           "name": "Luis Díaz",
-          "points": 0,
+          "points": 3,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250118908,
           "name": "S. Lammens",
-          "points": 0,
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250164991,
-          "name": "João Neves",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250064064,
-          "name": "Marquinhos",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -2238,6 +2198,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250218560,
           "name": "Z. Suzuki",
           "points": 2,
@@ -2245,9 +2214,54 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250164991,
+          "name": "João Neves",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250064064,
+          "name": "Marquinhos",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -2255,50 +2269,58 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "最美95花周也大美女全球后援会",
       "displayName": "第一边锋萨默维尔",
       "matchday": 1,
-      "score": 58,
-      "overallPoints": 58,
+      "score": 75,
+      "overallPoints": 75,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
           "position": 4
         },
         {
           "id": 250132811,
           "name": "Luis Díaz",
-          "points": 0,
+          "points": 3,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250101238,
-          "name": "W. Anton",
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250101240,
+          "name": "G. Prömel",
+          "points": 4,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
           "points": 3,
           "captain": false,
           "bench": false,
@@ -2315,38 +2337,39 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250134170,
+          "name": "Ronald Araújo",
+          "points": 5,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250088246,
-          "name": "M. Rashford",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
+          "id": 250101238,
+          "name": "W. Anton",
           "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -2369,34 +2392,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250101240,
-          "name": "G. Prömel",
-          "points": 4,
+          "id": 250088246,
+          "name": "M. Rashford",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250134170,
-          "name": "Ronald Araújo",
-          "points": 5,
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -2404,9 +2418,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "XHS公众号请关注无敌紫葱酱！",
       "displayName": "Chichung So",
       "matchday": 1,
-      "score": 65,
-      "overallPoints": 65,
-      "captain": "D. Undav",
+      "score": 113,
+      "overallPoints": 113,
+      "captain": "M. Olise",
       "lineup": [
         {
           "id": 250171278,
@@ -2418,13 +2432,49 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250212323,
+          "name": "Wesley França",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250153621,
+          "name": "N. Paz",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250112880,
@@ -2437,21 +2487,12 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250178067,
+          "name": "G. Zechiel",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -2464,20 +2505,20 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250153621,
-          "name": "N. Paz",
-          "points": 0,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -2491,27 +2532,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250212323,
-          "name": "Wesley França",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 16,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -2527,25 +2550,17 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250178067,
-          "name": "G. Zechiel",
-          "points": 3,
-          "captain": false,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 42,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -2553,118 +2568,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "dongma",
       "displayName": "kingwenwei",
       "matchday": 1,
-      "score": 63,
-      "overallPoints": 63,
+      "score": 100,
+      "overallPoints": 100,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250163786,
-          "name": "J. Seys",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250181514,
-          "name": "R. Risser",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
           "id": 250078886,
           "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250081555,
-          "name": "D. Malen",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
         },
         {
           "id": 250187727,
@@ -2677,44 +2592,49 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
+          "id": 250163786,
+          "name": "J. Seys",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250081555,
+          "name": "D. Malen",
+          "points": 5,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "c08daa66-a927-11f1-af0f-673f9c905f14",
-      "fantasyTeam": "美式加冰",
-      "displayName": "Kimi",
-      "matchday": 1,
-      "score": 50,
-      "overallPoints": 50,
-      "captain": "Raphinha",
-      "lineup": [
+          "position": 4
+        },
         {
-          "id": 250164780,
-          "name": "Fermín López",
+          "id": 250181514,
+          "name": "R. Risser",
           "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 1
         },
         {
           "id": 250112880,
@@ -2727,35 +2647,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
           "captain": false,
-          "bench": false,
-          "played": false,
+          "bench": true,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250069832,
-          "name": "G. Kobel",
+          "id": 250218560,
+          "name": "Z. Suzuki",
           "points": 2,
           "captain": false,
           "bench": true,
@@ -2763,13 +2692,54 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250153621,
-          "name": "N. Paz",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
           "points": 0,
           "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "c08daa66-a927-11f1-af0f-673f9c905f14",
+      "fantasyTeam": "美式加冰",
+      "displayName": "Kimi",
+      "matchday": 1,
+      "score": 100,
+      "overallPoints": 100,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250116951,
@@ -2777,24 +2747,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 1,
           "captain": false,
           "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 2
         },
@@ -2808,224 +2760,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194474,
-          "name": "D. Huijsen",
-          "points": 1,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250081555,
-          "name": "D. Malen",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250070418,
-          "name": "F. Bredlow",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250163689,
-          "name": "N. Jackson",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "f4037612-a280-11f1-8aaa-73ffe14ca92e",
-      "fantasyTeam": "johnnyocean",
-      "displayName": "Jim Ocean",
-      "matchday": 1,
-      "score": 74,
-      "overallPoints": 74,
-      "captain": "L. Yamal",
-      "lineup": [
-        {
-          "id": 250106963,
-          "name": "Álex Baena",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250074004,
-          "name": "J. Butez",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250096761,
-          "name": "J. Martínez",
+          "id": 250088061,
+          "name": "A. Hakimi",
           "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
+          "position": 2
+        },
+        {
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250066886,
-          "name": "O. Dembélé",
-          "points": 16,
+          "id": 250081555,
+          "name": "D. Malen",
+          "points": 5,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250041741,
-          "name": "B. Cristante",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250136464,
-          "name": "Gonçalo Inácio",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
+          "id": 250153621,
+          "name": "N. Paz",
           "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "80363448-a7d7-11f1-a4be-590aadeedd9f",
-      "fantasyTeam": "Verydisco",
-      "displayName": "Dapeng",
-      "matchday": 1,
-      "score": 66,
-      "overallPoints": 66,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3042,54 +2806,245 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250163689,
+          "name": "N. Jackson",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250194474,
+          "name": "D. Huijsen",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250070418,
+          "name": "F. Bredlow",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
+          "played": true,
+          "position": 3
         },
         {
           "id": 250171184,
           "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "f4037612-a280-11f1-8aaa-73ffe14ca92e",
+      "fantasyTeam": "johnnyocean",
+      "displayName": "Jim Ocean",
+      "matchday": 1,
+      "score": 120,
+      "overallPoints": 120,
+      "captain": "L. Yamal",
+      "lineup": [
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250136464,
+          "name": "Gonçalo Inácio",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250074004,
+          "name": "J. Butez",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250041741,
+          "name": "B. Cristante",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250140940,
-          "name": "M. Baturina",
-          "points": 0,
+          "id": 250106963,
+          "name": "Álex Baena",
+          "points": 2,
           "captain": false,
-          "bench": false,
-          "played": false,
+          "bench": true,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250066886,
+          "name": "O. Dembélé",
+          "points": 16,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250076574,
           "name": "K. Mbappé",
           "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "80363448-a7d7-11f1-a4be-590aadeedd9f",
+      "fantasyTeam": "Verydisco",
+      "displayName": "Dapeng",
+      "matchday": 1,
+      "score": 114,
+      "overallPoints": 114,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3105,6 +3060,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250140940,
+          "name": "M. Baturina",
+          "points": 13,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250147458,
           "name": "L. Suárez",
           "points": 7,
@@ -3114,9 +3079,46 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3132,41 +3134,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "4a83b406-aaca-11f1-b95f-4d1bf1577485",
-      "fantasyTeam": "Fitz",
-      "displayName": "fitz",
-      "matchday": 1,
-      "score": 65,
-      "overallPoints": 65,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -3177,45 +3148,59 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "N. Brown",
           "points": 0,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "4a83b406-aaca-11f1-b95f-4d1bf1577485",
+      "fantasyTeam": "Fitz",
+      "displayName": "fitz",
+      "matchday": 1,
+      "score": 106,
+      "overallPoints": 106,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
+          "played": true,
+          "position": 4
         },
         {
           "id": 250088061,
@@ -3227,28 +3212,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
+          "id": 250118908,
+          "name": "S. Lammens",
           "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
+          "position": 1
+        },
+        {
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -3264,13 +3249,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
+          "position": 4
         },
         {
           "id": 250123068,
@@ -3282,30 +3267,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
-          "points": 1,
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
           "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
-          "position": 4
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "08ea6936-a9e9-11f1-b9a4-7bff1b0db3fd",
-      "fantasyTeam": "KisScam",
-      "displayName": "Bad K",
-      "matchday": 1,
-      "score": 79,
-      "overallPoints": 79,
-      "captain": "Raphinha",
-      "lineup": [
+          "position": 3
+        },
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
@@ -3313,19 +3304,32 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 3
-        },
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "08ea6936-a9e9-11f1-b9a4-7bff1b0db3fd",
+      "fantasyTeam": "KisScam",
+      "displayName": "Bad K",
+      "matchday": 1,
+      "score": 112,
+      "overallPoints": 112,
+      "captain": "Raphinha",
+      "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -3334,38 +3338,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
+          "position": 4
         },
         {
           "id": 250088061,
@@ -3377,28 +3354,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 1
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -3414,9 +3400,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3432,6 +3427,34 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250190377,
           "name": "Xavi Espart",
           "points": 0,
@@ -3441,7 +3464,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -3449,15 +3472,63 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "当代丁蟹",
       "displayName": "Zach",
       "matchday": 1,
-      "score": 68,
-      "overallPoints": 68,
+      "score": 109,
+      "overallPoints": 109,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
           "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 2
@@ -3472,98 +3543,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088491,
-          "name": "A. Buongiorno",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250162177,
-          "name": "D. Doué",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
           "id": 250070418,
           "name": "F. Bredlow",
           "points": 2,
@@ -3573,9 +3552,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3589,9 +3568,55 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250088491,
+          "name": "A. Buongiorno",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250162177,
+          "name": "D. Doué",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -3599,19 +3624,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "W^2",
       "displayName": "W²",
       "matchday": 1,
-      "score": 47,
-      "overallPoints": 47,
-      "captain": "K. Mbappé",
+      "score": 88,
+      "overallPoints": 88,
+      "captain": "H. Kane",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -3622,45 +3638,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
+          "points": 18,
+          "captain": true,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -3677,51 +3666,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 12,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250041741,
-          "name": "B. Cristante",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250200231,
-          "name": "M. Araújo",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 3
-        },
-        {
           "id": 250147458,
           "name": "L. Suárez",
           "points": 7,
@@ -3729,64 +3673,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
-        },
-        {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "20011dae-962f-11f1-b315-13c016d43dfd",
-      "fantasyTeam": "蒂亚鸽鸽鸽",
-      "displayName": "南无十三鸽",
-      "matchday": 1,
-      "score": 35,
-      "overallPoints": 35,
-      "captain": "K. Kvaratskhelia",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
         },
         {
           "id": 250156423,
@@ -3798,56 +3684,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250164785,
-          "name": "A. Valle",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250221057,
-          "name": "M. Udol",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250164991,
-          "name": "João Neves",
-          "points": 0,
+          "id": 250041741,
+          "name": "B. Cristante",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": true,
-          "bench": false,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250200231,
+          "name": "M. Araújo",
+          "points": 2,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
@@ -3859,6 +3727,74 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "20011dae-962f-11f1-b315-13c016d43dfd",
+      "fantasyTeam": "蒂亚鸽鸽鸽",
+      "displayName": "南无十三鸽",
+      "matchday": 1,
+      "score": 85,
+      "overallPoints": 85,
+      "captain": "Bruno Fernandes",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 16,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250187727,
@@ -3871,81 +3807,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250210287,
-          "name": "Luiz Júnior",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "76be57a4-9a19-11f1-9cfa-2d08ab3613bf",
-      "fantasyTeam": "UEFAntasis",
-      "displayName": "摩二哥",
-      "matchday": 1,
-      "score": 60,
-      "overallPoints": 60,
-      "captain": "D. Undav",
-      "lineup": [
-        {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
+          "position": 4
         },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250164785,
+          "name": "A. Valle",
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 2
         },
         {
           "id": 250156423,
@@ -3957,36 +3843,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250074004,
-          "name": "J. Butez",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250116003,
-          "name": "L. Da Cunha",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 2
         },
         {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
+          "id": 250221057,
+          "name": "M. Udol",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
@@ -4002,12 +3870,126 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250041741,
-          "name": "B. Cristante",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250164991,
+          "name": "João Neves",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250210287,
+          "name": "Luiz Júnior",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "76be57a4-9a19-11f1-9cfa-2d08ab3613bf",
+      "fantasyTeam": "UEFAntasis",
+      "displayName": "摩二哥",
+      "matchday": 1,
+      "score": 101,
+      "overallPoints": 101,
+      "captain": "H. Kane",
+      "lineup": [
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250074004,
+          "name": "J. Butez",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250041741,
+          "name": "B. Cristante",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
@@ -4020,10 +4002,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 16,
-          "captain": true,
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250116003,
+          "name": "L. Da Cunha",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 4
@@ -4036,9 +4036,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -4046,10 +4074,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "penguin",
       "displayName": "企鹅",
       "matchday": 1,
-      "score": 62,
-      "overallPoints": 62,
+      "score": 99,
+      "overallPoints": 99,
       "captain": "Raphinha",
       "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -4060,40 +4097,48 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250153874,
+          "name": "Gabriel Veiga",
+          "points": 3,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250202036,
+          "name": "Flávio Gonçalves",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -4106,40 +4151,32 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250153874,
-          "name": "Gabriel Veiga",
-          "points": 3,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250187620,
           "name": "R. Pepi",
-          "points": 0,
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -4151,24 +4188,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250123068,
           "name": "E. Konsa",
           "points": 8,
@@ -4178,16 +4197,26 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250202036,
-          "name": "Flávio Gonçalves",
-          "points": 1,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -4195,28 +4224,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Yamine Lmao",
       "displayName": "Kevin",
       "matchday": 1,
-      "score": 45,
-      "overallPoints": 45,
+      "score": 54,
+      "overallPoints": 54,
       "captain": "K. Mbappé",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -4225,24 +4236,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 1
-        },
-        {
-          "id": 250153634,
-          "name": "G. Simeone",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250176453,
-          "name": "P. Cubarsí",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250117036,
@@ -4254,29 +4247,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250163404,
-          "name": "P. Esposito",
-          "points": 0,
-          "captain": false,
-          "bench": true,
           "played": true,
           "position": 4
         },
@@ -4290,24 +4265,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250065792,
-          "name": "V. Milinković-Savić",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
           "id": 250136465,
           "name": "Nuno Mendes",
           "points": 6,
@@ -4317,9 +4274,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
+          "id": 250176453,
+          "name": "P. Cubarsí",
           "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250065792,
+          "name": "V. Milinković-Savić",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250153634,
+          "name": "G. Simeone",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -4333,92 +4317,24 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "e661daa2-a1b9-11f1-9844-b11277887598",
-      "fantasyTeam": "ZhallWin",
-      "displayName": "Kiki",
-      "matchday": 1,
-      "score": 67,
-      "overallPoints": 67,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250181082,
-          "name": "M. Lewis-Skelly",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
+          "id": 250163404,
+          "name": "P. Esposito",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 4
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250101808,
@@ -4430,23 +4346,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250099671,
-          "name": "G. Til",
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
         },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "e661daa2-a1b9-11f1-9844-b11277887598",
+      "fantasyTeam": "ZhallWin",
+      "displayName": "Kiki",
+      "matchday": 1,
+      "score": 104,
+      "overallPoints": 104,
+      "captain": "Raphinha",
+      "lineup": [
         {
           "id": 250187727,
           "name": "R. Zalazar",
@@ -4458,13 +4387,77 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250070418,
-          "name": "F. Bredlow",
-          "points": 2,
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250070418,
+          "name": "F. Bredlow",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250123068,
@@ -4476,16 +4469,53 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250190377,
-          "name": "Xavi Espart",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250181082,
+          "name": "M. Lewis-Skelly",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250190377,
+          "name": "Xavi Espart",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -4493,19 +4523,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Shuo",
       "displayName": "Shuo",
       "matchday": 1,
-      "score": 56,
-      "overallPoints": 56,
+      "score": 86,
+      "overallPoints": 86,
       "captain": "Raphinha",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -4516,9 +4537,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -4535,51 +4574,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250056189,
-          "name": "F. Dimarco",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 250065792,
           "name": "V. Milinković-Savić",
           "points": 2,
@@ -4587,24 +4581,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250076574,
@@ -4625,6 +4601,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250056189,
+          "name": "F. Dimarco",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250179564,
           "name": "L. Jovanović",
           "points": 0,
@@ -4632,9 +4627,45 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -4642,16 +4673,97 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Chelsea Mata",
       "displayName": "stone",
       "matchday": 1,
-      "score": 58,
-      "overallPoints": 58,
+      "score": 62,
+      "overallPoints": 62,
       "captain": "L. Yamal",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250134138,
+          "name": "B. Barcola",
+          "points": 2,
           "captain": false,
           "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250117036,
+          "name": "A. Gordon",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250174838,
+          "name": "E. Fernández",
+          "points": 6,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250194474,
+          "name": "D. Huijsen",
+          "points": 1,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -4674,49 +4786,90 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250117036,
-          "name": "A. Gordon",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "4962df62-a5e2-11f1-9eb9-215e99730280",
+      "fantasyTeam": "X Team",
+      "displayName": "Lik Kee",
+      "matchday": 1,
+      "score": 108,
+      "overallPoints": 108,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250178823,
+          "name": "P. Dorgu",
+          "points": 12,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250154129,
+          "name": "B. El Khannouss",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 15,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250136465,
@@ -4728,33 +4881,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250134138,
-          "name": "B. Barcola",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250194474,
-          "name": "D. Huijsen",
-          "points": 1,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 250179137,
           "name": "I. Fresneda",
           "points": 1,
@@ -4764,44 +4890,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250174838,
-          "name": "E. Fernández",
-          "points": 6,
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 3
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "4962df62-a5e2-11f1-9eb9-215e99730280",
-      "fantasyTeam": "X Team",
-      "displayName": "Lik Kee",
-      "matchday": 1,
-      "score": 84,
-      "overallPoints": 84,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
+          "position": 4
         },
         {
           "id": 250112880,
@@ -4814,49 +4909,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 15,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
           "position": 2
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250178823,
-          "name": "P. Dorgu",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
+          "played": true,
+          "position": 1
         },
         {
           "id": 250066886,
@@ -4868,15 +4936,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250101444,
           "name": "Vitinha",
           "points": 4,
@@ -4884,33 +4943,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 3
-        },
-        {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250154129,
-          "name": "B. El Khannouss",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250218560,
@@ -4922,16 +4954,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
-          "points": 1,
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -4939,19 +4971,46 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "JZhuoyan",
       "displayName": "DU",
       "matchday": 1,
-      "score": 87,
-      "overallPoints": 87,
+      "score": 115,
+      "overallPoints": 115,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250176450,
@@ -4963,65 +5022,20 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
+          "position": 2
         },
         {
           "id": 250088061,
           "name": "A. Hakimi",
           "points": 3,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -5035,14 +5049,23 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250070418,
@@ -5054,20 +5077,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -5079,53 +5093,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "arctic",
-      "guid": "15079cb6-a8cc-11f1-8dab-21440fc510f6",
-      "fantasyTeam": "kusuri",
-      "displayName": "Romeo Zhao",
-      "matchday": 1,
-      "score": 78,
-      "overallPoints": 78,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
           "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 15,
-          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
@@ -5135,54 +5109,49 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "N. Brown",
           "points": 0,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
           "bench": false,
-          "played": false,
-          "position": 4
-        },
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "arctic",
+      "guid": "15079cb6-a8cc-11f1-8dab-21440fc510f6",
+      "fantasyTeam": "kusuri",
+      "displayName": "Romeo Zhao",
+      "matchday": 1,
+      "score": 116,
+      "overallPoints": 116,
+      "captain": "Raphinha",
+      "lineup": [
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 4
         },
         {
           "id": 250078886,
           "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250187727,
@@ -5195,6 +5164,33 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 15,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250194673,
           "name": "D. Undav",
           "points": 8,
@@ -5202,6 +5198,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250127538,
@@ -5222,16 +5228,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250190377,
-          "name": "Xavi Espart",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190377,
+          "name": "Xavi Espart",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "arctic",
@@ -5239,18 +5273,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "欧冠你们的王回来了",
       "displayName": "Warmer",
       "matchday": 1,
-      "score": 54,
-      "overallPoints": 54,
+      "score": 102,
+      "overallPoints": 102,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250171278,
@@ -5262,13 +5296,40 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 4
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250147458,
+          "name": "L. Suárez",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250112880,
@@ -5281,78 +5342,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250147458,
-          "name": "L. Suárez",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 250090766,
           "name": "M. Mittelstädt",
           "points": 4,
@@ -5360,6 +5349,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250127538,
@@ -5371,16 +5379,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
-          "points": 1,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -5388,45 +5424,45 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "爱你我不能说",
       "displayName": "Hall",
       "matchday": 1,
-      "score": 72,
-      "overallPoints": 72,
+      "score": 90,
+      "overallPoints": 90,
       "captain": "R. Marin",
       "lineup": [
         {
-          "id": 250131901,
-          "name": "Gabriel",
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250154129,
+          "name": "B. El Khannouss",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
           "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
         },
         {
           "id": 250080553,
@@ -5439,31 +5475,50 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 1
         },
         {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250130418,
-          "name": "N. Ngoy",
+          "id": 250069832,
+          "name": "G. Kobel",
           "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "points": 28,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187458,
+          "name": "R. van Bommel",
+          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250103758,
@@ -5476,44 +5531,17 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
+          "id": 250130418,
+          "name": "N. Ngoy",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250187458,
-          "name": "R. van Bommel",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250154129,
-          "name": "B. El Khannouss",
-          "points": 3,
-          "captain": false,
-          "bench": false,
           "played": true,
-          "position": 3
+          "position": 2
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
+          "id": 250156423,
+          "name": "D. Svensson",
           "points": 2,
           "captain": false,
           "bench": false,
@@ -5521,17 +5549,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250055294,
-          "name": "R. Marin",
-          "points": 28,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -5539,59 +5575,41 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Elliott",
       "displayName": "junxi",
       "matchday": 1,
-      "score": 48,
-      "overallPoints": 48,
+      "score": 90,
+      "overallPoints": 90,
       "captain": "H. Kane",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 4
         },
         {
           "id": 250070417,
           "name": "J. Kimmich",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": true,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
           "position": 3
         },
         {
           "id": 250086928,
           "name": "M. Guéhi",
           "points": 10,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250187215,
+          "name": "O. Bjørtuft",
+          "points": -1,
           "captain": false,
           "bench": false,
           "played": true,
@@ -5608,15 +5626,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250127284,
-          "name": "J. Gvardiol",
-          "points": 1,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250103758,
           "name": "E. Haaland",
           "points": 12,
@@ -5625,6 +5634,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
+        },
+        {
+          "id": 250127284,
+          "name": "J. Gvardiol",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076168,
@@ -5636,6 +5654,24 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250200231,
+          "name": "M. Araújo",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250076574,
           "name": "K. Mbappé",
           "points": 6,
@@ -5645,10 +5681,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250200231,
-          "name": "M. Araújo",
-          "points": 2,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -5663,25 +5700,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250187215,
-          "name": "O. Bjørtuft",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250107249,
           "name": "H. Evjen",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -5689,18 +5726,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "DNMCCB",
       "displayName": "wengowen1985",
       "matchday": 1,
-      "score": 75,
-      "overallPoints": 75,
+      "score": 102,
+      "overallPoints": 102,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250131901,
-          "name": "Gabriel",
+          "id": 250078886,
+          "name": "Bruno Fernandes",
           "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250171278,
@@ -5712,11 +5749,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
@@ -5724,20 +5760,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250101238,
-          "name": "W. Anton",
-          "points": 3,
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 4
         },
         {
           "id": 250080553,
@@ -5750,103 +5777,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 97746,
-          "name": "Y. Sommer",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250088061,
           "name": "A. Hakimi",
           "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250162184,
-          "name": "C. Lang",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250042209,
-          "name": "V. Simić",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "36dc5ee0-a7f4-11f1-a746-c39d9f6e388a",
-      "fantasyTeam": "Team Blue",
-      "displayName": "Enzo",
-      "matchday": 1,
-      "score": 60,
-      "overallPoints": 60,
-      "captain": "S. Guirassy",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
@@ -5862,50 +5795,118 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250181082,
-          "name": "M. Lewis-Skelly",
-          "points": 0,
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
         {
+          "id": 250042209,
+          "name": "V. Simić",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250112880,
           "name": "Raphinha",
-          "points": 16,
-          "captain": false,
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250162184,
+          "name": "C. Lang",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101238,
+          "name": "W. Anton",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 97746,
+          "name": "Y. Sommer",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "36dc5ee0-a7f4-11f1-a746-c39d9f6e388a",
+      "fantasyTeam": "Team Blue",
+      "displayName": "Enzo",
+      "matchday": 1,
+      "score": 83,
+      "overallPoints": 83,
+      "captain": "S. Guirassy",
+      "lineup": [
+        {
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
         },
         {
           "id": 250080553,
@@ -5918,28 +5919,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250118908,
           "name": "S. Lammens",
-          "points": 0,
+          "points": 6,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
           "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -5954,22 +5965,49 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250218560,
           "name": "Z. Suzuki",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
-          "points": 1,
+          "id": 250181082,
+          "name": "M. Lewis-Skelly",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250190377,
@@ -5981,7 +6019,7 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -5989,18 +6027,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "FAIAAA",
       "displayName": "FAIAAA",
       "matchday": 1,
-      "score": 62,
-      "overallPoints": 62,
+      "score": 108,
+      "overallPoints": 108,
       "captain": "L. Yamal",
       "lineup": [
         {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250176450,
@@ -6012,75 +6059,67 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250055660,
-          "name": "J. Tah",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250186227,
-          "name": "A. Diao",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250118908,
           "name": "S. Lammens",
-          "points": 0,
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250127111,
-          "name": "B. Šeško",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250064064,
-          "name": "Marquinhos",
-          "points": 0,
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250127111,
+          "name": "B. Šeško",
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250186227,
+          "name": "A. Diao",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "points": 14,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250055660,
+          "name": "J. Tah",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 2
         },
         {
@@ -6088,9 +6127,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "Jude Bellingham",
           "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -6102,15 +6151,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250218560,
           "name": "Z. Suzuki",
           "points": 2,
@@ -6120,17 +6160,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250055294,
-          "name": "R. Marin",
-          "points": 14,
+          "id": 250064064,
+          "name": "Marquinhos",
+          "points": 0,
           "captain": false,
-          "manOfMatch": true,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 3
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -6138,16 +6177,24 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "remember",
       "displayName": "remember",
       "matchday": 1,
-      "score": 84,
-      "overallPoints": 84,
+      "score": 117,
+      "overallPoints": 117,
       "captain": "S. Guirassy",
       "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
           "captain": false,
-          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
@@ -6155,29 +6202,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
         },
         {
           "id": 250080553,
@@ -6190,22 +6219,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 1
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250104066,
@@ -6218,21 +6238,12 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "played": true,
           "position": 1
         },
         {
@@ -6245,6 +6256,34 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250090766,
           "name": "M. Mittelstädt",
           "points": 4,
@@ -6254,20 +6293,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -6279,9 +6309,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -6289,10 +6329,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "yu99",
       "displayName": "hu",
       "matchday": 1,
-      "score": 56,
-      "overallPoints": 56,
+      "score": 79,
+      "overallPoints": 79,
       "captain": "E. Haaland",
       "lineup": [
+        {
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250154129,
+          "name": "B. El Khannouss",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -6303,31 +6361,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
+          "bench": true,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250103758,
@@ -6340,58 +6398,32 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250075007,
-          "name": "H. Maguire",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250110943,
           "name": "Matheus Cunha",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
-          "bench": false,
-          "played": false,
+          "bench": true,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -6403,24 +6435,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250154129,
-          "name": "B. El Khannouss",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250123068,
           "name": "E. Konsa",
           "points": 8,
@@ -6428,9 +6442,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250075007,
+          "name": "H. Maguire",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -6438,19 +6479,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Lens",
       "displayName": "寂",
       "matchday": 1,
-      "score": 75,
-      "overallPoints": 75,
+      "score": 96,
+      "overallPoints": 96,
       "captain": "Raphinha",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -6461,40 +6493,21 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
@@ -6508,24 +6521,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250050319,
-          "name": "F. Thauvin",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250104066,
           "name": "D. Szoboszlai",
           "points": 13,
@@ -6536,40 +6531,23 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250164991,
-          "name": "João Neves",
-          "points": 0,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076168,
-          "name": "M. Cucurella",
-          "points": 3,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
         },
         {
           "id": 250090766,
@@ -6579,34 +6557,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "f35ed068-a6c6-11f1-a921-ad603c1a7c5f",
-      "fantasyTeam": "Yummy",
-      "displayName": "Ethan",
-      "matchday": 1,
-      "score": 71,
-      "overallPoints": 71,
-      "captain": "E. Haaland",
-      "lineup": [
-        {
-          "id": 250081341,
-          "name": "M. Ødegaard",
-          "points": 11,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
         },
         {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
+          "id": 250076168,
+          "name": "M. Cucurella",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
@@ -6622,9 +6577,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
+          "id": 250050319,
+          "name": "F. Thauvin",
+          "points": 11,
           "captain": false,
           "manOfMatch": true,
           "bench": false,
@@ -6632,26 +6587,75 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
+          "id": 250164991,
+          "name": "João Neves",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250101238,
-          "name": "W. Anton",
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "f35ed068-a6c6-11f1-a921-ad603c1a7c5f",
+      "fantasyTeam": "Yummy",
+      "displayName": "Ethan",
+      "matchday": 1,
+      "score": 111,
+      "overallPoints": 111,
+      "captain": "E. Haaland",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
           "points": 3,
           "captain": false,
           "bench": false,
@@ -6669,39 +6673,182 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250081555,
+          "name": "D. Malen",
+          "points": 5,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "id": 250041741,
+          "name": "B. Cristante",
+          "points": 8,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250041741,
-          "name": "B. Cristante",
-          "points": 0,
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250101238,
+          "name": "W. Anton",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250081341,
+          "name": "M. Ødegaard",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250081555,
-          "name": "D. Malen",
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "7649f634-a5a9-11f1-ad1f-b33810b58db2",
+      "fantasyTeam": "蒂尔尼又没欧冠踢了",
+      "displayName": "Levine",
+      "matchday": 1,
+      "score": 95,
+      "overallPoints": 95,
+      "captain": "H. Kane",
+      "lineup": [
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250065413,
+          "name": "K. Laimer",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "points": 14,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
@@ -6714,79 +6861,12 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "7649f634-a5a9-11f1-ad1f-b33810b58db2",
-      "fantasyTeam": "蒂尔尼又没欧冠踢了",
-      "displayName": "Levine",
-      "matchday": 1,
-      "score": 58,
-      "overallPoints": 58,
-      "captain": "D. Undav",
-      "lineup": [
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
           "id": 250164780,
           "name": "Fermín López",
           "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250065413,
-          "name": "K. Laimer",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
           "position": 3
         },
         {
@@ -6799,31 +6879,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250162177,
-          "name": "D. Doué",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -6835,31 +6897,14 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 16,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250046901,
@@ -6871,17 +6916,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250055294,
-          "name": "R. Marin",
-          "points": 14,
+          "id": 250162177,
+          "name": "D. Doué",
+          "points": 0,
           "captain": false,
-          "manOfMatch": true,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -6889,10 +6933,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "列侬贝尔两翼齐飞 我至尽还记得",
       "displayName": "Conan Joe",
       "matchday": 1,
-      "score": 39,
-      "overallPoints": 39,
-      "captain": "K. Kvaratskhelia",
+      "score": 80,
+      "overallPoints": 80,
+      "captain": "H. Kane",
       "lineup": [
+        {
+          "id": 250116767,
+          "name": "M. Greenwood",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -6903,76 +6956,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250153621,
-          "name": "N. Paz",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250050319,
-          "name": "F. Thauvin",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
+          "points": 18,
           "captain": true,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 4
         },
         {
           "id": 250136465,
@@ -6984,13 +6974,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250153621,
+          "name": "N. Paz",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 3
         },
         {
           "id": 250194673,
@@ -7002,13 +6992,50 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250116767,
-          "name": "M. Greenwood",
-          "points": 0,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250143747,
+          "name": "L. Rota",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250050319,
+          "name": "F. Thauvin",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250218560,
@@ -7020,51 +7047,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250143747,
-          "name": "L. Rota",
-          "points": 9,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "12888f84-a81a-11f1-8d5e-a3f41c932b19",
-      "fantasyTeam": "Bill goes to EUROPA",
-      "displayName": "Bill",
-      "matchday": 1,
-      "score": 31,
-      "overallPoints": 31,
-      "captain": "H. Kane",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
           "points": 0,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250150915,
-          "name": "J. Cardoso",
-          "points": 0,
-          "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
@@ -7074,61 +7061,56 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 0,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": true,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250086928,
-          "name": "M. Guéhi",
-          "points": 10,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
+          "id": 250197801,
+          "name": "Gerard Martín",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "12888f84-a81a-11f1-8d5e-a3f41c932b19",
+      "fantasyTeam": "Bill goes to EUROPA",
+      "displayName": "Bill",
+      "matchday": 1,
+      "score": 72,
+      "overallPoints": 72,
+      "captain": "H. Kane",
+      "lineup": [
+        {
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 1
+          "played": true,
+          "position": 3
         },
         {
-          "id": 250127111,
-          "name": "B. Šeško",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
@@ -7141,13 +7123,40 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 1
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250127111,
+          "name": "B. Šeško",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250086928,
+          "name": "M. Guéhi",
+          "points": 10,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250128377,
@@ -7168,6 +7177,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250218560,
           "name": "Z. Suzuki",
           "points": 2,
@@ -7175,9 +7193,36 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250150915,
+          "name": "J. Cardoso",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -7185,8 +7230,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "lulucool",
       "displayName": "Chen",
       "matchday": 1,
-      "score": 76,
-      "overallPoints": 76,
+      "score": 106,
+      "overallPoints": 106,
       "captain": "Raphinha",
       "lineup": [
         {
@@ -7197,106 +7242,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 1
-        },
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250096761,
-          "name": "J. Martínez",
-          "points": 3,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
-          "points": 3,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250147458,
-          "name": "L. Suárez",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
         },
         {
           "id": 250187727,
@@ -7309,40 +7254,64 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
           "captain": false,
           "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250147458,
+          "name": "L. Suárez",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "0c61e244-a8f2-11f1-8e54-213c2215da12",
-      "fantasyTeam": "ZHIYU FC",
-      "displayName": "ZHIYU",
-      "matchday": 1,
-      "score": 52,
-      "overallPoints": 52,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
@@ -7358,46 +7327,95 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250096761,
-          "name": "J. Martínez",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "0c61e244-a8f2-11f1-8e54-213c2215da12",
+      "fantasyTeam": "ZHIYU FC",
+      "displayName": "ZHIYU",
+      "matchday": 1,
+      "score": 92,
+      "overallPoints": 92,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
           "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -7413,82 +7431,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250163400,
-          "name": "A. Nusa",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250190377,
-          "name": "Xavi Espart",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "a97d5060-991e-11f1-8c90-8d18d107a522",
-      "fantasyTeam": "Southcote Bargain",
-      "displayName": "Sadio",
-      "matchday": 1,
-      "score": 76,
-      "overallPoints": 76,
-      "captain": "Raphinha",
-      "lineup": [
-        {
           "id": 250112880,
           "name": "Raphinha",
           "points": 32,
@@ -7499,29 +7441,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 1
         },
@@ -7535,22 +7459,99 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250186227,
-          "name": "A. Diao",
-          "points": 0,
+          "id": 250163400,
+          "name": "A. Nusa",
+          "points": 2,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250096761,
-          "name": "J. Martínez",
-          "points": 3,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 1
+          "position": 3
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250190377,
+          "name": "Xavi Espart",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "a97d5060-991e-11f1-8c90-8d18d107a522",
+      "fantasyTeam": "Southcote Bargain",
+      "displayName": "Sadio",
+      "matchday": 1,
+      "score": 107,
+      "overallPoints": 107,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 50327420,
+          "name": "V. van Dijk",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250104066,
@@ -7563,96 +7564,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 50327420,
-          "name": "V. van Dijk",
-          "points": 3,
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 1
         },
         {
-          "id": 250187620,
-          "name": "R. Pepi",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
-          "points": 3,
+          "id": 250186227,
+          "name": "A. Diao",
+          "points": 7,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 250130006,
           "name": "Sergi Altimira",
           "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
         {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "1c5cbd1a-a922-11f1-af3b-310ab7822331",
-      "fantasyTeam": "Nedved",
-      "displayName": "Nedved",
-      "matchday": 1,
-      "score": 70,
-      "overallPoints": 70,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250117036,
-          "name": "A. Gordon",
-          "points": 1,
-          "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
@@ -7667,40 +7610,118 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250187620,
+          "name": "R. Pepi",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250079545,
-          "name": "D. Upamecano",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250177594,
-          "name": "J. Gadou",
+          "id": 250156423,
+          "name": "D. Svensson",
           "points": 2,
           "captain": false,
           "bench": true,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "1c5cbd1a-a922-11f1-af3b-310ab7822331",
+      "fantasyTeam": "Nedved",
+      "displayName": "Nedved",
+      "matchday": 1,
+      "score": 117,
+      "overallPoints": 117,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250117036,
+          "name": "A. Gordon",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250080553,
@@ -7713,22 +7734,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250177594,
+          "name": "J. Gadou",
+          "points": 2,
           "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 4
+          "position": 2
         },
         {
           "id": 250130006,
@@ -7740,14 +7752,23 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250079545,
+          "name": "D. Upamecano",
+          "points": 10,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250070418,
@@ -7768,6 +7789,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
           "id": 250218560,
           "name": "Z. Suzuki",
           "points": 2,
@@ -7775,9 +7805,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -7785,19 +7834,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "美凌格欧冠分格",
       "displayName": "foreveraul7",
       "matchday": 1,
-      "score": 76,
-      "overallPoints": 76,
+      "score": 108,
+      "overallPoints": 108,
       "captain": "Raphinha",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -7808,32 +7848,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250117581,
-          "name": "I. Maatsen",
-          "points": 1,
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250176450,
@@ -7845,58 +7875,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250202036,
+          "name": "Flávio Gonçalves",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250101238,
-          "name": "W. Anton",
-          "points": 3,
+          "id": 250117581,
+          "name": "I. Maatsen",
+          "points": 1,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
-        },
-        {
-          "id": 97746,
-          "name": "Y. Sommer",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
         },
         {
           "id": 250147458,
@@ -7906,64 +7900,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
-        },
-        {
-          "id": 250090766,
-          "name": "M. Mittelstädt",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250202036,
-          "name": "Flávio Gonçalves",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "8915213a-a2f7-11f1-a2a7-219bfa7e672a",
-      "fantasyTeam": "fantasynba.cn欢迎各位大佬",
-      "displayName": "Golden_Sheva🇨🇳",
-      "matchday": 1,
-      "score": 73,
-      "overallPoints": 73,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250112880,
@@ -7976,53 +7912,17 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101238,
-          "name": "W. Anton",
-          "points": 3,
+          "id": 250090766,
+          "name": "M. Mittelstädt",
+          "points": 4,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
+          "id": 250101238,
+          "name": "W. Anton",
           "points": 3,
           "captain": false,
           "bench": false,
@@ -8037,6 +7937,83 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 4
+        },
+        {
+          "id": 97746,
+          "name": "Y. Sommer",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "8915213a-a2f7-11f1-a2a7-219bfa7e672a",
+      "fantasyTeam": "fantasynba.cn欢迎各位大佬",
+      "displayName": "Golden_Sheva🇨🇳",
+      "matchday": 1,
+      "score": 109,
+      "overallPoints": 109,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250187727,
@@ -8049,53 +8026,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
-        },
-        {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "aae30560-a811-11f1-b1b8-0b29a6729ad1",
-      "fantasyTeam": "wc1018",
-      "displayName": "鬼嗨hi",
-      "matchday": 1,
-      "score": 51,
-      "overallPoints": 51,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
         },
         {
           "id": 250112880,
@@ -8108,67 +8054,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250055660,
-          "name": "J. Tah",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
+          "id": 250101238,
+          "name": "W. Anton",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -8180,18 +8090,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250081555,
-          "name": "D. Malen",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -8207,8 +8108,76 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "aae30560-a811-11f1-b1b8-0b29a6729ad1",
+      "fantasyTeam": "wc1018",
+      "displayName": "鬼嗨hi",
+      "matchday": 1,
+      "score": 108,
+      "overallPoints": 108,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250055660,
+          "name": "J. Tah",
           "points": 8,
           "captain": false,
           "bench": false,
@@ -8216,84 +8185,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250190377,
-          "name": "Xavi Espart",
-          "points": 0,
+          "id": 250081555,
+          "name": "D. Malen",
+          "points": 5,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "f6dfd406-a9b6-11f1-b342-1d80f5a566bd",
-      "fantasyTeam": "Xi9Li",
-      "displayName": "Danny",
-      "matchday": 1,
-      "score": 56,
-      "overallPoints": 56,
-      "captain": "L. Yamal",
-      "lineup": [
-        {
-          "id": 250176453,
-          "name": "P. Cubarsí",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
+          "position": 4
         },
         {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
           "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250092517,
-          "name": "J. Ryerson",
+          "id": 250156423,
+          "name": "D. Svensson",
           "points": 2,
           "captain": false,
           "bench": false,
@@ -8301,29 +8213,20 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250163404,
-          "name": "P. Esposito",
-          "points": 0,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 4
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
           "position": 3
         },
         {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
@@ -8337,22 +8240,72 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250200231,
-          "name": "M. Araújo",
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250218560,
+          "name": "Z. Suzuki",
           "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190377,
+          "name": "Xavi Espart",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "f6dfd406-a9b6-11f1-b342-1d80f5a566bd",
+      "fantasyTeam": "Xi9Li",
+      "displayName": "Danny",
+      "matchday": 1,
+      "score": 90,
+      "overallPoints": 90,
+      "captain": "L. Yamal",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250062141,
-          "name": "Rui Silva",
-          "points": 3,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
+          "position": 4
         },
         {
           "id": 250101240,
@@ -8364,16 +8317,116 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250176453,
+          "name": "P. Cubarsí",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250200231,
+          "name": "M. Araújo",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250092517,
+          "name": "J. Ryerson",
+          "points": 2,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250062141,
+          "name": "Rui Silva",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250163404,
+          "name": "P. Esposito",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -8381,18 +8434,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Frank Hua",
       "displayName": "Hua",
       "matchday": 1,
-      "score": 66,
-      "overallPoints": 66,
-      "captain": "D. Undav",
+      "score": 78,
+      "overallPoints": 78,
+      "captain": "Luis Díaz",
       "lineup": [
         {
-          "id": 250163454,
-          "name": "P. Hincapié",
+          "id": 250132811,
+          "name": "Luis Díaz",
+          "points": 6,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
           "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250171278,
@@ -8404,49 +8466,40 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250042422,
-          "name": "A. Grimaldo",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250117036,
           "name": "A. Gordon",
           "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
         {
-          "id": 250132811,
-          "name": "Luis Díaz",
-          "points": 0,
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250055660,
-          "name": "J. Tah",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250163404,
-          "name": "P. Esposito",
-          "points": 0,
+          "id": 250042422,
+          "name": "A. Grimaldo",
+          "points": 1,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 4
+          "position": 2
+        },
+        {
+          "id": 250124063,
+          "name": "R. Cherki",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250104066,
@@ -8459,31 +8512,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250124063,
-          "name": "R. Cherki",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
+          "id": 250163454,
+          "name": "P. Hincapié",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250055660,
+          "name": "J. Tah",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250174126,
@@ -8504,25 +8557,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 16,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
           "id": 108923,
           "name": "Ø. Nyland",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 1
+        },
+        {
+          "id": 250163404,
+          "name": "P. Esposito",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -8530,10 +8583,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "战Siu小师",
       "displayName": "Nirvana",
       "matchday": 1,
-      "score": 40,
-      "overallPoints": 40,
-      "captain": "K. Mbappé",
+      "score": 91,
+      "overallPoints": 91,
+      "captain": "H. Kane",
       "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
         {
           "id": 250131901,
           "name": "Gabriel",
@@ -8544,48 +8624,21 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250058244,
+          "name": "L. Jović",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 4
         },
         {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250116003,
-          "name": "L. Da Cunha",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -8598,63 +8651,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
           "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
+          "bench": false,
+          "played": true,
+          "position": 1
         },
         {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
+          "id": 250116003,
+          "name": "L. Da Cunha",
           "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         },
         {
           "id": 250076574,
           "name": "K. Mbappé",
-          "points": 12,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250180059,
-          "name": "João Simões",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250058244,
-          "name": "L. Jović",
-          "points": 1,
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
@@ -8668,9 +8695,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": false,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250180059,
+          "name": "João Simões",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -8678,10 +8733,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "halfbrain",
       "displayName": "hb",
       "matchday": 1,
-      "score": 94,
-      "overallPoints": 94,
+      "score": 119,
+      "overallPoints": 119,
       "captain": "L. Yamal",
       "lineup": [
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
         {
           "id": 250131901,
           "name": "Gabriel",
@@ -8692,13 +8775,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250177594,
+          "name": "J. Gadou",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 3
+          "position": 4
         },
         {
           "id": 250112880,
@@ -8711,58 +8803,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250177594,
-          "name": "J. Gadou",
+          "id": 250117491,
+          "name": "M. Kovář",
           "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 1
         },
         {
-          "id": 250117491,
-          "name": "M. Kovář",
-          "points": 0,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 1
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -8774,28 +8839,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250194673,
-          "name": "D. Undav",
+          "id": 250123068,
+          "name": "E. Konsa",
           "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
@@ -8806,21 +8852,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "Z. Suzuki",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -8828,53 +8884,35 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "红衫圣殿",
       "displayName": "Eric",
       "matchday": 1,
-      "score": 29,
-      "overallPoints": 29,
-      "captain": "K. Kvaratskhelia",
+      "score": 64,
+      "overallPoints": 64,
+      "captain": "H. Kane",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 4
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250118131,
-          "name": "Joan García",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
           "position": 4
         },
         {
@@ -8882,51 +8920,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "R. Gravenberch",
           "points": 2,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250101534,
-          "name": "P. Foden",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250137260,
-          "name": "B. Mbeumo",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": true,
           "bench": false,
           "played": true,
           "position": 3
@@ -8941,202 +8934,38 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
+          "id": 250118908,
+          "name": "S. Lammens",
           "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 1
         },
         {
           "id": 250179137,
           "name": "I. Fresneda",
           "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
+          "id": 250101534,
+          "name": "P. Foden",
+          "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "59000b0c-aa4c-11f1-8a87-31576c242732",
-      "fantasyTeam": "saru",
-      "displayName": "nianzu",
-      "matchday": 1,
-      "score": 92,
-      "overallPoints": 92,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250117581,
-          "name": "I. Maatsen",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
+          "position": 3
         },
         {
           "id": 250118131,
           "name": "Joan García",
           "points": 2,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250050319,
-          "name": "F. Thauvin",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250104066,
-          "name": "D. Szoboszlai",
-          "points": 13,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 50327420,
-          "name": "V. van Dijk",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250130006,
-          "name": "Sergi Altimira",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250218560,
-          "name": "Z. Suzuki",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "101e6fc0-991a-11f1-8c73-93a143d942d6",
-      "fantasyTeam": "光之围棋俱乐部",
-      "displayName": "进藤光",
-      "matchday": 1,
-      "score": 85,
-      "overallPoints": 85,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 1
         },
@@ -9150,6 +8979,147 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "59000b0c-aa4c-11f1-8a87-31576c242732",
+      "fantasyTeam": "saru",
+      "displayName": "nianzu",
+      "matchday": 1,
+      "score": 105,
+      "overallPoints": 105,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 50327420,
+          "name": "V. van Dijk",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250104066,
+          "name": "D. Szoboszlai",
+          "points": 13,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250117581,
+          "name": "I. Maatsen",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250130006,
+          "name": "Sergi Altimira",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250112880,
           "name": "Raphinha",
           "points": 32,
@@ -9160,39 +9130,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101238,
-          "name": "W. Anton",
-          "points": 3,
+          "id": 250118131,
+          "name": "Joan García",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
+          "position": 1
         },
         {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
+          "id": 250050319,
+          "name": "F. Thauvin",
+          "points": 11,
           "captain": false,
+          "manOfMatch": true,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -9205,12 +9158,80 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250218560,
+          "name": "Z. Suzuki",
+          "points": 2,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 1
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "101e6fc0-991a-11f1-8c73-93a143d942d6",
+      "fantasyTeam": "光之围棋俱乐部",
+      "displayName": "进藤光",
+      "matchday": 1,
+      "score": 117,
+      "overallPoints": 117,
+      "captain": "Raphinha",
+      "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 1
         },
         {
@@ -9223,10 +9244,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -9242,122 +9272,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
+          "id": 250101238,
+          "name": "W. Anton",
+          "points": 3,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
-          "position": 4
+          "position": 2
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "f3eabc3a-a4f1-11f1-b7f6-95b0f638dfe9",
-      "fantasyTeam": "MutdBJ",
-      "displayName": "垫底超人00",
-      "matchday": 1,
-      "score": 48,
-      "overallPoints": 48,
-      "captain": "Raphinha",
-      "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250194474,
-          "name": "D. Huijsen",
-          "points": 1,
           "captain": false,
           "bench": true,
           "played": true,
@@ -9373,40 +9308,127 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250081555,
-          "name": "D. Malen",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250200231,
-          "name": "M. Araújo",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250179137,
-          "name": "I. Fresneda",
-          "points": 1,
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 2
         },
         {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "f3eabc3a-a4f1-11f1-b7f6-95b0f638dfe9",
+      "fantasyTeam": "MutdBJ",
+      "displayName": "垫底超人00",
+      "matchday": 1,
+      "score": 93,
+      "overallPoints": 93,
+      "captain": "Raphinha",
+      "lineup": [
+        {
           "id": 250116767,
           "name": "M. Greenwood",
-          "points": 0,
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250179137,
+          "name": "I. Fresneda",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250081555,
+          "name": "D. Malen",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250194474,
+          "name": "D. Huijsen",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250200231,
+          "name": "M. Araújo",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250218560,
@@ -9416,28 +9438,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 1
-        }
-      ],
-      "status": "进行中"
-    },
-    {
-      "region": "antarctic",
-      "guid": "f5676392-a9c9-11f1-8825-67e7c75306d7",
-      "fantasyTeam": "联曼",
-      "displayName": "Jia",
-      "matchday": 1,
-      "score": 36,
-      "overallPoints": 36,
-      "captain": "K. Kvaratskhelia",
-      "lineup": [
+        },
         {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 1
+          "position": 2
         },
         {
           "id": 250197801,
@@ -9449,48 +9468,44 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
+          "id": 250113392,
+          "name": "R. Calafiori",
           "points": 0,
           "captain": false,
           "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250138985,
-          "name": "K. Sabbe",
-          "points": 0,
-          "captain": false,
-          "bench": true,
           "played": true,
           "position": 2
-        },
+        }
+      ],
+      "status": "已结束"
+    },
+    {
+      "region": "antarctic",
+      "guid": "f5676392-a9c9-11f1-8825-67e7c75306d7",
+      "fantasyTeam": "联曼",
+      "displayName": "Jia",
+      "matchday": 1,
+      "score": 82,
+      "overallPoints": 82,
+      "captain": "H. Kane",
+      "lineup": [
         {
-          "id": 250186227,
-          "name": "A. Diao",
-          "points": 0,
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
@@ -9498,6 +9513,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "A. Isak",
           "points": 5,
           "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
           "bench": false,
           "played": true,
           "position": 4
@@ -9512,13 +9536,40 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": true,
+          "id": 250186227,
+          "name": "A. Diao",
+          "points": 7,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250136464,
+          "name": "Gonçalo Inácio",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250138985,
+          "name": "K. Sabbe",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250070418,
+          "name": "F. Bredlow",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
         },
         {
           "id": 250076574,
@@ -9539,18 +9590,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250136464,
-          "name": "Gonçalo Inácio",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
           "manOfMatch": true,
           "bench": false,
@@ -9558,16 +9600,34 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250070418,
-          "name": "F. Bredlow",
-          "points": 2,
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 1
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -9575,27 +9635,27 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "换汤不换药",
       "displayName": "Jiang",
       "matchday": 1,
-      "score": 48,
-      "overallPoints": 48,
+      "score": 50,
+      "overallPoints": 50,
       "captain": "L. Suárez",
       "lineup": [
         {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250106939,
-          "name": "B. Saka",
+          "id": 250132811,
+          "name": "Luis Díaz",
           "points": 3,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250117036,
@@ -9607,12 +9667,48 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250132811,
-          "name": "Luis Díaz",
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250011668,
+          "name": "T. Courtois",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250090285,
+          "name": "T. Puchacz",
           "points": 0,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250128377,
+          "name": "Jude Bellingham",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 3
         },
         {
@@ -9625,49 +9721,13 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250128377,
-          "name": "Jude Bellingham",
-          "points": 3,
+          "id": 250116653,
+          "name": "Sandro Cruz",
+          "points": 1,
           "captain": false,
           "bench": true,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250011668,
-          "name": "T. Courtois",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
+          "position": 2
         },
         {
           "id": 250147458,
@@ -9688,6 +9748,24 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250106939,
+          "name": "B. Saka",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250171293,
           "name": "D. Spence",
           "points": 0,
@@ -9695,27 +9773,9 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 2
-        },
-        {
-          "id": 250116653,
-          "name": "Sandro Cruz",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250090285,
-          "name": "T. Puchacz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -9723,24 +9783,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Acidboy",
       "displayName": "acidboy",
       "matchday": 1,
-      "score": 72,
-      "overallPoints": 72,
+      "score": 110,
+      "overallPoints": 110,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250197801,
-          "name": "Gerard Martín",
-          "points": 0,
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
           "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -9749,56 +9800,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
+          "points": 9,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250069832,
-          "name": "G. Kobel",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250153621,
-          "name": "N. Paz",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250064064,
-          "name": "Marquinhos",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250136465,
@@ -9810,22 +9816,31 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250101444,
-          "name": "Vitinha",
-          "points": 4,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
+          "id": 250118908,
+          "name": "S. Lammens",
           "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 1
+        },
+        {
+          "id": 250069832,
+          "name": "G. Kobel",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250153621,
+          "name": "N. Paz",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250147458,
@@ -9837,10 +9852,10 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -9856,6 +9871,15 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
           "id": 250123068,
           "name": "E. Konsa",
           "points": 8,
@@ -9863,9 +9887,46 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "bench": true,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250101444,
+          "name": "Vitinha",
+          "points": 4,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250064064,
+          "name": "Marquinhos",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -9873,19 +9934,37 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "TakahashiAkira",
       "displayName": "takahashi",
       "matchday": 1,
-      "score": 97,
-      "overallPoints": 97,
+      "score": 108,
+      "overallPoints": 108,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "points": 11,
+          "captain": false,
           "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250176450,
@@ -9897,21 +9976,12 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250176488,
-          "name": "J. Ramón",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
+          "played": true,
           "position": 2
         },
         {
@@ -9925,26 +9995,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250188246,
-          "name": "Tiago Santos",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
+          "id": 250130006,
+          "name": "Sergi Altimira",
           "points": 3,
           "captain": false,
           "bench": false,
@@ -9956,42 +10008,33 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "name": "A. Valles",
           "points": 1,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 1
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250188246,
+          "name": "Tiago Santos",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250115748,
-          "name": "J. Markovič",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250130006,
-          "name": "Sergi Altimira",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250187727,
-          "name": "R. Zalazar",
-          "points": 11,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
           "manOfMatch": true,
           "bench": false,
           "played": true,
@@ -10007,16 +10050,34 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 8,
+          "id": 250115748,
+          "name": "J. Markovič",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
+          "position": 1
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 4
+        },
+        {
+          "id": 250176488,
+          "name": "J. Ramón",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10024,8 +10085,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "EURO BEN",
       "displayName": "欧洲笨",
       "matchday": 1,
-      "score": 70,
-      "overallPoints": 70,
+      "score": 109,
+      "overallPoints": 109,
       "captain": "Raphinha",
       "lineup": [
         {
@@ -10038,13 +10099,58 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 15,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250202036,
+          "name": "Flávio Gonçalves",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250130006,
+          "name": "Sergi Altimira",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250168144,
+          "name": "D. Pejcinovic",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250112880,
@@ -10057,83 +10163,11 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 15,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250156423,
           "name": "D. Svensson",
           "points": 2,
           "captain": false,
           "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250112998,
-          "name": "S. Dest",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250130006,
-          "name": "Sergi Altimira",
-          "points": 3,
-          "captain": false,
-          "bench": false,
           "played": true,
           "position": 2
         },
@@ -10147,25 +10181,54 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250168144,
-          "name": "D. Pejcinovic",
+          "id": 250112998,
+          "name": "S. Dest",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250164780,
+          "name": "Fermín López",
           "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
           "position": 4
         },
         {
-          "id": 250202036,
-          "name": "Flávio Gonçalves",
-          "points": 1,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10173,101 +10236,18 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Vamos Espana",
       "displayName": "Russ",
       "matchday": 1,
-      "score": 64,
-      "overallPoints": 64,
+      "score": 119,
+      "overallPoints": 119,
       "captain": "Raphinha",
       "lineup": [
         {
-          "id": 250131901,
-          "name": "Gabriel",
-          "points": 8,
+          "id": 250137260,
+          "name": "B. Mbeumo",
+          "points": 6,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        },
-        {
-          "id": 250181082,
-          "name": "M. Lewis-Skelly",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250081341,
-          "name": "M. Ødegaard",
-          "points": 11,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250117036,
-          "name": "A. Gordon",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250128120,
-          "name": "A. Davies",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
           "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250116951,
-          "name": "Y. Bisseck",
-          "points": 1,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250096761,
-          "name": "J. Martínez",
-          "points": 3,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
         },
         {
           "id": 250089868,
@@ -10279,9 +10259,63 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250117036,
+          "name": "A. Gordon",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250116951,
+          "name": "Y. Bisseck",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
           "id": 250177928,
           "name": "J. Jacquet",
           "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250128120,
+          "name": "A. Davies",
+          "points": 14,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250131901,
+          "name": "Gabriel",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -10297,25 +10331,55 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
-          "played": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
           "position": 1
         },
         {
-          "id": 250137260,
-          "name": "B. Mbeumo",
+          "id": 250081341,
+          "name": "M. Ødegaard",
+          "points": 11,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250181082,
+          "name": "M. Lewis-Skelly",
           "points": 0,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10323,27 +10387,45 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Livy Lv",
       "displayName": "Yan",
       "matchday": 1,
-      "score": 45,
-      "overallPoints": 45,
+      "score": 87,
+      "overallPoints": 87,
       "captain": "K. Mbappé",
       "lineup": [
+        {
+          "id": 97923,
+          "name": "M. Neuer",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 1
+        },
+        {
+          "id": 250128120,
+          "name": "A. Davies",
+          "points": 14,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 2
+        },
+        {
+          "id": 250079545,
+          "name": "D. Upamecano",
+          "points": 10,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 2
+        },
         {
           "id": 250163454,
           "name": "P. Hincapié",
           "points": 8,
           "captain": false,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 2
-        },
-        {
-          "id": 250083732,
-          "name": "D. Rice",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
         },
         {
           "id": 250143693,
@@ -10351,7 +10433,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 7,
           "captain": false,
           "bench": false,
-          "played": true,
+          "played": false,
+          "position": 3
+        },
+        {
+          "id": 250083732,
+          "name": "D. Rice",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": false,
           "position": 3
         },
         {
@@ -10360,80 +10451,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 15,
           "captain": false,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 3
-        },
-        {
-          "id": 250128120,
-          "name": "A. Davies",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 97923,
-          "name": "M. Neuer",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250079545,
-          "name": "D. Upamecano",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250132987,
-          "name": "V. Osimhen",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250187698,
-          "name": "A. Khusanov",
-          "points": 1,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250065792,
-          "name": "V. Milinković-Savić",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250183342,
-          "name": "T. Gomis",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 4
         },
         {
           "id": 250076574,
@@ -10441,8 +10460,17 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 12,
           "captain": true,
           "bench": false,
-          "played": true,
+          "played": false,
           "position": 4
+        },
+        {
+          "id": 250187698,
+          "name": "A. Khusanov",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 2
         },
         {
           "id": 250101284,
@@ -10450,21 +10478,57 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "points": 10,
           "captain": false,
           "manOfMatch": true,
-          "bench": true,
-          "played": true,
+          "bench": false,
+          "played": false,
           "position": 3
+        },
+        {
+          "id": 250183342,
+          "name": "T. Gomis",
+          "points": 1,
+          "captain": false,
+          "bench": false,
+          "played": false,
+          "position": 4
+        },
+        {
+          "id": 250065792,
+          "name": "V. Milinković-Savić",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": false,
+          "position": 1
         },
         {
           "id": 250171293,
           "name": "D. Spence",
           "points": 0,
           "captain": false,
-          "bench": false,
-          "played": true,
+          "bench": true,
+          "played": false,
           "position": 2
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": false,
+          "position": 3
+        },
+        {
+          "id": 250132987,
+          "name": "V. Osimhen",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": false,
+          "position": 4
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10472,14 +10536,68 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "BeatEnzoWang",
       "displayName": "Enzo",
       "matchday": 1,
-      "score": 67,
-      "overallPoints": 67,
+      "score": 119,
+      "overallPoints": 119,
       "captain": "L. Yamal",
       "lineup": [
         {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250089868,
+          "name": "A. Isak",
+          "points": 5,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "points": 30,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250118908,
+          "name": "S. Lammens",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250086928,
+          "name": "M. Guéhi",
+          "points": 10,
           "captain": false,
           "bench": false,
           "played": true,
@@ -10495,94 +10613,22 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250176450,
-          "name": "L. Yamal",
-          "points": 30,
-          "captain": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
           "id": 250074004,
           "name": "J. Butez",
-          "points": 0,
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
           "position": 1
         },
         {
           "id": 250153621,
           "name": "N. Paz",
-          "points": 0,
+          "points": 8,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
           "position": 3
-        },
-        {
-          "id": 250086928,
-          "name": "M. Guéhi",
-          "points": 10,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250089868,
-          "name": "A. Isak",
-          "points": 5,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 4
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250118908,
-          "name": "S. Lammens",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250136465,
-          "name": "Nuno Mendes",
-          "points": 6,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250194673,
@@ -10594,6 +10640,25 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
+          "id": 250123068,
+          "name": "E. Konsa",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
           "id": 250171293,
           "name": "D. Spence",
           "points": 0,
@@ -10603,16 +10668,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250123068,
-          "name": "E. Konsa",
-          "points": 8,
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10620,108 +10685,17 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "Noodle FC",
       "displayName": "面条 ",
       "matchday": 1,
-      "score": 30,
-      "overallPoints": 30,
-      "captain": "K. Kvaratskhelia",
+      "score": 79,
+      "overallPoints": 79,
+      "captain": "H. Kane",
       "lineup": [
-        {
-          "id": 250113392,
-          "name": "R. Calafiori",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250164780,
-          "name": "Fermín López",
-          "points": 1,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 16,
-          "captain": false,
-          "manOfMatch": true,
-          "bench": false,
-          "played": true,
-          "position": 3
-        },
-        {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
         {
           "id": 250016833,
           "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250156423,
-          "name": "D. Svensson",
-          "points": 2,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 2
-        },
-        {
-          "id": 250096761,
-          "name": "J. Martínez",
-          "points": 3,
-          "captain": false,
-          "bench": true,
-          "played": true,
-          "position": 1
-        },
-        {
-          "id": 250110943,
-          "name": "Matheus Cunha",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250101808,
-          "name": "K. Kvaratskhelia",
-          "points": 0,
+          "points": 18,
           "captain": true,
           "bench": false,
           "played": true,
-          "position": 3
-        },
-        {
-          "id": 250187620,
-          "name": "R. Pepi",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
           "position": 4
         },
         {
@@ -10734,15 +10708,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250070418,
-          "name": "F. Bredlow",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 1
-        },
-        {
           "id": 250194673,
           "name": "D. Undav",
           "points": 8,
@@ -10752,33 +10717,55 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250127538,
-          "name": "J. Vagnoman",
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 16,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250096761,
+          "name": "J. Martínez",
+          "points": 3,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250187620,
+          "name": "R. Pepi",
           "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
-          "position": 2
-        }
-      ],
-      "status": "进行中"
-    }
-  ],
-  "extras": [
-    {
-      "region": "arctic",
-      "guid": "7649f634-a5a9-11f1-ad1f-b33810b58db2",
-      "fantasyTeam": "蒂尔尼又没欧冠踢了",
-      "displayName": "Levine",
-      "matchday": 1,
-      "score": 58,
-      "overallPoints": 58,
-      "captain": "D. Undav",
-      "lineup": [
+          "position": 4
+        },
         {
-          "id": 250171278,
-          "name": "D. Raya",
-          "points": 7,
+          "id": 250156423,
+          "name": "D. Svensson",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250110943,
+          "name": "Matheus Cunha",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250070418,
+          "name": "F. Bredlow",
+          "points": 2,
           "captain": false,
           "bench": false,
           "played": true,
@@ -10794,35 +10781,8 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 3
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250065413,
-          "name": "K. Laimer",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 2
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250092517,
-          "name": "J. Ryerson",
+          "id": 250127538,
+          "name": "J. Vagnoman",
           "points": 2,
           "captain": false,
           "bench": false,
@@ -10830,13 +10790,83 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250162177,
-          "name": "D. Doué",
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
           "points": 0,
           "captain": false,
           "bench": false,
           "played": true,
+          "position": 2
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "points": 0,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
+        }
+      ],
+      "status": "已结束"
+    }
+  ],
+  "extras": [
+    {
+      "region": "arctic",
+      "guid": "7649f634-a5a9-11f1-ad1f-b33810b58db2",
+      "fantasyTeam": "蒂尔尼又没欧冠踢了",
+      "displayName": "Levine",
+      "matchday": 1,
+      "score": 95,
+      "overallPoints": 95,
+      "captain": "H. Kane",
+      "lineup": [
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "points": 7,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250099671,
+          "name": "G. Til",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 3
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 18,
+          "captain": true,
+          "bench": false,
+          "played": true,
+          "position": 4
         },
         {
           "id": 250136465,
@@ -10848,18 +10878,28 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250099671,
-          "name": "G. Til",
-          "points": 0,
+          "id": 250065413,
+          "name": "K. Laimer",
+          "points": 6,
           "captain": false,
-          "bench": true,
-          "played": false,
+          "bench": false,
+          "played": true,
+          "position": 2
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "points": 14,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
           "position": 3
         },
         {
-          "id": 250076574,
-          "name": "K. Mbappé",
-          "points": 6,
+          "id": 250194673,
+          "name": "D. Undav",
+          "points": 8,
           "captain": false,
           "bench": false,
           "played": true,
@@ -10875,22 +10915,50 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250194673,
-          "name": "D. Undav",
-          "points": 16,
-          "captain": true,
+          "id": 250164780,
+          "name": "Fermín López",
+          "points": 1,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 3
+        },
+        {
+          "id": 250092517,
+          "name": "J. Ryerson",
+          "points": 2,
+          "captain": false,
           "bench": false,
           "played": true,
-          "position": 4
+          "position": 2
         },
         {
           "id": 250127538,
           "name": "J. Vagnoman",
           "points": 2,
           "captain": false,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 2
+        },
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "points": 6,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
+          "captain": false,
+          "manOfMatch": true,
+          "bench": false,
+          "played": true,
+          "position": 3
         },
         {
           "id": 250046901,
@@ -10902,17 +10970,16 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250055294,
-          "name": "R. Marin",
-          "points": 14,
+          "id": 250162177,
+          "name": "D. Doué",
+          "points": 0,
           "captain": false,
-          "manOfMatch": true,
-          "bench": false,
+          "bench": true,
           "played": true,
           "position": 3
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     },
     {
       "region": "antarctic",
@@ -10920,10 +10987,19 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       "fantasyTeam": "penguin",
       "displayName": "企鹅",
       "matchday": 1,
-      "score": 62,
-      "overallPoints": 62,
+      "score": 99,
+      "overallPoints": 99,
       "captain": "Raphinha",
       "lineup": [
+        {
+          "id": 250078886,
+          "name": "Bruno Fernandes",
+          "points": 8,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 3
+        },
         {
           "id": 250171278,
           "name": "D. Raya",
@@ -10934,40 +11010,48 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 1
         },
         {
-          "id": 250112880,
-          "name": "Raphinha",
-          "points": 32,
-          "captain": true,
-          "manOfMatch": true,
+          "id": 250016833,
+          "name": "H. Kane",
+          "points": 9,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 4
+        },
+        {
+          "id": 250153874,
+          "name": "Gabriel Veiga",
+          "points": 3,
+          "captain": false,
           "bench": false,
           "played": true,
           "position": 3
         },
         {
-          "id": 250190350,
-          "name": "N. Brown",
-          "points": 0,
+          "id": 250076007,
+          "name": "M. Svilar",
+          "points": 3,
           "captain": false,
           "bench": true,
-          "played": false,
+          "played": true,
+          "position": 1
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "points": 3,
+          "captain": false,
+          "bench": false,
+          "played": true,
           "position": 2
         },
         {
-          "id": 250016833,
-          "name": "H. Kane",
-          "points": 0,
+          "id": 250202036,
+          "name": "Flávio Gonçalves",
+          "points": 1,
           "captain": false,
           "bench": true,
-          "played": false,
-          "position": 4
-        },
-        {
-          "id": 250171184,
-          "name": "M. Olise",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
+          "played": true,
           "position": 3
         },
         {
@@ -10980,40 +11064,32 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250153874,
-          "name": "Gabriel Veiga",
-          "points": 3,
-          "captain": false,
+          "id": 250112880,
+          "name": "Raphinha",
+          "points": 32,
+          "captain": true,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
-        },
-        {
-          "id": 250078886,
-          "name": "Bruno Fernandes",
-          "points": 0,
-          "captain": false,
-          "bench": false,
-          "played": false,
-          "position": 3
-        },
-        {
-          "id": 250088061,
-          "name": "A. Hakimi",
-          "points": 3,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
         },
         {
           "id": 250187620,
           "name": "R. Pepi",
-          "points": 0,
+          "points": 2,
           "captain": false,
           "bench": false,
-          "played": false,
+          "played": true,
           "position": 4
+        },
+        {
+          "id": 250127538,
+          "name": "J. Vagnoman",
+          "points": 2,
+          "captain": false,
+          "bench": true,
+          "played": true,
+          "position": 2
         },
         {
           "id": 250076574,
@@ -11025,24 +11101,6 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 4
         },
         {
-          "id": 250076007,
-          "name": "M. Svilar",
-          "points": 0,
-          "captain": false,
-          "bench": true,
-          "played": false,
-          "position": 1
-        },
-        {
-          "id": 250127538,
-          "name": "J. Vagnoman",
-          "points": 2,
-          "captain": false,
-          "bench": false,
-          "played": true,
-          "position": 2
-        },
-        {
           "id": 250123068,
           "name": "E. Konsa",
           "points": 8,
@@ -11052,16 +11110,26 @@ window.PENGUIN_UEFA_SNAPSHOT = {
           "position": 2
         },
         {
-          "id": 250202036,
-          "name": "Flávio Gonçalves",
-          "points": 1,
+          "id": 250171184,
+          "name": "M. Olise",
+          "points": 21,
           "captain": false,
+          "manOfMatch": true,
           "bench": false,
           "played": true,
           "position": 3
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "points": 0,
+          "captain": false,
+          "bench": false,
+          "played": true,
+          "position": 2
         }
       ],
-      "status": "进行中"
+      "status": "已结束"
     }
   ]
 };
