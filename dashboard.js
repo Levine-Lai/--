@@ -290,19 +290,47 @@ function fixtureForTeam(round, teamName) {
   return { opponent: teamsByName.get(opponentName), venue: isHome ? "H" : "A" };
 }
 
+function fdrStrengthRanks(region = dashboardRegion) {
+  const ranked = allTeams.map((team) => {
+    const available = officialMatchdays.map((round) => managerScoresByRegion[region][`${round.number}|${team.name}`]).filter(Boolean);
+    const latest = available.at(-1);
+    const total = Number.isFinite(latest?.overallPoints) ? latest.overallPoints : available.reduce((sum, item) => sum + (Number(item.score) || 0), 0);
+    return { team, total };
+  }).sort((a, b) => b.total - a.total || a.team.pot - b.team.pot || a.team.potPosition - b.team.potPosition);
+  return new Map(ranked.map((item, index) => [item.team.name, { rank: index + 1, total: item.total }]));
+}
+
+function fdrDifficulty(team, strengthRanks) {
+  const strength = strengthRanks.get(team.name);
+  const rankLevel = strength ? 1 + (3 * (strength.rank - 1)) / Math.max(1, allTeams.length - 1) : team.pot;
+  const score = team.pot * 0.6 + rankLevel * 0.4;
+  return { score, level: Math.max(1, Math.min(4, Math.round(score))), rank: strength?.rank || null };
+}
+
+function isRoundFinished(round, region = dashboardRegion) {
+  return round.matches.every(([, homeName, awayName]) => {
+    const data = getMatchData(round.number, homeName, awayName, region);
+    return Number.isFinite(data.homeScore) && Number.isFinite(data.awayScore) && data.status === "已结束";
+  });
+}
+
 function renderFdr() {
+  const strengthRanks = fdrStrengthRanks();
   dashboardEls.fdrHead.innerHTML = `<tr><th>玩家</th>${officialMatchdays.map((round) => {
     const active = fdrSort.round === round.number && fdrSort.direction;
+    const finished = isRoundFinished(round);
     const directionLabel = active ? (fdrSort.direction === "easy" ? "易→难" : "难→易") : "";
-    return `<th aria-sort="${active ? (fdrSort.direction === "easy" ? "descending" : "ascending") : "none"}"><button class="fdr-sort${active ? " is-active" : ""}" type="button" data-fdr-sort="${round.number}" aria-label="GD${round.number}${directionLabel ? `，当前${directionLabel}` : "，按难度排序"}"><strong>GD${round.number}</strong>${directionLabel ? `<small>${directionLabel}</small>` : ""}</button></th>`;
+    return `<th class="${finished ? "is-finished" : ""}" aria-sort="${active ? (fdrSort.direction === "easy" ? "descending" : "ascending") : "none"}"><button class="fdr-sort${active ? " is-active" : ""}${finished ? " is-finished" : ""}" type="button" data-fdr-sort="${round.number}" aria-label="GD${round.number}${directionLabel ? `，当前${directionLabel}` : "，按难度排序"}"><strong>GD${round.number}</strong>${directionLabel ? `<small>${directionLabel}</small>` : ""}</button></th>`;
   }).join("")}</tr>`;
   const displayedTeams = [...allTeams];
   if (fdrSort.round && fdrSort.direction) {
     const round = officialMatchdays.find((item) => item.number === fdrSort.round);
     displayedTeams.sort((teamA, teamB) => {
-      const potA = fixtureForTeam(round, teamA.name)?.opponent?.pot || 0;
-      const potB = fixtureForTeam(round, teamB.name)?.opponent?.pot || 0;
-      return fdrSort.direction === "easy" ? potB - potA : potA - potB;
+      const opponentA = fixtureForTeam(round, teamA.name)?.opponent;
+      const opponentB = fixtureForTeam(round, teamB.name)?.opponent;
+      const difficultyA = opponentA ? fdrDifficulty(opponentA, strengthRanks).score : 0;
+      const difficultyB = opponentB ? fdrDifficulty(opponentB, strengthRanks).score : 0;
+      return fdrSort.direction === "easy" ? difficultyB - difficultyA : difficultyA - difficultyB;
     });
   }
   dashboardEls.fdrBody.innerHTML = displayedTeams.map((team) => {
@@ -311,7 +339,9 @@ function renderFdr() {
       const fixture = fixtureForTeam(round, team.name);
       if (!fixture?.opponent) return '<td class="fdr-empty">—</td>';
       const opponentManager = managerFor(fixture.opponent.name);
-      return `<td class="fdr-cell" data-pot="${fixture.opponent.pot}" title="${escapeHtml(opponentManager)} · Pot ${fixture.opponent.pot}"><span>${escapeHtml(opponentManager)}</span></td>`;
+      const difficulty = fdrDifficulty(fixture.opponent, strengthRanks);
+      const finished = isRoundFinished(round);
+      return `<td class="fdr-cell${finished ? " is-finished" : ""}" data-pot="${difficulty.level}" data-difficulty="${difficulty.score.toFixed(2)}" title="${escapeHtml(opponentManager)} · ${difficulty.score.toFixed(2)}"><span>${escapeHtml(opponentManager)}</span></td>`;
     }).join("");
     return `<tr><th scope="row"><img src="${logoUrl(team)}" alt="" /><span>${escapeHtml(manager)}</span></th>${fixtures}</tr>`;
   }).join("");
@@ -357,6 +387,7 @@ function setManagerScores(records) {
     if (record.guid) attachGuidToLeagueMember(member, record.guid, region);
     managerScoresByRegion[region][`${matchday}|${team.name}`] = {
       score,
+      overallPoints: Number(record.overallPoints),
       lineup: Array.isArray(record.lineup) ? record.lineup : [],
       captain: record.captain ?? null,
       status: record.status || "已同步",
@@ -383,6 +414,7 @@ function setManagerScores(records) {
   });
   renderMatches();
   renderStandings();
+  renderFdr();
   return { imported, unresolved };
 }
 

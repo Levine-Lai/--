@@ -67,6 +67,9 @@ h1 { font-family: var(--font-display); font-weight: 700; letter-spacing: -.025em
 .fdr-cell { height: 54px; padding: 6px 5px; color: #fff; border-radius: 4px; text-align: center; }
 .fdr-cell span { display: block; overflow: hidden; font-size: 15px; font-weight: 600; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
 .fdr-cell[data-pot="3"] { color: #041732; }
+.fdr-table thead th.is-finished { color: #f5f7fb; background: #626d81; }
+.fdr-sort.is-finished, .fdr-sort.is-finished:hover, .fdr-sort.is-finished.is-active { color: #fff; background: rgba(255,255,255,.06); }
+.fdr-cell.is-finished { color: #f5f7fb !important; background: #687386 !important; box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); }
 .fdr-empty { color: #6f82a6; text-align: center; }
 .match-modal { border-radius: 14px; background: #081936; }
 .modal-match-head { background: linear-gradient(110deg,#123568,#0a2046); }
