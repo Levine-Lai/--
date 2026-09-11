@@ -45,6 +45,7 @@ const allTeams = teamPots.flatMap((pot) => pot.teams.map((team, index) => ({ ...
 const teamsByName = new Map(allTeams.map((team) => [team.name, team]));
 const resultsByRegion = { arctic: {}, antarctic: {} };
 const managerScoresByRegion = { arctic: {}, antarctic: {} };
+const roundAnalyticsByMatchday = window.PENGUIN_UEFA_SNAPSHOT?.roundAnalytics || {};
 const dashboardParams = new URLSearchParams(window.location.search);
 const requestedRegion = dashboardParams.get("region");
 const requestedView = dashboardParams.get("view");
@@ -59,6 +60,7 @@ const dashboardEls = {
   navButtons: [...document.querySelectorAll(".nav-button")],
   viewPanels: [...document.querySelectorAll("[data-view-panel]")],
   roundTabs: document.querySelector("#roundTabs"), matchGrid: document.querySelector("#matchGrid"),
+  analyticsPanel: document.querySelector("#analyticsPanel"), analyticsGrid: document.querySelector("#analyticsGrid"),
   standingsBody: document.querySelector("#standingsBody"), potGrid: document.querySelector("#potGrid"),
   fdrHead: document.querySelector("#fdrHead"), fdrBody: document.querySelector("#fdrBody"),
   matchesRegionLabel: document.querySelector("#matchesRegionLabel"), standingsRegionLabel: document.querySelector("#standingsRegionLabel"),
@@ -148,6 +150,45 @@ function matchCardHtml(roundNumber, match, index) {
 function renderMatches() {
   const round = officialMatchdays.find((item) => item.number === activeRound);
   dashboardEls.matchGrid.innerHTML = round.matches.map((match, index) => matchCardHtml(round.number, match, index)).join("");
+  renderAnalytics();
+}
+
+const analyticsCards = [
+  { key: "score", title: "分数排行", area: "score" },
+  { key: "ownership", title: "持有率排行", area: "ownership" },
+  { key: "lowSalaryHigh", title: "低薪高能", area: "value" },
+  { key: "highSalaryLow", title: "高薪低能", area: "low" },
+  { key: "hiddenGems", title: "隐藏宝石", area: "gem" },
+  { key: "popularTraps", title: "热门陷阱", area: "trap" },
+];
+
+function analyticsMetricHtml(player, key) {
+  const points = Number(player.points) || 0;
+  const price = Number(player.price) || 0;
+  const ownership = Number(player.ownership) || 0;
+  if (key === "score") return `<strong>${points}</strong><small>分</small>`;
+  if (key === "ownership") return `<strong>${ownership.toFixed(1).replace(/\.0$/, "")}</strong><small>%</small>`;
+  if (key === "lowSalaryHigh" || key === "highSalaryLow") {
+    const ratio = price > 0 ? points / price : 0;
+    return `<strong>${ratio.toFixed(2)}</strong><small>${points}分 · €${price.toFixed(1)}</small>`;
+  }
+  const ratio = ownership > 0 ? points / ownership : 0;
+  return `<strong>${ratio.toFixed(2)}</strong><small>${points}分 · ${ownership.toFixed(1).replace(/\.0$/, "")}%</small>`;
+}
+
+function renderAnalytics() {
+  if (!dashboardEls.analyticsPanel || !dashboardEls.analyticsGrid) return;
+  const data = roundAnalyticsByMatchday[activeRound] || roundAnalyticsByMatchday[String(activeRound)];
+  dashboardEls.analyticsPanel.hidden = !data;
+  if (!data) {
+    dashboardEls.analyticsGrid.innerHTML = "";
+    return;
+  }
+  dashboardEls.analyticsGrid.innerHTML = analyticsCards.map(({ key, title, area }) => {
+    const players = Array.isArray(data[key]) ? data[key] : [];
+    return `<section class="analytics-card" style="--analytics-area:${area}"><h3>${title}</h3><ol>${players.map((player, index) => `
+      <li><span class="analytics-rank">${index + 1}</span><span class="analytics-player"><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(player.club)}</small></span><span class="analytics-metric">${analyticsMetricHtml(player, key)}</span></li>`).join("")}</ol></section>`;
+  }).join("");
 }
 
 function positionLabel(position) {

@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const CURRENT_USER_GUID = "7649f634-a5a9-11f1-ad1f-b33810b58db2";
 const MATCHDAY = 1;
@@ -99,6 +99,31 @@ const playerFeed = await fetch(playerFeedUrl, { headers }).then((response) => {
 });
 const playerInfoById = new Map(playerFeed.data.value.playerList.map((player) => [Number(player.id), player]));
 
+const analyticsPlayers = playerFeed.data.value.playerList
+  .filter((player) => Number(player.isActive) === 1 && Number(player.value) > 0)
+  .map((player) => ({
+    id: Number(player.id),
+    name: player.pDName || player.pFName || String(player.id),
+    club: player.cCode || player.tName || "",
+    points: Number(player.curGDPts ?? player.lastGdPoints ?? 0),
+    price: Number(player.value || 0),
+    ownership: Number(player.selPer || 0),
+  }));
+
+const takeTop = (items, compare) => [...items].sort(compare).slice(0, 10);
+const byPoints = (a, b) => b.points - a.points || b.ownership - a.ownership || a.name.localeCompare(b.name);
+const byOwnership = (a, b) => b.ownership - a.ownership || b.points - a.points || a.name.localeCompare(b.name);
+const valueRatio = (player) => player.price > 0 ? player.points / player.price : 0;
+const ownershipRatio = (player) => player.ownership > 0 ? player.points / player.ownership : 0;
+const roundAnalytics = {
+  score: takeTop(analyticsPlayers, byPoints),
+  ownership: takeTop(analyticsPlayers, byOwnership),
+  lowSalaryHigh: takeTop(analyticsPlayers.filter((player) => player.points > 0), (a, b) => valueRatio(b) - valueRatio(a) || byPoints(a, b)),
+  highSalaryLow: takeTop(analyticsPlayers, (a, b) => valueRatio(a) - valueRatio(b) || b.price - a.price || byOwnership(a, b)),
+  hiddenGems: takeTop(analyticsPlayers.filter((player) => player.points > 0 && player.ownership > 0), (a, b) => ownershipRatio(b) - ownershipRatio(a) || byPoints(a, b)),
+  popularTraps: takeTop(analyticsPlayers.filter((player) => player.ownership > 0), (a, b) => ownershipRatio(a) - ownershipRatio(b) || b.ownership - a.ownership || a.name.localeCompare(b.name)),
+};
+
 async function fetchMember(region, expectedTeamName, guid) {
   const endpoint = new URL(`https://gaming.uefa.com/en/uclfantasy/services/api/Gameplay/user/${CURRENT_USER_GUID}/opponent-team`);
   endpoint.search = new URLSearchParams({ matchdayId: String(MATCHDAY), phaseId: String(PHASE_ID), opponentguid: guid }).toString();
@@ -144,12 +169,29 @@ for (let index = 0; index < all.length; index += 6) {
 }
 
 const officialRecords = records.filter((record) => !extras[record.region].has(record.guid));
+let previousSnapshot = {};
+try {
+  const previousSource = await readFile("uefa-live-data.js", "utf8");
+  previousSnapshot = JSON.parse(previousSource.replace(/^window\.PENGUIN_UEFA_SNAPSHOT\s*=\s*/, "").replace(/;\s*$/, ""));
+} catch {
+  previousSnapshot = {};
+}
+const previousRecords = Array.isArray(previousSnapshot.records)
+  ? previousSnapshot.records.filter((record) => Number(record.matchday) !== MATCHDAY)
+  : [];
+const previousExtras = Array.isArray(previousSnapshot.extras)
+  ? previousSnapshot.extras.filter((record) => Number(record.matchday) !== MATCHDAY)
+  : [];
 const snapshot = {
   generatedAt: new Date().toISOString(),
   matchday: MATCHDAY,
   source: "UEFA UCL Fantasy opponent-team API",
-  records: officialRecords,
-  extras: records.filter((record) => extras[record.region].has(record.guid)),
+  records: [...previousRecords, ...officialRecords],
+  extras: [...previousExtras, ...records.filter((record) => extras[record.region].has(record.guid))],
+  roundAnalytics: {
+    ...(previousSnapshot.roundAnalytics || {}),
+    [MATCHDAY]: roundAnalytics,
+  },
 };
 await writeFile("uefa-live-data.js", `window.PENGUIN_UEFA_SNAPSHOT = ${JSON.stringify(snapshot, null, 2)};\n`, "utf8");
 console.log(`Saved ${officialRecords.length} official records and ${snapshot.extras.length} extras.`);

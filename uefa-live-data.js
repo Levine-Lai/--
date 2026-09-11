@@ -1,5 +1,5 @@
 window.PENGUIN_UEFA_SNAPSHOT = {
-  "generatedAt": "2026-09-11T00:55:10.237Z",
+  "generatedAt": "2026-09-11T01:16:16.610Z",
   "matchday": 1,
   "source": "UEFA UCL Fantasy opponent-team API",
   "records": [
@@ -11131,5 +11131,501 @@ window.PENGUIN_UEFA_SNAPSHOT = {
       ],
       "status": "已结束"
     }
-  ]
+  ],
+  "roundAnalytics": {
+    "1": {
+      "score": [
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "club": "BAY",
+          "points": 21,
+          "price": 9,
+          "ownership": 44
+        },
+        {
+          "id": 250088320,
+          "name": "Ferran Torres",
+          "club": "PSG",
+          "points": 18,
+          "price": 7,
+          "ownership": 8
+        },
+        {
+          "id": 250010245,
+          "name": "M. Bartra",
+          "club": "BET",
+          "points": 18,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250079383,
+          "name": "E. Demirović",
+          "club": "STU",
+          "points": 17,
+          "price": 6,
+          "ownership": 0
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "club": "BAR",
+          "points": 16,
+          "price": 9.5,
+          "ownership": 39
+        },
+        {
+          "id": 250066886,
+          "name": "O. Dembélé",
+          "club": "PSG",
+          "points": 16,
+          "price": 10,
+          "ownership": 15
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "club": "BAR",
+          "points": 15,
+          "price": 10,
+          "ownership": 32
+        },
+        {
+          "id": 250128120,
+          "name": "A. Davies",
+          "club": "BAY",
+          "points": 14,
+          "price": 5,
+          "ownership": 4
+        },
+        {
+          "id": 250132803,
+          "name": "Lisandro Martínez",
+          "club": "MUN",
+          "points": 14,
+          "price": 4.5,
+          "ownership": 2
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "club": "AEK",
+          "points": 14,
+          "price": 5.5,
+          "ownership": 0
+        }
+      ],
+      "ownership": [
+        {
+          "id": 250076574,
+          "name": "K. Mbappé",
+          "club": "RMA",
+          "points": 6,
+          "price": 11,
+          "ownership": 56
+        },
+        {
+          "id": 250016833,
+          "name": "H. Kane",
+          "club": "BAY",
+          "points": 9,
+          "price": 11,
+          "ownership": 54
+        },
+        {
+          "id": 250171184,
+          "name": "M. Olise",
+          "club": "BAY",
+          "points": 21,
+          "price": 9,
+          "ownership": 44
+        },
+        {
+          "id": 250112880,
+          "name": "Raphinha",
+          "club": "BAR",
+          "points": 16,
+          "price": 9.5,
+          "ownership": 39
+        },
+        {
+          "id": 250171278,
+          "name": "D. Raya",
+          "club": "ARS",
+          "points": 7,
+          "price": 6,
+          "ownership": 35
+        },
+        {
+          "id": 250176450,
+          "name": "L. Yamal",
+          "club": "BAR",
+          "points": 15,
+          "price": 10,
+          "ownership": 32
+        },
+        {
+          "id": 250136465,
+          "name": "Nuno Mendes",
+          "club": "PSG",
+          "points": 6,
+          "price": 6,
+          "ownership": 32
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "club": "ARS",
+          "points": 0,
+          "price": 4.5,
+          "ownership": 31
+        },
+        {
+          "id": 250088061,
+          "name": "A. Hakimi",
+          "club": "PSG",
+          "points": 3,
+          "price": 6,
+          "ownership": 30
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "club": "PSG",
+          "points": 0,
+          "price": 10,
+          "ownership": 27
+        }
+      ],
+      "lowSalaryHigh": [
+        {
+          "id": 250010245,
+          "name": "M. Bartra",
+          "club": "BET",
+          "points": 18,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250132803,
+          "name": "Lisandro Martínez",
+          "club": "MUN",
+          "points": 14,
+          "price": 4.5,
+          "ownership": 2
+        },
+        {
+          "id": 250079383,
+          "name": "E. Demirović",
+          "club": "STU",
+          "points": 17,
+          "price": 6,
+          "ownership": 0
+        },
+        {
+          "id": 250128120,
+          "name": "A. Davies",
+          "club": "BAY",
+          "points": 14,
+          "price": 5,
+          "ownership": 4
+        },
+        {
+          "id": 250088320,
+          "name": "Ferran Torres",
+          "club": "PSG",
+          "points": 18,
+          "price": 7,
+          "ownership": 8
+        },
+        {
+          "id": 250055294,
+          "name": "R. Marin",
+          "club": "AEK",
+          "points": 14,
+          "price": 5.5,
+          "ownership": 0
+        },
+        {
+          "id": 250187727,
+          "name": "R. Zalazar",
+          "club": "SPO",
+          "points": 11,
+          "price": 4.5,
+          "ownership": 4
+        },
+        {
+          "id": 250135831,
+          "name": "A. Brown",
+          "club": "FEN",
+          "points": 11,
+          "price": 4.5,
+          "ownership": 0
+        },
+        {
+          "id": 250188247,
+          "name": "Alexsandro",
+          "club": "LIL",
+          "points": 11,
+          "price": 4.5,
+          "ownership": 0
+        },
+        {
+          "id": 250178823,
+          "name": "P. Dorgu",
+          "club": "MUN",
+          "points": 12,
+          "price": 5,
+          "ownership": 1
+        }
+      ],
+      "highSalaryLow": [
+        {
+          "id": 250170001,
+          "name": "M. Konečný",
+          "club": "SLA",
+          "points": -3,
+          "price": 4,
+          "ownership": 0
+        },
+        {
+          "id": 250131541,
+          "name": "C. Blackman",
+          "club": "SBR",
+          "points": -2,
+          "price": 4.5,
+          "ownership": 0
+        },
+        {
+          "id": 250187215,
+          "name": "O. Bjørtuft",
+          "club": "BOD",
+          "points": -1,
+          "price": 4,
+          "ownership": 3
+        },
+        {
+          "id": 250085663,
+          "name": "J. Faye Lund",
+          "club": "BOD",
+          "points": -1,
+          "price": 4,
+          "ownership": 0
+        },
+        {
+          "id": 250164935,
+          "name": "Renato Veiga",
+          "club": "VIL",
+          "points": -1,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250105502,
+          "name": "S. Marković",
+          "club": "SBR",
+          "points": -1,
+          "price": 4.5,
+          "ownership": 0
+        },
+        {
+          "id": 250051754,
+          "name": "W. Orbán",
+          "club": "RBL",
+          "points": -1,
+          "price": 4.5,
+          "ownership": 0
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "club": "PSG",
+          "points": 0,
+          "price": 10,
+          "ownership": 27
+        },
+        {
+          "id": 250162177,
+          "name": "D. Doué",
+          "club": "PSG",
+          "points": 0,
+          "price": 8.5,
+          "ownership": 4
+        },
+        {
+          "id": 250132987,
+          "name": "V. Osimhen",
+          "club": "GAL",
+          "points": 0,
+          "price": 8,
+          "ownership": 6
+        }
+      ],
+      "hiddenGems": [
+        {
+          "id": 250010245,
+          "name": "M. Bartra",
+          "club": "BET",
+          "points": 18,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250178823,
+          "name": "P. Dorgu",
+          "club": "MUN",
+          "points": 12,
+          "price": 5,
+          "ownership": 1
+        },
+        {
+          "id": 250050319,
+          "name": "F. Thauvin",
+          "club": "LEN",
+          "points": 11,
+          "price": 6.5,
+          "ownership": 1
+        },
+        {
+          "id": 250058958,
+          "name": "J. McGinn",
+          "club": "AVL",
+          "points": 10,
+          "price": 6.5,
+          "ownership": 1
+        },
+        {
+          "id": 250165232,
+          "name": "L. Yoro",
+          "club": "MUN",
+          "points": 9,
+          "price": 4,
+          "ownership": 1
+        },
+        {
+          "id": 250188223,
+          "name": "Carlos Augusto",
+          "club": "INT",
+          "points": 8,
+          "price": 4,
+          "ownership": 1
+        },
+        {
+          "id": 250080569,
+          "name": "E. Buendía",
+          "club": "AVL",
+          "points": 8,
+          "price": 6,
+          "ownership": 1
+        },
+        {
+          "id": 250088461,
+          "name": "Pau Torres",
+          "club": "AVL",
+          "points": 8,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250132803,
+          "name": "Lisandro Martínez",
+          "club": "MUN",
+          "points": 14,
+          "price": 4.5,
+          "ownership": 2
+        },
+        {
+          "id": 250186227,
+          "name": "A. Diao",
+          "club": "COM",
+          "points": 7,
+          "price": 5,
+          "ownership": 1
+        }
+      ],
+      "popularTraps": [
+        {
+          "id": 250164935,
+          "name": "Renato Veiga",
+          "club": "VIL",
+          "points": -1,
+          "price": 4.5,
+          "ownership": 1
+        },
+        {
+          "id": 250187215,
+          "name": "O. Bjørtuft",
+          "club": "BOD",
+          "points": -1,
+          "price": 4,
+          "ownership": 3
+        },
+        {
+          "id": 250113392,
+          "name": "R. Calafiori",
+          "club": "ARS",
+          "points": 0,
+          "price": 4.5,
+          "ownership": 31
+        },
+        {
+          "id": 250101808,
+          "name": "K. Kvaratskhelia",
+          "club": "PSG",
+          "points": 0,
+          "price": 10,
+          "ownership": 27
+        },
+        {
+          "id": 250064064,
+          "name": "Marquinhos",
+          "club": "PSG",
+          "points": 0,
+          "price": 5,
+          "ownership": 17
+        },
+        {
+          "id": 250190350,
+          "name": "N. Brown",
+          "club": "BAY",
+          "points": 0,
+          "price": 4,
+          "ownership": 12
+        },
+        {
+          "id": 250164991,
+          "name": "João Neves",
+          "club": "PSG",
+          "points": 0,
+          "price": 6,
+          "ownership": 11
+        },
+        {
+          "id": 250197801,
+          "name": "Gerard Martín",
+          "club": "BAR",
+          "points": 0,
+          "price": 4,
+          "ownership": 9
+        },
+        {
+          "id": 250165221,
+          "name": "N. O’Reilly",
+          "club": "MCI",
+          "points": 0,
+          "price": 5,
+          "ownership": 7
+        },
+        {
+          "id": 250163404,
+          "name": "P. Esposito",
+          "club": "INT",
+          "points": 0,
+          "price": 5,
+          "ownership": 7
+        }
+      ]
+    }
+  }
 };
