@@ -169,10 +169,10 @@ function analyticsMetricHtml(player, key) {
   if (key === "score") return `<strong>${points}</strong><small>分</small>`;
   if (key === "ownership") return `<strong>${ownership.toFixed(1).replace(/\.0$/, "")}</strong><small>%</small>`;
   if (key === "lowSalaryHigh" || key === "highSalaryLow") {
-    const ratio = price > 0 ? points / price : 0;
+    const ratio = price > 0 ? Math.abs(points) / price : 0;
     return `<strong>${ratio.toFixed(2)}</strong><small>${points}分 · €${price.toFixed(1)}</small>`;
   }
-  const ratio = ownership > 0 ? points / ownership : 0;
+  const ratio = ownership > 0 ? Math.abs(points) / ownership : 0;
   return `<strong>${ratio.toFixed(2)}</strong><small>${points}分 · ${ownership.toFixed(1).replace(/\.0$/, "")}%</small>`;
 }
 
@@ -186,9 +186,22 @@ function renderAnalytics() {
   }
   dashboardEls.analyticsGrid.innerHTML = analyticsCards.map(({ key, title, area }) => {
     const players = Array.isArray(data[key]) ? data[key] : [];
-    return `<section class="analytics-card" style="--analytics-area:${area}"><h3>${title}</h3><ol>${players.map((player, index) => `
+    return `<section class="analytics-card" style="--analytics-area:${area}" data-analytics-key="${key}" role="button" tabindex="0" aria-label="查看${title}完整前25名"><h3>${title}</h3><ol>${players.slice(0, 10).map((player, index) => `
       <li><span class="analytics-rank">${index + 1}</span><span class="analytics-player"><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(player.club)}</small></span><span class="analytics-metric">${analyticsMetricHtml(player, key)}</span></li>`).join("")}</ol></section>`;
   }).join("");
+}
+
+function openAnalyticsModal(key) {
+  const config = analyticsCards.find((item) => item.key === key);
+  const data = roundAnalyticsByMatchday[activeRound] || roundAnalyticsByMatchday[String(activeRound)];
+  const players = config && Array.isArray(data?.[key]) ? data[key] : [];
+  if (!config || !players.length) return;
+  dashboardEls.matchModal.classList.add("is-analytics");
+  dashboardEls.modalContent.innerHTML = `<div class="analytics-modal-content"><header><p>GD${activeRound}</p><h2 id="modalMatchTitle">${config.title}</h2></header><ol class="analytics-full-list">${players.slice(0, 25).map((player, index) => `
+    <li><span class="analytics-rank">${index + 1}</span><span class="analytics-player"><strong>${escapeHtml(player.name)}</strong><small>${escapeHtml(player.club)}</small></span><span class="analytics-metric">${analyticsMetricHtml(player, key)}</span></li>`).join("")}</ol></div>`;
+  dashboardEls.matchModal.hidden = false;
+  document.body.style.overflow = "hidden";
+  dashboardEls.modalClose.focus();
 }
 
 function positionLabel(position) {
@@ -225,6 +238,7 @@ function openMatchModal(matchIndex) {
   const data = getMatchData(activeRound, homeName, awayName);
   const homeLineup = Array.isArray(data.homeLineup) ? data.homeLineup : [];
   const awayLineup = Array.isArray(data.awayLineup) ? data.awayLineup : [];
+  dashboardEls.matchModal.classList.remove("is-analytics");
   dashboardEls.modalContent.innerHTML = `<div class="modal-match-head">
       <p id="modalMatchTitle">${escapeHtml(regionLabels[dashboardRegion])} · 第 ${activeRound} 轮</p>
       <div class="modal-scoreline">
@@ -377,6 +391,8 @@ dashboardEls.navButtons.forEach((button) => button.addEventListener("click",()=>
 dashboardEls.fdrHead.addEventListener("click",(event)=>{const button=event.target.closest("[data-fdr-sort]");if(button)cycleFdrSort(Number(button.dataset.fdrSort))});
 dashboardEls.roundTabs.addEventListener("click",(event)=>{const button=event.target.closest("[data-round]");if(!button)return;activeRound=Number(button.dataset.round);renderRoundTabs();renderMatches()});
 dashboardEls.matchGrid.addEventListener("click",(event)=>{const card=event.target.closest("[data-match-index]");if(card)openMatchModal(Number(card.dataset.matchIndex))});
+dashboardEls.analyticsGrid.addEventListener("click",(event)=>{const card=event.target.closest("[data-analytics-key]");if(card)openAnalyticsModal(card.dataset.analyticsKey)});
+dashboardEls.analyticsGrid.addEventListener("keydown",(event)=>{if(event.key!=="Enter"&&event.key!==" ")return;const card=event.target.closest("[data-analytics-key]");if(!card)return;event.preventDefault();openAnalyticsModal(card.dataset.analyticsKey)});
 dashboardEls.modalClose.addEventListener("click",closeMatchModal);
 dashboardEls.matchModal.addEventListener("click",(event)=>{if(event.target===dashboardEls.matchModal)closeMatchModal()});
 window.addEventListener("keydown",(event)=>{if(event.key==="Escape")closeMatchModal()});

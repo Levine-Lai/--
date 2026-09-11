@@ -110,11 +110,11 @@ const analyticsPlayers = playerFeed.data.value.playerList
     ownership: Number(player.selPer || 0),
   }));
 
-const takeTop = (items, compare) => [...items].sort(compare).slice(0, 10);
+const takeTop = (items, compare) => [...items].sort(compare).slice(0, 25);
 const byPoints = (a, b) => b.points - a.points || b.ownership - a.ownership || a.name.localeCompare(b.name);
 const byOwnership = (a, b) => b.ownership - a.ownership || b.points - a.points || a.name.localeCompare(b.name);
-const valueRatio = (player) => player.price > 0 ? player.points / player.price : 0;
-const ownershipRatio = (player) => player.ownership > 0 ? player.points / player.ownership : 0;
+const valueRatio = (player) => player.price > 0 ? Math.abs(player.points) / player.price : 0;
+const ownershipRatio = (player) => player.ownership > 0 ? Math.abs(player.points) / player.ownership : 0;
 const roundAnalytics = {
   score: takeTop(analyticsPlayers, byPoints),
   ownership: takeTop(analyticsPlayers, byOwnership),
